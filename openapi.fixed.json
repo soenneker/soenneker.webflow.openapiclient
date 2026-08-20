@@ -73309,7 +73309,7 @@
               "type": "string",
               "description": "CMS Locale ID"
             },
-            "description": "Array of identifiers for the locales where the item will be created",
+            "description": "Array of identifiers for the locales where the item will be deleted",
             "example": [
               "653ad57de882f528b32e810e",
               "6514390aea353fc691d69827",
@@ -73688,7 +73688,7 @@
               "type": "string",
               "description": "CMS Locale ID"
             },
-            "description": "Array of identifiers for the locales where the item will be created",
+            "description": "Array of identifiers for the locales where the item will be unpublished",
             "example": [
               "653ad57de882f528b32e810e",
               "6514390aea353fc691d69827",

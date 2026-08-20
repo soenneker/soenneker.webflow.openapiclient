@@ -37317,7 +37317,7 @@ paths:
                         description: Unique identifier for the Item
                       cmsLocaleIds:
                         type: array
-                        description: Array of identifiers for the locales where the item will be created
+                        description: Array of identifiers for the locales where the item will be deleted
                         items:
                           type: string
                           description: CMS Locale ID
@@ -40369,7 +40369,7 @@ paths:
                         description: Unique identifier for the Item
                       cmsLocaleIds:
                         type: array
-                        description: Array of identifiers for the locales where the item will be created
+                        description: Array of identifiers for the locales where the item will be unpublished
                         items:
                           type: string
                           description: CMS Locale ID
