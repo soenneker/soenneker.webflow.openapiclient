@@ -14,7 +14,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>List of collection items to create</summary>
+        /// <summary>The items to create. Each entry needs its own `fieldData`. Don&apos;t send a top-level `fieldData` with this shape.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemLiveRequestMultipleLiveItemsItemsItem>? Items { get; set; }

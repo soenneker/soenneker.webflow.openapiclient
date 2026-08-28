@@ -12,7 +12,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     public partial class CreateItemRequestMultipleItems : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>An array of items to create</summary>
+        /// <summary>The items to create. Each entry needs its own `fieldData`. Don&apos;t send a top-level `fieldData` with this shape.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemRequestMultipleItemsItemsItem>? Items { get; set; }

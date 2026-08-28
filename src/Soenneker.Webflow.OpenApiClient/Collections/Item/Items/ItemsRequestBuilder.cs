@@ -53,7 +53,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items{?cmsLocaleId*,createdOn*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sortBy*,sortOrder*,translatable*}", pathParameters)
+        public ItemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", pathParameters)
         {
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items{?cmsLocaleId*,createdOn*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sortBy*,sortOrder*,translatable*}", rawUrl)
+        public ItemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", rawUrl)
         {
         }
         /// <summary>
@@ -99,7 +99,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List of all Items within a Collection.Required scope | `CMS:read`
+        /// List of all Items within a Collection.&lt;Note&gt;  This endpoint supports:  - Custom `filter[...]` queries support up to 10 filter terms and 2 text-search terms per request.  - Custom `sort[...]` queries support up to 3 sort fields per request.&lt;/Note&gt;Required scope | `CMS:read`
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Models.ListCollectionItems200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -163,7 +163,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.UpdateItems200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.UpdateItems200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create Item(s) in a Collection.To create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)Required scope | `CMS:write`
+        /// Create Item(s) in a Collection.This endpoint accepts two request shapes, and a request must use one or the other:- **Single item** — send `fieldData` at the top level. Set `cmsLocaleId` to create the item in a specific locale.- **Multiple items** — send an `items` array with at least one entry. Each entry needs its own `fieldData`, and can set its own `cmsLocaleId`, `isDraft`, and `isArchived`. The API ignores any other property on an entry.```json{  &quot;items&quot;: [    {      &quot;isArchived&quot;: false,      &quot;isDraft&quot;: false,      &quot;fieldData&quot;: {        &quot;name&quot;: &quot;Senior Data Analyst&quot;,        &quot;slug&quot;: &quot;senior-data-analyst&quot;      }    },    {      &quot;isArchived&quot;: false,      &quot;isDraft&quot;: false,      &quot;fieldData&quot;: {        &quot;name&quot;: &quot;Product Manager&quot;,        &quot;slug&quot;: &quot;product-manager&quot;      }    }  ]}```A request that carries both `fieldData` and `items` returns a `400`.To create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)Required scope | `CMS:write`
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateItem202Response"/></returns>
         /// <param name="body">The request body</param>
@@ -218,7 +218,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
             return requestInfo;
         }
         /// <summary>
-        /// List of all Items within a Collection.Required scope | `CMS:read`
+        /// List of all Items within a Collection.&lt;Note&gt;  This endpoint supports:  - Custom `filter[...]` queries support up to 10 filter terms and 2 text-search terms per request.  - Custom `sort[...]` queries support up to 3 sort fields per request.&lt;/Note&gt;Required scope | `CMS:read`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -259,7 +259,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
             return requestInfo;
         }
         /// <summary>
-        /// Create Item(s) in a Collection.To create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)Required scope | `CMS:write`
+        /// Create Item(s) in a Collection.This endpoint accepts two request shapes, and a request must use one or the other:- **Single item** — send `fieldData` at the top level. Set `cmsLocaleId` to create the item in a specific locale.- **Multiple items** — send an `items` array with at least one entry. Each entry needs its own `fieldData`, and can set its own `cmsLocaleId`, `isDraft`, and `isArchived`. The API ignores any other property on an entry.```json{  &quot;items&quot;: [    {      &quot;isArchived&quot;: false,      &quot;isDraft&quot;: false,      &quot;fieldData&quot;: {        &quot;name&quot;: &quot;Senior Data Analyst&quot;,        &quot;slug&quot;: &quot;senior-data-analyst&quot;      }    },    {      &quot;isArchived&quot;: false,      &quot;isDraft&quot;: false,      &quot;fieldData&quot;: {        &quot;name&quot;: &quot;Product Manager&quot;,        &quot;slug&quot;: &quot;product-manager&quot;      }    }  ]}```A request that carries both `fieldData` and `items` returns a `400`.To create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)Required scope | `CMS:write`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -290,7 +290,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
             return new global::Soenneker.Webflow.OpenApiClient.Collections.Item.Items.ItemsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List of all Items within a Collection.Required scope | `CMS:read`
+        /// List of all Items within a Collection.&lt;Note&gt;  This endpoint supports:  - Custom `filter[...]` queries support up to 10 filter terms and 2 text-search terms per request.  - Custom `sort[...]` queries support up to 3 sort fields per request.&lt;/Note&gt;Required scope | `CMS:read`
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemsRequestBuilderGetQueryParameters 
@@ -314,6 +314,16 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
 #else
             [QueryParameter("createdOn")]
             public string CreatedOn { get; set; }
+#endif
+            /// <summary>Filter collection items by custom field values. Use bracket notation:`filter[&lt;fieldSlug&gt;][&lt;operator&gt;]=&lt;value&gt;`.Example: `filter[price][gte]=10&amp;filter[price][lte]=100&amp;filter[name][contains]=shirt`.Filters are combined with AND. You can combine custom field filters with top-level filters such as `name`, `slug`, `createdOn`, `lastPublished`, and `lastUpdated`. OR logic and nested filter groups are not supported on GET requests.More filter terms can increase request latency.Supported operators by field type:| Field type | Supported operators || --- | --- || `id` | `eq`, `ne`, `in`, `nin` || `PlainText` | `eq`, `ne`, `in`, `nin`, `contains`, `ncontains`, `exists` || `Number` | `eq`, `ne`, `gt`, `gte`, `lt`, `lte`, `in`, `nin`, `exists` || `Switch` | `eq`, `ne`, `in`, `nin`, `exists` || `DateTime` | `eq`, `ne`, `gt`, `gte`, `lt`, `lte`, `in`, `nin`, `exists` || `Email`, `Phone`, `Link` | `eq`, `ne`, `in`, `nin`, `contains`, `ncontains`, `exists` || `Color` | `eq`, `ne`, `in`, `nin`, `exists` || `Reference` | `eq`, `ne`, `in`, `nin`, `exists` || `Option` | `eq`, `ne`, `in`, `nin` || `RichText`, `Image`, `MultiImage`, `VideoLink`, `MultiReference` | `exists` |`contains` and `ncontains` are case-insensitive. `ncontains` also matches items where the field is empty or not set.`exists=true` matches items where the field has a value. `exists=false` matches items where the field is missing or null. For `Switch` fields, `false` is still a set value.Value formats:| Field type | Value format || --- | --- || `Number` | A valid number, such as `10` or `12.5` || `Switch` | `true` or `false` || `DateTime` | ISO 8601 date-time string || `id`, `Reference` | 24-character item ID || `Option` | Option ID || `in`, `nin` | Comma-separated list, up to 100 values |Invalid fields, invalid values, and operators that do not apply to a field type return a `400 BadArgument` response.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("filter")]
+            public string? Filter { get; set; }
+#nullable restore
+#else
+            [QueryParameter("filter")]
+            public string Filter { get; set; }
 #endif
             /// <summary>Filter by the last published date of the item(s)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -361,6 +371,16 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
             [QueryParameter("slug")]
             public string Slug { get; set; }
 #endif
+            /// <summary>Sort collection items by custom fields using bracket notation: `sort[&lt;fieldSlug&gt;]=&lt;asc|desc&gt;`.- Example: `sort[price]=desc`- Multiple sort fields are applied in query-string order. When `sort[...]` is provided, it takes precedence over `sortBy` and `sortOrder`.- Sortable field types: `PlainText`, `Email`, `Phone`, `Number`, `DateTime`, and `Switch`.- Unknown fields, invalid sort directions, and non-sortable field types return a `400 BadArgument` response.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("sort")]
+            public string? Sort { get; set; }
+#nullable restore
+#else
+            [QueryParameter("sort")]
+            public string Sort { get; set; }
+#endif
             /// <summary>Sort results by the provided value</summary>
             [QueryParameter("sortBy")]
             public global::Soenneker.Webflow.OpenApiClient.Models.ListCollectionItemsSortByParameter? SortBy { get; set; }
@@ -389,7 +409,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
             public bool? SkipInvalidFiles { get; set; }
         }
         /// <summary>
-        /// Create Item(s) in a Collection.To create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)Required scope | `CMS:write`
+        /// Create Item(s) in a Collection.This endpoint accepts two request shapes, and a request must use one or the other:- **Single item** — send `fieldData` at the top level. Set `cmsLocaleId` to create the item in a specific locale.- **Multiple items** — send an `items` array with at least one entry. Each entry needs its own `fieldData`, and can set its own `cmsLocaleId`, `isDraft`, and `isArchived`. The API ignores any other property on an entry.```json{  &quot;items&quot;: [    {      &quot;isArchived&quot;: false,      &quot;isDraft&quot;: false,      &quot;fieldData&quot;: {        &quot;name&quot;: &quot;Senior Data Analyst&quot;,        &quot;slug&quot;: &quot;senior-data-analyst&quot;      }    },    {      &quot;isArchived&quot;: false,      &quot;isDraft&quot;: false,      &quot;fieldData&quot;: {        &quot;name&quot;: &quot;Product Manager&quot;,        &quot;slug&quot;: &quot;product-manager&quot;      }    }  ]}```A request that carries both `fieldData` and `items` returns a `400`.To create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)Required scope | `CMS:write`
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemsRequestBuilderPostQueryParameters 

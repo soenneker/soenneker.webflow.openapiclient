@@ -13790,7 +13790,7 @@
           "Sites"
         ],
         "summary": "List Collection Items",
-        "description": "List of all Items within a Collection.\n\nRequired scope | \u0060CMS:read\u0060\n",
+        "description": "List of all Items within a Collection.\n\n\u003CNote\u003E\n  This endpoint supports:\n\n  - Custom \u0060filter[...]\u0060 queries support up to 10 filter terms and 2 text-search terms per request.\n  - Custom \u0060sort[...]\u0060 queries support up to 3 sort fields per request.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
         "operationId": "ListCollectionItems",
         "parameters": [
           {
@@ -13927,6 +13927,99 @@
             }
           },
           {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter collection items by custom field values. Use bracket notation:\n\u0060filter[\u003CfieldSlug\u003E][\u003Coperator\u003E]=\u003Cvalue\u003E\u0060.\n\nExample: \u0060filter[price][gte]=10\u0026filter[price][lte]=100\u0026filter[name][contains]=shirt\u0060.\n\nFilters are combined with AND. You can combine custom field filters with top-level filters such as \u0060name\u0060, \u0060slug\u0060, \u0060createdOn\u0060, \u0060lastPublished\u0060, and \u0060lastUpdated\u0060. OR logic and nested filter groups are not supported on GET requests.\n\nMore filter terms can increase request latency.\n\nSupported operators by field type:\n\n| Field type | Supported operators |\n| --- | --- |\n| \u0060id\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060 |\n| \u0060PlainText\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060contains\u0060, \u0060ncontains\u0060, \u0060exists\u0060 |\n| \u0060Number\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060gt\u0060, \u0060gte\u0060, \u0060lt\u0060, \u0060lte\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Switch\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060DateTime\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060gt\u0060, \u0060gte\u0060, \u0060lt\u0060, \u0060lte\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Email\u0060, \u0060Phone\u0060, \u0060Link\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060contains\u0060, \u0060ncontains\u0060, \u0060exists\u0060 |\n| \u0060Color\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Reference\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Option\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060 |\n| \u0060RichText\u0060, \u0060Image\u0060, \u0060MultiImage\u0060, \u0060VideoLink\u0060, \u0060MultiReference\u0060 | \u0060exists\u0060 |\n\n\u0060contains\u0060 and \u0060ncontains\u0060 are case-insensitive. \u0060ncontains\u0060 also matches items where the field is empty or not set.\n\n\u0060exists=true\u0060 matches items where the field has a value. \u0060exists=false\u0060 matches items where the field is missing or null. For \u0060Switch\u0060 fields, \u0060false\u0060 is still a set value.\n\nValue formats:\n\n| Field type | Value format |\n| --- | --- |\n| \u0060Number\u0060 | A valid number, such as \u006010\u0060 or \u006012.5\u0060 |\n| \u0060Switch\u0060 | \u0060true\u0060 or \u0060false\u0060 |\n| \u0060DateTime\u0060 | ISO 8601 date-time string |\n| \u0060id\u0060, \u0060Reference\u0060 | 24-character item ID |\n| \u0060Option\u0060 | Option ID |\n| \u0060in\u0060, \u0060nin\u0060 | Comma-separated list, up to 100 values |\n\nInvalid fields, invalid values, and operators that do not apply to a field type return a \u0060400 BadArgument\u0060 response.\n",
+            "allowEmptyValue": true,
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "minProperties": 1,
+                "type": "object",
+                "properties": {
+                  "eq": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "ne": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "gt": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "gte": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "lt": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "lte": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "in": {
+                    "type": "object",
+                    "oneOf": [
+                      {
+                        "maxLength": 25699,
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "maxItems": 100,
+                        "minItems": 1,
+                        "type": "array",
+                        "items": {
+                          "maxLength": 256,
+                          "type": "string"
+                        }
+                      }
+                    ]
+                  },
+                  "nin": {
+                    "type": "object",
+                    "oneOf": [
+                      {
+                        "maxLength": 25699,
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "maxItems": 100,
+                        "minItems": 1,
+                        "type": "array",
+                        "items": {
+                          "maxLength": 256,
+                          "type": "string"
+                        }
+                      }
+                    ]
+                  },
+                  "contains": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "ncontains": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "exists": {
+                    "$ref": "#/components/schemas/ListCollectionItemsFilterParameterAdditionalPropertiesExists"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          {
             "name": "sortBy",
             "in": "query",
             "description": "Sort results by the provided value",
@@ -13942,6 +14035,20 @@
             "allowEmptyValue": true,
             "schema": {
               "$ref": "#/components/schemas/ListCollectionItemsSortOrderParameter"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort collection items by custom fields using bracket notation: \u0060sort[\u003CfieldSlug\u003E]=\u003Casc|desc\u003E\u0060.\n\n- Example: \u0060sort[price]=desc\u0060\n- Multiple sort fields are applied in query-string order. When \u0060sort[...]\u0060 is provided, it takes precedence over \u0060sortBy\u0060 and \u0060sortOrder\u0060.\n- Sortable field types: \u0060PlainText\u0060, \u0060Email\u0060, \u0060Phone\u0060, \u0060Number\u0060, \u0060DateTime\u0060, and \u0060Switch\u0060.\n- Unknown fields, invalid sort directions, and non-sortable field types return a \u0060400 BadArgument\u0060 response.\n",
+            "allowEmptyValue": true,
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/components/schemas/ListCollectionItemsSortParameterAdditionalProperties"
+              }
             }
           },
           {
@@ -14077,7 +14184,7 @@
           "Sites"
         ],
         "summary": "Create Collection Item(s)",
-        "description": "Create Item(s) in a Collection.\n\n\nTo create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "Create Item(s) in a Collection.\n\nThis endpoint accepts two request shapes, and a request must use one or the other:\n\n- **Single item** \u2014 send \u0060fieldData\u0060 at the top level. Set \u0060cmsLocaleId\u0060 to create the item in a specific locale.\n- **Multiple items** \u2014 send an \u0060items\u0060 array with at least one entry. Each entry needs its own \u0060fieldData\u0060, and can set its own \u0060cmsLocaleId\u0060, \u0060isDraft\u0060, and \u0060isArchived\u0060. The API ignores any other property on an entry.\n\n\u0060\u0060\u0060json\n{\n  \u0022items\u0022: [\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Senior Data Analyst\u0022,\n        \u0022slug\u0022: \u0022senior-data-analyst\u0022\n      }\n    },\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Product Manager\u0022,\n        \u0022slug\u0022: \u0022product-manager\u0022\n      }\n    }\n  ]\n}\n\u0060\u0060\u0060\n\nA request that carries both \u0060fieldData\u0060 and \u0060items\u0060 returns a \u0060400\u0060.\n\nTo create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "CreateItem",
         "parameters": [
           {
@@ -14154,32 +14261,6 @@
                       }
                     }
                   }
-                },
-                "MultipleItems": {
-                  "value": {
-                    "items": [
-                      {
-                        "isArchived": false,
-                        "isDraft": false,
-                        "fieldData": {
-                          "name": "Senior Data Analyst",
-                          "slug": "senior-data-analyst",
-                          "url": "https://boards.greenhouse.io/webflow/jobs/26567701",
-                          "department": "Data"
-                        }
-                      },
-                      {
-                        "isArchived": false,
-                        "isDraft": false,
-                        "fieldData": {
-                          "name": "Product Manager",
-                          "slug": "product-manager",
-                          "url": "https://boards.greenhouse.io/webflow/jobs/31234567",
-                          "department": "Product"
-                        }
-                      }
-                    ]
-                  }
                 }
               }
             }
@@ -14241,32 +14322,6 @@
                           "url": "/files/62b720ef280c7a7a3be8cab3_document.pdf"
                         }
                       }
-                    }
-                  },
-                  "MultipleItems": {
-                    "value": {
-                      "items": [
-                        {
-                          "isArchived": false,
-                          "isDraft": false,
-                          "fieldData": {
-                            "name": "Senior Data Analyst",
-                            "slug": "senior-data-analyst",
-                            "url": "https://boards.greenhouse.io/webflow/jobs/26567701",
-                            "department": "Data"
-                          }
-                        },
-                        {
-                          "isArchived": false,
-                          "isDraft": false,
-                          "fieldData": {
-                            "name": "Product Manager",
-                            "slug": "product-manager",
-                            "url": "https://boards.greenhouse.io/webflow/jobs/31234567",
-                            "department": "Product"
-                          }
-                        }
-                      ]
                     }
                   }
                 }
@@ -14879,7 +14934,7 @@
           "Sites"
         ],
         "summary": "List Live Collection Items",
-        "description": "List all published items in a collection.\n\n\u003CTip title=\u0022Serve data with the Content Delivery API\u0022\u003E\n  Serving data to applications in real-time? Use the Content Delivery API at \u0060api-cdn.webflow.com\u0060 for better performance. The CDN-backed endpoint is optimized for high-volume reads, while the Data API is designed for writes and management operations.\n\u003C/Tip\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
+        "description": "List all published items in a collection.\n\n\u003CTip title=\u0022Serve data with the Content Delivery API\u0022\u003E\n  Serving data to applications in real-time? Use the Content Delivery API at \u0060api-cdn.webflow.com\u0060 for better performance. The CDN-backed endpoint is optimized for high-volume reads, while the Data API is designed for writes and management operations.\n\u003C/Tip\u003E\n\n\u003CNote\u003E\n  This endpoint supports:\n\n  - Custom \u0060filter[...]\u0060 queries support up to 10 filter terms and 2 text-search terms per request.\n  - Custom \u0060sort[...]\u0060 queries support up to 3 sort fields per request.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
         "operationId": "ListCollectionItemsLive",
         "parameters": [
           {
@@ -15016,6 +15071,99 @@
             }
           },
           {
+            "name": "filter",
+            "in": "query",
+            "description": "Filter collection items by custom field values. Use bracket notation:\n\u0060filter[\u003CfieldSlug\u003E][\u003Coperator\u003E]=\u003Cvalue\u003E\u0060.\n\nExample: \u0060filter[price][gte]=10\u0026filter[price][lte]=100\u0026filter[name][contains]=shirt\u0060.\n\nFilters are combined with AND. You can combine custom field filters with top-level filters such as \u0060name\u0060, \u0060slug\u0060, \u0060createdOn\u0060, \u0060lastPublished\u0060, and \u0060lastUpdated\u0060. OR logic and nested filter groups are not supported on GET requests.\n\nMore filter terms can increase request latency.\n\nSupported operators by field type:\n\n| Field type | Supported operators |\n| --- | --- |\n| \u0060id\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060 |\n| \u0060PlainText\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060contains\u0060, \u0060ncontains\u0060, \u0060exists\u0060 |\n| \u0060Number\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060gt\u0060, \u0060gte\u0060, \u0060lt\u0060, \u0060lte\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Switch\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060DateTime\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060gt\u0060, \u0060gte\u0060, \u0060lt\u0060, \u0060lte\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Email\u0060, \u0060Phone\u0060, \u0060Link\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060contains\u0060, \u0060ncontains\u0060, \u0060exists\u0060 |\n| \u0060Color\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Reference\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060, \u0060exists\u0060 |\n| \u0060Option\u0060 | \u0060eq\u0060, \u0060ne\u0060, \u0060in\u0060, \u0060nin\u0060 |\n| \u0060RichText\u0060, \u0060Image\u0060, \u0060MultiImage\u0060, \u0060VideoLink\u0060, \u0060MultiReference\u0060 | \u0060exists\u0060 |\n\n\u0060contains\u0060 and \u0060ncontains\u0060 are case-insensitive. \u0060ncontains\u0060 also matches items where the field is empty or not set.\n\n\u0060exists=true\u0060 matches items where the field has a value. \u0060exists=false\u0060 matches items where the field is missing or null. For \u0060Switch\u0060 fields, \u0060false\u0060 is still a set value.\n\nValue formats:\n\n| Field type | Value format |\n| --- | --- |\n| \u0060Number\u0060 | A valid number, such as \u006010\u0060 or \u006012.5\u0060 |\n| \u0060Switch\u0060 | \u0060true\u0060 or \u0060false\u0060 |\n| \u0060DateTime\u0060 | ISO 8601 date-time string |\n| \u0060id\u0060, \u0060Reference\u0060 | 24-character item ID |\n| \u0060Option\u0060 | Option ID |\n| \u0060in\u0060, \u0060nin\u0060 | Comma-separated list, up to 100 values |\n\nInvalid fields, invalid values, and operators that do not apply to a field type return a \u0060400 BadArgument\u0060 response.\n",
+            "allowEmptyValue": true,
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "minProperties": 1,
+                "type": "object",
+                "properties": {
+                  "eq": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "ne": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "gt": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "gte": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "lt": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "lte": {
+                    "maxLength": 256,
+                    "type": "string"
+                  },
+                  "in": {
+                    "type": "object",
+                    "oneOf": [
+                      {
+                        "maxLength": 25699,
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "maxItems": 100,
+                        "minItems": 1,
+                        "type": "array",
+                        "items": {
+                          "maxLength": 256,
+                          "type": "string"
+                        }
+                      }
+                    ]
+                  },
+                  "nin": {
+                    "type": "object",
+                    "oneOf": [
+                      {
+                        "maxLength": 25699,
+                        "minLength": 1,
+                        "type": "string"
+                      },
+                      {
+                        "maxItems": 100,
+                        "minItems": 1,
+                        "type": "array",
+                        "items": {
+                          "maxLength": 256,
+                          "type": "string"
+                        }
+                      }
+                    ]
+                  },
+                  "contains": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "ncontains": {
+                    "maxLength": 256,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "exists": {
+                    "$ref": "#/components/schemas/ListCollectionItemsLiveFilterParameterAdditionalPropertiesExists"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          {
             "name": "sortBy",
             "in": "query",
             "description": "Sort results by the provided value",
@@ -15031,6 +15179,20 @@
             "allowEmptyValue": true,
             "schema": {
               "$ref": "#/components/schemas/ListCollectionItemsLiveSortOrderParameter"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort collection items by custom fields using bracket notation: \u0060sort[\u003CfieldSlug\u003E]=\u003Casc|desc\u003E\u0060.\n\n- Example: \u0060sort[price]=desc\u0060\n- Multiple sort fields are applied in query-string order. When \u0060sort[...]\u0060 is provided, it takes precedence over \u0060sortBy\u0060 and \u0060sortOrder\u0060.\n- Sortable field types: \u0060PlainText\u0060, \u0060Email\u0060, \u0060Phone\u0060, \u0060Number\u0060, \u0060DateTime\u0060, and \u0060Switch\u0060.\n- Unknown fields, invalid sort directions, and non-sortable field types return a \u0060400 BadArgument\u0060 response.\n",
+            "allowEmptyValue": true,
+            "style": "deepObject",
+            "explode": true,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/components/schemas/ListCollectionItemsLiveSortParameterAdditionalProperties"
+              }
             }
           },
           {
@@ -15176,7 +15338,7 @@
           "Sites"
         ],
         "summary": "Create Live Collection Item(s)",
-        "description": "Create item(s) in a collection that will be immediately published to the live site.\n\n\nTo create items across multiple locales, [please use this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "Create item(s) in a collection that will be immediately published to the live site.\n\nThis endpoint accepts two request shapes, and a request must use one or the other:\n\n- **Single item** \u2014 send \u0060fieldData\u0060 at the top level. Set \u0060cmsLocaleId\u0060 to create the item in a specific locale.\n- **Multiple items** \u2014 send an \u0060items\u0060 array with at least one entry. Each entry needs its own \u0060fieldData\u0060, and can set its own \u0060cmsLocaleId\u0060, \u0060isDraft\u0060, and \u0060isArchived\u0060. The API ignores any other property on an entry.\n\n\u0060\u0060\u0060json\n{\n  \u0022items\u0022: [\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Senior Data Analyst\u0022,\n        \u0022slug\u0022: \u0022senior-data-analyst\u0022\n      }\n    },\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Product Manager\u0022,\n        \u0022slug\u0022: \u0022product-manager\u0022\n      }\n    }\n  ]\n}\n\u0060\u0060\u0060\n\nA request that carries both \u0060fieldData\u0060 and \u0060items\u0060 returns a \u0060400\u0060.\n\nTo create items across multiple locales, [please use this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "CreateItemLive",
         "parameters": [
           {
@@ -15252,32 +15414,6 @@
                         "url": "/files/62b720ef280c7a7a3be8cab3_document.pdf"
                       }
                     }
-                  }
-                },
-                "MultipleItems": {
-                  "value": {
-                    "items": [
-                      {
-                        "isArchived": false,
-                        "isDraft": false,
-                        "fieldData": {
-                          "name": "Senior Data Analyst",
-                          "slug": "senior-data-analyst",
-                          "url": "https://boards.greenhouse.io/webflow/jobs/26567701",
-                          "department": "Data"
-                        }
-                      },
-                      {
-                        "isArchived": false,
-                        "isDraft": false,
-                        "fieldData": {
-                          "name": "Product Manager",
-                          "slug": "product-manager",
-                          "url": "https://boards.greenhouse.io/webflow/jobs/31234567",
-                          "department": "Product"
-                        }
-                      }
-                    ]
                   }
                 }
               }
@@ -16269,7 +16405,7 @@
           {
             "name": "cmsLocaleId",
             "in": "query",
-            "description": "Unique identifier for a CMS Locale. This UID is different from the Site locale identifier and is listed as \u0060cmsLocaleId\u0060 in the Sites response. To query multiple locales, input a comma separated string.",
+            "description": "Unique identifier for a CMS Locale. This UID is different from the Site locale identifier and is listed as \u0060cmsLocaleId\u0060 in the Sites response. This endpoint returns a single item, so it accepts one locale. To retrieve an item in several locales, use [List Collection Items](/data/reference/cms/collection-items/staged-items/list-items) with \u0060filter[id][eq]\u0060 and a comma separated \u0060cmsLocaleId\u0060.",
             "allowEmptyValue": true,
             "schema": {
               "type": "string"
@@ -16757,7 +16893,7 @@
           {
             "name": "cmsLocaleId",
             "in": "query",
-            "description": "Unique identifier for a CMS Locale. This UID is different from the Site locale identifier and is listed as \u0060cmsLocaleId\u0060 in the Sites response. To query multiple locales, input a comma separated string.",
+            "description": "Unique identifier for a CMS Locale. This UID is different from the Site locale identifier and is listed as \u0060cmsLocaleId\u0060 in the Sites response. This endpoint returns a single item, so it accepts one locale. To retrieve an item in several locales, use [List Collection Items](/data/reference/cms/collection-items/staged-items/list-items) with \u0060filter[id][eq]\u0060 and a comma separated \u0060cmsLocaleId\u0060.",
             "allowEmptyValue": true,
             "schema": {
               "type": "string"
@@ -42113,11 +42249,12 @@
             "$ref": "#/components/schemas/CreateItemRequestSingleItemFieldData"
           },
           "items": {
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateItemRequestMultipleItemsItemsItem"
             },
-            "description": "An array of items to create"
+            "description": "The items to create. Each entry needs its own \u0060fieldData\u0060. Don\u0027t send a top-level \u0060fieldData\u0060 with this shape."
           }
         }
       },
@@ -43139,11 +43276,12 @@
             "$ref": "#/components/schemas/CreateItemLiveRequestCollectionItemFieldData"
           },
           "items": {
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateItemLiveRequestMultipleLiveItemsItemsItem"
             },
-            "description": "List of collection items to create"
+            "description": "The items to create. Each entry needs its own \u0060fieldData\u0060. Don\u0027t send a top-level \u0060fieldData\u0060 with this shape."
           }
         }
       },
@@ -68526,11 +68664,12 @@
         "type": "object",
         "properties": {
           "items": {
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateItemRequestMultipleItemsItemsItem"
             },
-            "description": "An array of items to create"
+            "description": "The items to create. Each entry needs its own \u0060fieldData\u0060. Don\u0027t send a top-level \u0060fieldData\u0060 with this shape."
           }
         },
         "additionalProperties": false,
@@ -68810,11 +68949,12 @@
         "type": "object",
         "properties": {
           "items": {
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/CreateItemLiveRequestMultipleLiveItemsItemsItem"
             },
-            "description": "List of collection items to create"
+            "description": "The items to create. Each entry needs its own \u0060fieldData\u0060. Don\u0027t send a top-level \u0060fieldData\u0060 with this shape."
           }
         },
         "x-fern-type-name": "Multiple Live Items"
@@ -240990,6 +241130,28 @@
           ]
         }
       },
+      "ListCollectionItemsFilterParameterAdditionalPropertiesExists": {
+        "enum": [
+          "true",
+          "false"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ListCollectionItemsFilterParameterAdditionalPropertiesExists",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "true",
+              "name": "TrueValue"
+            },
+            {
+              "value": "false",
+              "name": "FalseValue"
+            }
+          ]
+        }
+      },
       "ListCollectionItemsSortByParameter": {
         "enum": [
           "createdOn",
@@ -241049,6 +241211,50 @@
           ]
         }
       },
+      "ListCollectionItemsSortParameterAdditionalProperties": {
+        "enum": [
+          "asc",
+          "desc"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ListCollectionItemsSortParameterAdditionalProperties",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "asc",
+              "name": "Asc"
+            },
+            {
+              "value": "desc",
+              "name": "Desc"
+            }
+          ]
+        }
+      },
+      "ListCollectionItemsLiveFilterParameterAdditionalPropertiesExists": {
+        "enum": [
+          "true",
+          "false"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ListCollectionItemsLiveFilterParameterAdditionalPropertiesExists",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "true",
+              "name": "TrueValue"
+            },
+            {
+              "value": "false",
+              "name": "FalseValue"
+            }
+          ]
+        }
+      },
       "ListCollectionItemsLiveSortByParameter": {
         "enum": [
           "createdOn",
@@ -241095,6 +241301,28 @@
         "additionalProperties": false,
         "x-ms-enum": {
           "name": "ListCollectionItemsLiveSortOrderParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "asc",
+              "name": "Asc"
+            },
+            {
+              "value": "desc",
+              "name": "Desc"
+            }
+          ]
+        }
+      },
+      "ListCollectionItemsLiveSortParameterAdditionalProperties": {
+        "enum": [
+          "asc",
+          "desc"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "ListCollectionItemsLiveSortParameterAdditionalProperties",
           "modelAsString": false,
           "values": [
             {
