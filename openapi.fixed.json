@@ -13964,7 +13964,6 @@
                     "type": "string"
                   },
                   "in": {
-                    "type": "object",
                     "oneOf": [
                       {
                         "maxLength": 25699,
@@ -13983,7 +13982,6 @@
                     ]
                   },
                   "nin": {
-                    "type": "object",
                     "oneOf": [
                       {
                         "maxLength": 25699,
@@ -15108,7 +15106,6 @@
                     "type": "string"
                   },
                   "in": {
-                    "type": "object",
                     "oneOf": [
                       {
                         "maxLength": 25699,
@@ -15127,7 +15124,6 @@
                     ]
                   },
                   "nin": {
-                    "type": "object",
                     "oneOf": [
                       {
                         "maxLength": 25699,
@@ -30304,10 +30300,8 @@
         }
       },
       "CreateSite403Response": {
-        "type": "object",
         "oneOf": [
           {
-            "type": "object",
             "description": "Provided access token is valid, but is missing the required scopes.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -30558,7 +30552,6 @@
             }
           },
           {
-            "type": "object",
             "description": "Error response for non-enterprise plan workspaces.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -32016,10 +32009,8 @@
         }
       },
       "UpdateSite403Response": {
-        "type": "object",
         "oneOf": [
           {
-            "type": "object",
             "description": "Provided access token is valid, but is missing the required scopes.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -32270,7 +32261,6 @@
             }
           },
           {
-            "type": "object",
             "description": "Error response for non-enterprise plan sites.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -32688,10 +32678,8 @@
         }
       },
       "DeleteSite403Response": {
-        "type": "object",
         "oneOf": [
           {
-            "type": "object",
             "description": "Provided access token is valid, but is missing the required scopes.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -32942,7 +32930,6 @@
             }
           },
           {
-            "type": "object",
             "description": "Error response for non-enterprise plan sites.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -33533,10 +33520,8 @@
         }
       },
       "SitePublish400Response": {
-        "type": "object",
         "oneOf": [
           {
-            "type": "object",
             "description": "Requested an invalid Domain. Please send a valid custom domain URI.",
             "x-logErrorCode": 400,
             "unrecognizedKeywords": {
@@ -33787,7 +33772,6 @@
             }
           },
           {
-            "type": "object",
             "description": "You must pass at least one domain ID to the publish endpoint.",
             "x-logErrorCode": 400,
             "unrecognizedKeywords": {
@@ -37231,10 +37215,8 @@
         }
       },
       "GetSiteActivityLogs403Response": {
-        "type": "object",
         "oneOf": [
           {
-            "type": "object",
             "description": "Provided access token is valid, but is missing the required scopes.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -37485,7 +37467,6 @@
             }
           },
           {
-            "type": "object",
             "description": "Error response for non-enterprise plan sites.",
             "x-logErrorCode": 403,
             "unrecognizedKeywords": {
@@ -41275,7 +41256,6 @@
         }
       },
       "CreateFieldRequest": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateFieldRequestStaticField"
@@ -41317,7 +41297,6 @@
         "description": "Details about the field of a collection"
       },
       "CreateField200Response": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateField200ResponseStaticField"
@@ -42192,7 +42171,6 @@
         }
       },
       "CreateItemRequest": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateItemRequestSingleItem"
@@ -42550,7 +42528,6 @@
           "isArchived",
           "isDraft"
         ],
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UpdateItems200ResponseCollectionItem"
@@ -43220,7 +43197,6 @@
         }
       },
       "CreateItemLiveRequest": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateItemLiveRequestCollectionItem"
@@ -43728,7 +43704,6 @@
         }
       },
       "UpdateItemsLive409Response": {
-        "type": "object",
         "description": "Resource conflict",
         "x-logErrorCode": 409,
         "unrecognizedKeywords": {
@@ -45924,7 +45899,6 @@
         }
       },
       "UpdateItemLive409Response": {
-        "type": "object",
         "description": "Resource conflict",
         "x-logErrorCode": 409,
         "unrecognizedKeywords": {
@@ -46406,7 +46380,6 @@
         }
       },
       "PublishItemRequest": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/PublishItemRequestItemIDs"
@@ -68117,7 +68090,6 @@
         }
       },
       "CreateCollectionRequestFieldsItem": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateCollectionRequestFieldsItemStaticField"
@@ -68159,7 +68131,6 @@
         "description": "Details about the field of a collection"
       },
       "CreateCollection200ResponseFieldsItemValidationsAdditionalProperties": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1"
@@ -68179,7 +68150,6 @@
         ]
       },
       "CollectionDetails200ResponseFieldsItemValidationsAdditionalProperties": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CollectionDetails200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1"
@@ -68199,7 +68169,6 @@
         ]
       },
       "PatchCollection200ResponseFieldsItemValidationsAdditionalProperties": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1"
@@ -68541,7 +68510,6 @@
         "x-fern-type-name": "Reference Field"
       },
       "UpdateField200ResponseValidationsAdditionalProperties": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch1"
@@ -68960,7 +68928,6 @@
         "x-fern-type-name": "Multiple Live Items"
       },
       "CreateItemsRequestFieldData": {
-        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateItemsRequestFieldDataSingleCmsItem"
@@ -69508,7 +69475,6 @@
         }
       },
       "CreateProductRequestProductFieldData": {
-        "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/CreateProductRequestProductFieldDataAllOf1"

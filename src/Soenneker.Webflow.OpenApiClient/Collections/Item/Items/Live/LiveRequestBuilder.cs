@@ -106,7 +106,6 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Live
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive401Response">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive404Response">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive409Response">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive429Response">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive500Response">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -125,7 +124,6 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Live
                 { "400", global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive401Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive404Response.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive409Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.UpdateItemsLive500Response.CreateFromDiscriminatorValue },
             };

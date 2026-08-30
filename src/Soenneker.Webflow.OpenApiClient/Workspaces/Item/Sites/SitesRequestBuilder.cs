@@ -42,7 +42,6 @@ namespace Soenneker.Webflow.OpenApiClient.Workspaces.Item.Sites
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateSite400Response">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateSite401Response">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateSite403Response">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateSite404Response">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateSite429Response">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateSite500Response">When receiving a 500 status code</exception>
@@ -61,7 +60,6 @@ namespace Soenneker.Webflow.OpenApiClient.Workspaces.Item.Sites
             {
                 { "400", global::Soenneker.Webflow.OpenApiClient.Models.CreateSite400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Webflow.OpenApiClient.Models.CreateSite401Response.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Webflow.OpenApiClient.Models.CreateSite403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.CreateSite404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.CreateSite429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.CreateSite500Response.CreateFromDiscriminatorValue },
