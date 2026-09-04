@@ -13790,7 +13790,7 @@
           "Sites"
         ],
         "summary": "List Collection Items",
-        "description": "List of all Items within a Collection.\n\n\u003CNote\u003E\n  This endpoint supports:\n\n  - Custom \u0060filter[...]\u0060 queries support up to 10 filter terms and 2 text-search terms per request.\n  - Custom \u0060sort[...]\u0060 queries support up to 3 sort fields per request.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nList of all Items within a Collection.\n\n\u003CNote\u003E\n  This endpoint supports:\n\n  - Custom \u0060filter[...]\u0060 queries support up to 10 filter terms and 2 text-search terms per request.\n  - Custom \u0060sort[...]\u0060 queries support up to 3 sort fields per request.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
         "operationId": "ListCollectionItems",
         "parameters": [
           {
@@ -14182,7 +14182,7 @@
           "Sites"
         ],
         "summary": "Create Collection Item(s)",
-        "description": "Create Item(s) in a Collection.\n\nThis endpoint accepts two request shapes, and a request must use one or the other:\n\n- **Single item** \u2014 send \u0060fieldData\u0060 at the top level. Set \u0060cmsLocaleId\u0060 to create the item in a specific locale.\n- **Multiple items** \u2014 send an \u0060items\u0060 array with at least one entry. Each entry needs its own \u0060fieldData\u0060, and can set its own \u0060cmsLocaleId\u0060, \u0060isDraft\u0060, and \u0060isArchived\u0060. The API ignores any other property on an entry.\n\n\u0060\u0060\u0060json\n{\n  \u0022items\u0022: [\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Senior Data Analyst\u0022,\n        \u0022slug\u0022: \u0022senior-data-analyst\u0022\n      }\n    },\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Product Manager\u0022,\n        \u0022slug\u0022: \u0022product-manager\u0022\n      }\n    }\n  ]\n}\n\u0060\u0060\u0060\n\nA request that carries both \u0060fieldData\u0060 and \u0060items\u0060 returns a \u0060400\u0060.\n\nTo create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nCreate Item(s) in a Collection.\n\nThis endpoint accepts two request shapes, and a request must use one or the other:\n\n- **Single item** \u2014 send \u0060fieldData\u0060 at the top level. Set \u0060cmsLocaleId\u0060 to create the item in a specific locale.\n- **Multiple items** \u2014 send an \u0060items\u0060 array with at least one entry. Each entry needs its own \u0060fieldData\u0060, and can set its own \u0060cmsLocaleId\u0060, \u0060isDraft\u0060, and \u0060isArchived\u0060. The API ignores any other property on an entry.\n\n\u0060\u0060\u0060json\n{\n  \u0022items\u0022: [\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Senior Data Analyst\u0022,\n        \u0022slug\u0022: \u0022senior-data-analyst\u0022\n      }\n    },\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Product Manager\u0022,\n        \u0022slug\u0022: \u0022product-manager\u0022\n      }\n    }\n  ]\n}\n\u0060\u0060\u0060\n\nA request that carries both \u0060fieldData\u0060 and \u0060items\u0060 returns a \u0060400\u0060.\n\nTo create items across multiple locales, please use [this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "CreateItem",
         "parameters": [
           {
@@ -14437,7 +14437,7 @@
           "Sites"
         ],
         "summary": "Update Collection Items",
-        "description": "Update a single item or multiple items in a Collection.\n\nThe limit for this endpoint is 100 items.\n\n\u003CTip title=\u0022Localization Tip\u0022\u003EItems will only be updated in the primary locale, unless a \u0060cmsLocaleId\u0060 is included in the request.\u003C/Tip\u003E\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nUpdate a single item or multiple items in a Collection.\n\nThe limit for this endpoint is 100 items.\n\n\u003CTip title=\u0022Localization Tip\u0022\u003EItems will only be updated in the primary locale, unless a \u0060cmsLocaleId\u0060 is included in the request.\u003C/Tip\u003E\n\n\u003CNote title=\u0022Draft status behavior\u0022\u003E\n  \u0060isDraft: true\u0060 doesn\u0027t unpublish an item. The resulting status depends on whether the item has been published before:\n\n  - **Item that has never been published:** the item gets a \u0060Draft\u0060 status.\n  - **Already-published item:** the item gets a \u0060Changes in draft\u0060 status. The live item stays published, and your changes are held back until you publish them.\n\n  Setting \u0060isDraft: false\u0060 queues the item to publish on the next site publish. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live). For the full status mapping, see [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing).\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "UpdateItems",
         "parameters": [
           {
@@ -14932,7 +14932,7 @@
           "Sites"
         ],
         "summary": "List Live Collection Items",
-        "description": "List all published items in a collection.\n\n\u003CTip title=\u0022Serve data with the Content Delivery API\u0022\u003E\n  Serving data to applications in real-time? Use the Content Delivery API at \u0060api-cdn.webflow.com\u0060 for better performance. The CDN-backed endpoint is optimized for high-volume reads, while the Data API is designed for writes and management operations.\n\u003C/Tip\u003E\n\n\u003CNote\u003E\n  This endpoint supports:\n\n  - Custom \u0060filter[...]\u0060 queries support up to 10 filter terms and 2 text-search terms per request.\n  - Custom \u0060sort[...]\u0060 queries support up to 3 sort fields per request.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nList all published items in a collection.\n\n\u003CTip title=\u0022Serve data with the Content Delivery API\u0022\u003E\n  Serving data to applications in real-time? Use the Content Delivery API at \u0060api-cdn.webflow.com\u0060 for better performance. The CDN-backed endpoint is optimized for high-volume reads, while the Data API is designed for writes and management operations.\n\u003C/Tip\u003E\n\n\u003CNote\u003E\n  This endpoint supports:\n\n  - Custom \u0060filter[...]\u0060 queries support up to 10 filter terms and 2 text-search terms per request.\n  - Custom \u0060sort[...]\u0060 queries support up to 3 sort fields per request.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
         "operationId": "ListCollectionItemsLive",
         "parameters": [
           {
@@ -15334,7 +15334,7 @@
           "Sites"
         ],
         "summary": "Create Live Collection Item(s)",
-        "description": "Create item(s) in a collection that will be immediately published to the live site.\n\nThis endpoint accepts two request shapes, and a request must use one or the other:\n\n- **Single item** \u2014 send \u0060fieldData\u0060 at the top level. Set \u0060cmsLocaleId\u0060 to create the item in a specific locale.\n- **Multiple items** \u2014 send an \u0060items\u0060 array with at least one entry. Each entry needs its own \u0060fieldData\u0060, and can set its own \u0060cmsLocaleId\u0060, \u0060isDraft\u0060, and \u0060isArchived\u0060. The API ignores any other property on an entry.\n\n\u0060\u0060\u0060json\n{\n  \u0022items\u0022: [\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Senior Data Analyst\u0022,\n        \u0022slug\u0022: \u0022senior-data-analyst\u0022\n      }\n    },\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Product Manager\u0022,\n        \u0022slug\u0022: \u0022product-manager\u0022\n      }\n    }\n  ]\n}\n\u0060\u0060\u0060\n\nA request that carries both \u0060fieldData\u0060 and \u0060items\u0060 returns a \u0060400\u0060.\n\nTo create items across multiple locales, [please use this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nCreate item(s) in a collection that will be immediately published to the live site.\n\nThis endpoint accepts two request shapes, and a request must use one or the other:\n\n- **Single item** \u2014 send \u0060fieldData\u0060 at the top level. Set \u0060cmsLocaleId\u0060 to create the item in a specific locale.\n- **Multiple items** \u2014 send an \u0060items\u0060 array with at least one entry. Each entry needs its own \u0060fieldData\u0060, and can set its own \u0060cmsLocaleId\u0060, \u0060isDraft\u0060, and \u0060isArchived\u0060. The API ignores any other property on an entry.\n\n\u0060\u0060\u0060json\n{\n  \u0022items\u0022: [\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Senior Data Analyst\u0022,\n        \u0022slug\u0022: \u0022senior-data-analyst\u0022\n      }\n    },\n    {\n      \u0022isArchived\u0022: false,\n      \u0022isDraft\u0022: false,\n      \u0022fieldData\u0022: {\n        \u0022name\u0022: \u0022Product Manager\u0022,\n        \u0022slug\u0022: \u0022product-manager\u0022\n      }\n    }\n  ]\n}\n\u0060\u0060\u0060\n\nA request that carries both \u0060fieldData\u0060 and \u0060items\u0060 returns a \u0060400\u0060.\n\nTo create items across multiple locales, [please use this endpoint.](/data/reference/cms/collection-items/staged-items/create-items)\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "CreateItemLive",
         "parameters": [
           {
@@ -15538,7 +15538,7 @@
           "Sites"
         ],
         "summary": "Update Live Collection Items",
-        "description": "Update a single published item or multiple published items (up to 100) in a Collection\n\n\u003CTip title=\u0022Localization Tip\u0022\u003EItems will only be updated in the primary locale, unless a \u0060cmsLocaleId\u0060 is included in the request.\u003C/Tip\u003E\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nUpdate a single published item or multiple published items (up to 100) in a Collection\n\n\u003CTip title=\u0022Localization Tip\u0022\u003EItems will only be updated in the primary locale, unless a \u0060cmsLocaleId\u0060 is included in the request.\u003C/Tip\u003E\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "UpdateItemsLive",
         "parameters": [
           {
@@ -16036,7 +16036,7 @@
           "Sites"
         ],
         "summary": "Create Collection Items",
-        "description": "Create an item or multiple items in a CMS Collection across multiple corresponding locales.\n\n\u003CNote\u003E\n  - This endpoint can create up to 100 items in a request.\n  - If the \u0060cmsLocaleIds\u0060 parameter is not included in the request, an item will only be created in the primary locale.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nCreate an item or multiple items in a CMS Collection across multiple corresponding locales.\n\n\u003CNote\u003E\n  - This endpoint can create up to 100 items in a request.\n  - If the \u0060cmsLocaleIds\u0060 parameter is not included in the request, an item will only be created in the primary locale.\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "CreateItems",
         "parameters": [
           {
@@ -16373,7 +16373,7 @@
           "Sites"
         ],
         "summary": "Get Collection Item",
-        "description": "Get details of a selected Collection Item.\n\nRequired scope | \u0060CMS:read\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nGet details of a selected Collection Item.\n\nRequired scope | \u0060CMS:read\u0060\n",
         "operationId": "GetItem",
         "parameters": [
           {
@@ -16540,7 +16540,7 @@
           "Sites"
         ],
         "summary": "Update Collection Item",
-        "description": "Update a selected Item in a Collection.\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nUpdate a selected Item in a Collection.\n\n\u003CNote title=\u0022Draft status behavior\u0022\u003E\n  \u0060isDraft: true\u0060 doesn\u0027t unpublish an item. The resulting status depends on whether the item has been published before:\n\n  - **Item that has never been published:** the item gets a \u0060Draft\u0060 status.\n  - **Already-published item:** the item gets a \u0060Changes in draft\u0060 status. The live item stays published, and your changes are held back until you publish them.\n\n  Setting \u0060isDraft: false\u0060 queues the item to publish on the next site publish. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live). For the full status mapping, see [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing).\n\u003C/Note\u003E\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "UpdateItem",
         "parameters": [
           {
@@ -16861,7 +16861,7 @@
           "Sites"
         ],
         "summary": "Get Live Collection Item",
-        "description": "Get details of a selected Collection live Item.\n\n\u003CTip title=\u0022Serve data with the Content Delivery API\u0022\u003E\n  Serving data to applications in real-time? Use the Content Delivery API at \u0060api-cdn.webflow.com\u0060 for better performance. The CDN-backed endpoint is optimized for high-volume reads, while the Data API is designed for writes and management operations.\n\u003C/Tip\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nGet details of a selected Collection live Item.\n\n\u003CTip title=\u0022Serve data with the Content Delivery API\u0022\u003E\n  Serving data to applications in real-time? Use the Content Delivery API at \u0060api-cdn.webflow.com\u0060 for better performance. The CDN-backed endpoint is optimized for high-volume reads, while the Data API is designed for writes and management operations.\n\u003C/Tip\u003E\n\nRequired scope | \u0060CMS:read\u0060\n",
         "operationId": "GetItemLive",
         "parameters": [
           {
@@ -17038,7 +17038,7 @@
           "Sites"
         ],
         "summary": "Update Live Collection Item",
-        "description": "Update a selected live Item in a Collection. The updates for this Item will be published to the live site.\n\nRequired scope | \u0060CMS:write\u0060\n",
+        "description": "\u003CTip title=\u0022Components in Rich Text\u0022\u003E\n  Rich Text field values may contain Webflow component instances as \u0060\u003Cwf-component\u003E\u0060 markup. On read they appear inline in the field\u0027s HTML; on write, the same markup creates or updates the instance.\n\n  Scalar props are \u0060prop-\u003CpropId\u003E=\u0022\u2026\u0022\u0060 attributes on the \u0060\u003Cwf-component\u003E\u0060. Text and rich-text props are nested \u0060\u003Cwf-prop name=\u0022\u003CpropId\u003E\u0022 type=\u0022text|richtext\u0022\u003E\u2026\u003C/wf-prop\u003E\u0060 children.\n\n  A write is rejected with a \u0060400\u0060 if a component can\u0027t be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.\n\n  \u0060component-id\u0060 and each \u0060prop-\u003CpropId\u003E\u0060 are specific to your site\u0027s component definition \u2014 obtain them by listing your site\u0027s components (\u0060GET /v2/sites/{site_id}/components\u0060, plus \u0060/components/{component_id}/properties\u0060 for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit \u0060data-w-id\u0060 when creating an instance (the server assigns it); keep it when updating one.\n\u003C/Tip\u003E\n\nUpdate a selected live Item in a Collection. The updates for this Item will be published to the live site.\n\nRequired scope | \u0060CMS:write\u0060\n",
         "operationId": "UpdateItemLive",
         "parameters": [
           {
@@ -42219,7 +42219,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is in a draft state.",
+            "description": "Whether the item is created in a draft state. A new item has never been published, so \u0060isDraft: true\u0060 gives it a \u0060Draft\u0060 status. Set \u0060isDraft: false\u0060 to queue the item to publish on the next site publish.\n",
             "default": true,
             "example": true
           },
@@ -42286,7 +42286,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -42576,7 +42576,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -43245,7 +43245,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -43311,7 +43311,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -44316,7 +44316,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is created in a draft state. A new item has never been published, so \u0060isDraft: true\u0060 gives it a \u0060Draft\u0060 status. Set \u0060isDraft: false\u0060 to queue the item to publish on the next site publish.\n",
             "default": false
           },
           "fieldData": {
@@ -44583,7 +44583,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -44845,7 +44845,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft"
+            "description": "Sets the item\u0027s draft state. The resulting status depends on whether the item has been published before:\n\n- **Item that has never been published:** \u0060isDraft: true\u0060 results in a \u0060Draft\u0060 status.\n- **Already-published item:** \u0060isDraft: true\u0060 results in a \u0060Changes in draft\u0060 status. The live item stays published, and your changes are held back until you publish them.\n\nSetting \u0060isDraft: true\u0060 never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).\n"
           },
           "fieldData": {
             "$ref": "#/components/schemas/UpdateItemRequestFieldData"
@@ -44945,7 +44945,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -45381,7 +45381,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -45643,7 +45643,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft"
+            "description": "Sets the item\u0027s draft state. The resulting status depends on whether the item has been published before:\n\n- **Item that has never been published:** \u0060isDraft: true\u0060 results in a \u0060Draft\u0060 status.\n- **Already-published item:** \u0060isDraft: true\u0060 results in a \u0060Changes in draft\u0060 status. The live item stays published, and your changes are held back until you publish them.\n\nSetting \u0060isDraft: true\u0060 never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).\n"
           },
           "fieldData": {
             "$ref": "#/components/schemas/UpdateItemLiveRequestFieldData"
@@ -45743,7 +45743,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -68145,7 +68145,7 @@
             "$ref": "#/components/schemas/CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"
           },
           {
-            "$ref": "#/components/schemas/CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"
+            "type": "object"
           }
         ]
       },
@@ -68164,7 +68164,7 @@
             "$ref": "#/components/schemas/CollectionDetails200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"
           },
           {
-            "$ref": "#/components/schemas/CollectionDetails200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"
+            "type": "object"
           }
         ]
       },
@@ -68183,7 +68183,7 @@
             "$ref": "#/components/schemas/PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"
           },
           {
-            "$ref": "#/components/schemas/PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"
+            "type": "object"
           }
         ]
       },
@@ -68524,7 +68524,7 @@
             "$ref": "#/components/schemas/UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4"
           },
           {
-            "$ref": "#/components/schemas/UpdateField200ResponseValidationsAdditionalPropertiesOneOf5"
+            "type": "object"
           }
         ]
       },
@@ -68574,7 +68574,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is in a draft state.",
+            "description": "Whether the item is created in a draft state. A new item has never been published, so \u0060isDraft: true\u0060 gives it a \u0060Draft\u0060 status. Set \u0060isDraft: false\u0060 to queue the item to publish on the next site publish.\n",
             "default": true,
             "example": true
           },
@@ -68693,7 +68693,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -68855,7 +68855,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -69731,18 +69731,6 @@
           }
         },
         "x-fern-type-name": "Reference Field"
-      },
-      "CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5": {
-        "type": "object"
-      },
-      "CollectionDetails200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5": {
-        "type": "object"
-      },
-      "PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5": {
-        "type": "object"
-      },
-      "UpdateField200ResponseValidationsAdditionalPropertiesOneOf5": {
-        "type": "object"
       },
       "CreateItemsRequestFieldDataSingleCmsItem": {
         "title": "Single CMS Item",
@@ -73201,7 +73189,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -73343,7 +73331,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft"
+            "description": "Sets the item\u0027s draft state. The resulting status depends on whether the item has been published before:\n\n- **Item that has never been published:** \u0060isDraft: true\u0060 results in a \u0060Draft\u0060 status.\n- **Already-published item:** \u0060isDraft: true\u0060 results in a \u0060Changes in draft\u0060 status. The live item stays published, and your changes are held back until you publish them.\n\nSetting \u0060isDraft: true\u0060 never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).\n"
           },
           "fieldData": {
             "$ref": "#/components/schemas/UpdateItemsRequestItemsItemFieldData"
@@ -73474,7 +73462,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -73616,7 +73604,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft"
+            "description": "Sets the item\u0027s draft state. The resulting status depends on whether the item has been published before:\n\n- **Item that has never been published:** \u0060isDraft: true\u0060 results in a \u0060Draft\u0060 status.\n- **Already-published item:** \u0060isDraft: true\u0060 results in a \u0060Changes in draft\u0060 status. The live item stays published, and your changes are held back until you publish them.\n\nSetting \u0060isDraft: true\u0060 never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).\n"
           },
           "fieldData": {
             "$ref": "#/components/schemas/UpdateItemsLiveRequestItemsItemFieldData"
@@ -73721,7 +73709,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -82639,7 +82627,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is in a draft state.",
+            "description": "Whether the item is created in a draft state. A new item has never been published, so \u0060isDraft: true\u0060 gives it a \u0060Draft\u0060 status. Set \u0060isDraft: false\u0060 to queue the item to publish on the next site publish.\n",
             "default": true,
             "example": true
           },
@@ -82765,7 +82753,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -82914,7 +82902,7 @@
           },
           "isDraft": {
             "type": "boolean",
-            "description": "Boolean determining if the Item is set to draft",
+            "description": "Whether the item is in a draft state. Together with \u0060lastPublished\u0060, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.\n",
             "default": false
           },
           "fieldData": {
@@ -241620,7 +241608,20 @@
             }
           }
         },
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "site_publish": {
@@ -241666,7 +241667,20 @@
             }
           }
         },
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "ecomm_order_changed": {
@@ -241687,7 +241701,20 @@
             }
           }
         },
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "ecomm_inventory_changed": {
@@ -241950,7 +241977,20 @@
             }
           }
         },
-        "responses": {}
+        "responses": {
+          "201": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

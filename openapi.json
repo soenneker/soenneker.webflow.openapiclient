@@ -34712,6 +34712,16 @@ paths:
       operationId: list-collection-items
       summary: List Collection Items
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         List of all Items within a Collection.
 
         <Note>
@@ -35092,7 +35102,8 @@ paths:
                         isDraft:
                           type: boolean
                           default: false
-                          description: Boolean determining if the Item is set to draft
+                          description: |
+                            Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                         fieldData:
                           type: object
                           required:
@@ -35583,6 +35594,16 @@ paths:
       operationId: create-item
       summary: Create Collection Item(s)
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Create Item(s) in a Collection.
 
         This endpoint accepts two request shapes, and a request must use one or the other:
@@ -35693,7 +35714,8 @@ paths:
                       type: boolean
                       default: true
                       example: true
-                      description: Boolean determining if the Item is in a draft state.
+                      description: |
+                        Whether the item is created in a draft state. A new item has never been published, so `isDraft: true` gives it a `Draft` status. Set `isDraft: false` to queue the item to publish on the next site publish.
                     fieldData:
                       type: object
                       required:
@@ -35800,7 +35822,8 @@ paths:
                             type: boolean
                             default: true
                             example: true
-                            description: Boolean determining if the Item is in a draft state.
+                            description: |
+                              Whether the item is created in a draft state. A new item has never been published, so `isDraft: true` gives it a `Draft` status. Set `isDraft: false` to queue the item to publish on the next site publish.
                           fieldData:
                             type: object
                             required:
@@ -35940,7 +35963,8 @@ paths:
                   isDraft:
                     type: boolean
                     default: false
-                    description: Boolean determining if the Item is set to draft
+                    description: |
+                      Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                   fieldData:
                     type: object
                     required:
@@ -36456,11 +36480,30 @@ paths:
       operationId: update-items
       summary: Update Collection Items
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Update a single item or multiple items in a Collection.
 
         The limit for this endpoint is 100 items.
 
         <Tip title="Localization Tip">Items will only be updated in the primary locale, unless a `cmsLocaleId` is included in the request.</Tip>
+
+        <Note title="Draft status behavior">
+          `isDraft: true` doesn't unpublish an item. The resulting status depends on whether the item has been published before:
+
+          - **Item that has never been published:** the item gets a `Draft` status.
+          - **Already-published item:** the item gets a `Changes in draft` status. The live item stays published, and your changes are held back until you publish them.
+
+          Setting `isDraft: false` queues the item to publish on the next site publish. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live). For the full status mapping, see [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing).
+        </Note>
 
         Required scope | `CMS:write`
       tags:
@@ -36530,7 +36573,13 @@ paths:
                         description: Boolean determining if the Item is set to archived
                       isDraft:
                         type: boolean
-                        description: Boolean determining if the Item is set to draft
+                        description: |
+                          Sets the item's draft state. The resulting status depends on whether the item has been published before:
+
+                          - **Item that has never been published:** `isDraft: true` results in a `Draft` status.
+                          - **Already-published item:** `isDraft: true` results in a `Changes in draft` status. The live item stays published, and your changes are held back until you publish them.
+
+                          Setting `isDraft: true` never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).
                       fieldData:
                         type: object
                         properties:
@@ -36692,7 +36741,8 @@ paths:
                       isDraft:
                         type: boolean
                         default: false
-                        description: Boolean determining if the Item is set to draft
+                        description: |
+                          Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                       fieldData:
                         type: object
                         required:
@@ -36834,7 +36884,8 @@ paths:
                             isDraft:
                               type: boolean
                               default: false
-                              description: Boolean determining if the Item is set to draft
+                              description: |
+                                Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                             fieldData:
                               type: object
                               required:
@@ -37963,6 +38014,16 @@ paths:
       operationId: list-collection-items-live
       summary: List Live Collection Items
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         List all published items in a collection.
 
         <Tip title="Serve data with the Content Delivery API">
@@ -38344,7 +38405,8 @@ paths:
                         isDraft:
                           type: boolean
                           default: false
-                          description: Boolean determining if the Item is set to draft
+                          description: |
+                            Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                         fieldData:
                           type: object
                           required:
@@ -38838,6 +38900,16 @@ paths:
       operationId: create-item-live
       summary: Create Live Collection Item(s)
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Create item(s) in a collection that will be immediately published to the live site.
 
         This endpoint accepts two request shapes, and a request must use one or the other:
@@ -38949,7 +39021,8 @@ paths:
                     isDraft:
                       type: boolean
                       default: false
-                      description: Boolean determining if the Item is set to draft
+                      description: |
+                        Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                     fieldData:
                       type: object
                       required:
@@ -39064,7 +39137,8 @@ paths:
                           isDraft:
                             type: boolean
                             default: false
-                            description: Boolean determining if the Item is set to draft
+                            description: |
+                              Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                           fieldData:
                             type: object
                             required:
@@ -39209,7 +39283,8 @@ paths:
                   isDraft:
                     type: boolean
                     default: false
-                    description: Boolean determining if the Item is set to draft
+                    description: |
+                      Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                   fieldData:
                     type: object
                     required:
@@ -39686,6 +39761,16 @@ paths:
       operationId: update-items-live
       summary: Update Live Collection Items
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Update a single published item or multiple published items (up to 100) in a Collection
 
         <Tip title="Localization Tip">Items will only be updated in the primary locale, unless a `cmsLocaleId` is included in the request.</Tip>
@@ -39758,7 +39843,13 @@ paths:
                         description: Boolean determining if the Item is set to archived
                       isDraft:
                         type: boolean
-                        description: Boolean determining if the Item is set to draft
+                        description: |
+                          Sets the item's draft state. The resulting status depends on whether the item has been published before:
+
+                          - **Item that has never been published:** `isDraft: true` results in a `Draft` status.
+                          - **Already-published item:** `isDraft: true` results in a `Changes in draft` status. The live item stays published, and your changes are held back until you publish them.
+
+                          Setting `isDraft: true` never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).
                       fieldData:
                         type: object
                         properties:
@@ -39955,7 +40046,8 @@ paths:
                         isDraft:
                           type: boolean
                           default: false
-                          description: Boolean determining if the Item is set to draft
+                          description: |
+                            Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                         fieldData:
                           type: object
                           required:
@@ -41077,6 +41169,16 @@ paths:
       operationId: create-items
       summary: Create Collection Items
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Create an item or multiple items in a CMS Collection across multiple corresponding locales.
 
         <Note>
@@ -41304,7 +41406,8 @@ paths:
                   isDraft:
                     type: boolean
                     default: false
-                    description: Boolean determining if the Item is set to draft
+                    description: |
+                      Whether the item is created in a draft state. A new item has never been published, so `isDraft: true` gives it a `Draft` status. Set `isDraft: false` to queue the item to publish on the next site publish.
                   fieldData:
                     type: object
                     properties:
@@ -41879,6 +41982,16 @@ paths:
       operationId: Get-Item
       summary: Get Collection Item
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Get details of a selected Collection Item.
 
         Required scope | `CMS:read`
@@ -41982,7 +42095,8 @@ paths:
                   isDraft:
                     type: boolean
                     default: false
-                    description: Boolean determining if the Item is set to draft
+                    description: |
+                      Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                   fieldData:
                     type: object
                     required:
@@ -42459,7 +42573,26 @@ paths:
       operationId: update-item
       summary: Update Collection Item
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Update a selected Item in a Collection.
+
+        <Note title="Draft status behavior">
+          `isDraft: true` doesn't unpublish an item. The resulting status depends on whether the item has been published before:
+
+          - **Item that has never been published:** the item gets a `Draft` status.
+          - **Already-published item:** the item gets a `Changes in draft` status. The live item stays published, and your changes are held back until you publish them.
+
+          Setting `isDraft: false` queues the item to publish on the next site publish. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live). For the full status mapping, see [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing).
+        </Note>
 
         Required scope | `CMS:write`
       tags:
@@ -42532,7 +42665,13 @@ paths:
                   description: Boolean determining if the Item is set to archived
                 isDraft:
                   type: boolean
-                  description: Boolean determining if the Item is set to draft
+                  description: |
+                    Sets the item's draft state. The resulting status depends on whether the item has been published before:
+
+                    - **Item that has never been published:** `isDraft: true` results in a `Draft` status.
+                    - **Already-published item:** `isDraft: true` results in a `Changes in draft` status. The live item stays published, and your changes are held back until you publish them.
+
+                    Setting `isDraft: true` never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).
                 fieldData:
                   type: object
                   properties:
@@ -42635,7 +42774,8 @@ paths:
                   isDraft:
                     type: boolean
                     default: false
-                    description: Boolean determining if the Item is set to draft
+                    description: |
+                      Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                   fieldData:
                     type: object
                     required:
@@ -43571,6 +43711,16 @@ paths:
       operationId: get-item-live
       summary: Get Live Collection Item
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Get details of a selected Collection live Item.
 
         <Tip title="Serve data with the Content Delivery API">
@@ -43678,7 +43828,8 @@ paths:
                   isDraft:
                     type: boolean
                     default: false
-                    description: Boolean determining if the Item is set to draft
+                    description: |
+                      Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                   fieldData:
                     type: object
                     required:
@@ -44155,6 +44306,16 @@ paths:
       operationId: update-item-live
       summary: Update Live Collection Item
       description: |
+        <Tip title="Components in Rich Text">
+          Rich Text field values may contain Webflow component instances as `<wf-component>` markup. On read they appear inline in the field's HTML; on write, the same markup creates or updates the instance.
+
+          Scalar props are `prop-<propId>="…"` attributes on the `<wf-component>`. Text and rich-text props are nested `<wf-prop name="<propId>" type="text|richtext">…</wf-prop>` children.
+
+          A write is rejected with a `400` if a component can't be resolved, contains a Collection List, populates a Slot (a component with an unpopulated Slot is allowed), includes an unknown prop, or creates a new instance in a secondary locale.
+
+          `component-id` and each `prop-<propId>` are specific to your site's component definition — obtain them by listing your site's components (`GET /v2/sites/{site_id}/components`, plus `/components/{component_id}/properties` for prop IDs) or by reading an item that already contains the component and reusing the returned markup. Omit `data-w-id` when creating an instance (the server assigns it); keep it when updating one.
+        </Tip>
+
         Update a selected live Item in a Collection. The updates for this Item will be published to the live site.
 
         Required scope | `CMS:write`
@@ -44228,7 +44389,13 @@ paths:
                   description: Boolean determining if the Item is set to archived
                 isDraft:
                   type: boolean
-                  description: Boolean determining if the Item is set to draft
+                  description: |
+                    Sets the item's draft state. The resulting status depends on whether the item has been published before:
+
+                    - **Item that has never been published:** `isDraft: true` results in a `Draft` status.
+                    - **Already-published item:** `isDraft: true` results in a `Changes in draft` status. The live item stays published, and your changes are held back until you publish them.
+
+                    Setting `isDraft: true` never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).
                 fieldData:
                   type: object
                   properties:
@@ -44331,7 +44498,8 @@ paths:
                   isDraft:
                     type: boolean
                     default: false
-                    description: Boolean determining if the Item is set to draft
+                    description: |
+                      Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.
                   fieldData:
                     type: object
                     required:

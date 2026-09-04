@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "492ACDCFD7AE53B93338B9E9ACFDA871B705A2E4BD9ACDF92DC22EEE0AB3A9FBBC33FE3427073179F1B2615E36B908E29392BE2A0C1FFEAC4EAC3AB0DD90C379",
+  "descriptionHash": "E62F82E1A21D469224AAF92E44999A284CEDC32575A0721B10F35599E25D18C1ADF76AFDDE9350740D4019BF9805BB0BE2D68718585DB3130931979A8B52BADC",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.34.1",
+  "kiotaVersion": "1.35.0",
   "clientClassName": "WebflowOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Webflow.OpenApiClient",

@@ -49,7 +49,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 #endif
         /// <summary>Boolean determining if the Item is in an archived state.</summary>
         public bool? IsArchived { get; set; }
-        /// <summary>Boolean determining if the Item is in a draft state.</summary>
+        /// <summary>Whether the item is created in a draft state. A new item has never been published, so `isDraft: true` gives it a `Draft` status. Set `isDraft: false` to queue the item to publish on the next site publish.</summary>
         public bool? IsDraft { get; set; }
         /// <summary>The date the item was last published</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

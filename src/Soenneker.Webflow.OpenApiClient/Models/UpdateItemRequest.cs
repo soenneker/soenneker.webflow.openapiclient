@@ -49,7 +49,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 #endif
         /// <summary>Boolean determining if the Item is set to archived</summary>
         public bool? IsArchived { get; set; }
-        /// <summary>Boolean determining if the Item is set to draft</summary>
+        /// <summary>Sets the item&apos;s draft state. The resulting status depends on whether the item has been published before:- **Item that has never been published:** `isDraft: true` results in a `Draft` status.- **Already-published item:** `isDraft: true` results in a `Changes in draft` status. The live item stays published, and your changes are held back until you publish them.Setting `isDraft: true` never unpublishes an item. To remove an item from the live site, use [Unpublish Live Collection Items](/data/reference/cms/collection-items/live-items/delete-items-live).</summary>
         public bool? IsDraft { get; set; }
         /// <summary>The date the item was last published</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

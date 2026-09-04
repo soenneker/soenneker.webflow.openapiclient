@@ -49,7 +49,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 #endif
         /// <summary>Boolean determining if the Item is set to archived</summary>
         public bool? IsArchived { get; set; }
-        /// <summary>Boolean determining if the Item is set to draft</summary>
+        /// <summary>Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.</summary>
         public bool? IsDraft { get; set; }
         /// <summary>The date the item was last published</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
