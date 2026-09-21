@@ -39,7 +39,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldData();
-            if("CreateItemsRequestFieldDataSingleCmsItem".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("CreateItemsApplicationJsonFieldDataBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CreateItemsApplicationJsonFieldDataBranch2 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsApplicationJsonFieldDataBranch2();
+            }
+            else if("CreateItemsRequestFieldDataSingleCmsItem".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CreateItemsRequestFieldDataSingleCmsItem = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem();
             }

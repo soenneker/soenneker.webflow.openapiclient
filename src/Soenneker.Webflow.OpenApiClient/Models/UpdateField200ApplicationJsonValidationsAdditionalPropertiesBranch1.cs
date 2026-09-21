@@ -14,6 +14,14 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The value property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Value { get; set; }
+#nullable restore
+#else
+        public string Value { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch1"/> and sets the default values.
         /// </summary>
@@ -39,6 +47,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "value", n => { Value = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -48,6 +57,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

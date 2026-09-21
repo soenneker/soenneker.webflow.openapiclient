@@ -63,6 +63,22 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalProperties();
+            if("UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch1 = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch1();
+            }
+            else if("UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch2 = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch2();
+            }
+            else if("UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch3 = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch3();
+            }
+            else if("UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4 = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4();
+            }
             return result;
         }
         /// <summary>

@@ -63,6 +63,22 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollection200ResponseFieldsItemValidationsAdditionalProperties();
+            if("PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1 = new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1();
+            }
+            else if("PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2 = new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2();
+            }
+            else if("PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3 = new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3();
+            }
+            else if("PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4 = new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4();
+            }
             return result;
         }
         /// <summary>

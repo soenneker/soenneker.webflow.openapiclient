@@ -63,6 +63,22 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalProperties();
+            if("CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1();
+            }
+            else if("CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2();
+            }
+            else if("CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3();
+            }
+            else if("CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4();
+            }
             return result;
         }
         /// <summary>
