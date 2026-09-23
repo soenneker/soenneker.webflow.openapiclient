@@ -36037,6 +36037,26 @@
         }
       },
       "SetWellKnownRequest": {
+        "examples": [
+          {
+            "appleAppSiteAssociation": {
+              "summary": "Apple App Site Association",
+              "value": {
+                "fileName": "apple-app-site-association.txt",
+                "fileData": "{\n  \u0022applinks\u0022: {\n    \u0022apps\u0022: [],\n    \u0022details\u0022: [\n  {\n    \u0022appID\u0022: \u0022ABCDE12345.com.example.app\u0022,\n    \u0022paths\u0022: [ \u0022/*\u0022, \u0022/some/path/*\u0022 ]\n      }\n    ]\n  }\n}\n",
+                "contentType": "application/json"
+              }
+            },
+            "appleDeveloperMerchantIdDomainAssociation": {
+              "summary": "Apple Developer Merchant ID Domain Association",
+              "value": {
+                "fileName": "apple-developer-merchantid-domain-association.txt",
+                "fileData": "{\n  \u0022merchantId\u0022: \u0022merchant.com.example\u0022,\n  \u0022merchantName\u0022: \u0022Example Inc.\u0022,\n  \u0022domainAssociation\u0022: \u0022web\u0022\n}\n",
+                "contentType": "text/plain"
+              }
+            }
+          }
+        ],
         "required": [
           "fileName",
           "fileData"
@@ -36044,10 +36064,34 @@
         "type": "object",
         "properties": {
           "fileName": {
+            "examples": [
+              {
+                "example1": {
+                  "summary": "Apple App Site Association",
+                  "value": "apple-app-site-association.txt"
+                },
+                "example2": {
+                  "summary": "Apple Developer Merchant ID Domain Association",
+                  "value": "apple-developer-merchantid-domain-association.txt"
+                }
+              }
+            ],
             "type": "string",
             "description": "The name of the file"
           },
           "fileData": {
+            "examples": [
+              {
+                "example1": {
+                  "summary": "Apple App Site Association File Example",
+                  "value": "{\n  \u0022applinks\u0022: {\n    \u0022apps\u0022: [],\n    \u0022details\u0022: [\n      {\n        \u0022appID\u0022: \u0022ABCDE12345.com.example.app\u0022,\n        \u0022paths\u0022: [ \u0022/*\u0022, \u0022/some/path/*\u0022 ]\n      }\n    ]\n  }\n}\n"
+                },
+                "example2": {
+                  "summary": "Apple Developer Merchant ID Domain Association File Example",
+                  "value": "{\n  \u0022merchantId\u0022: \u0022merchant.com.example\u0022,\n  \u0022merchantName\u0022: \u0022Example Inc.\u0022,\n  \u0022domainAssociation\u0022: \u0022web\u0022\n}\n"
+                }
+              }
+            ],
             "type": "string",
             "description": "The contents of the file"
           },
@@ -40936,6 +40980,50 @@
         }
       },
       "CreateFieldRequest": {
+        "examples": [
+          {
+            "StaticField": {
+              "id": "562ac0395358780a1f5e6fbc",
+              "isEditable": true,
+              "type": "RichText",
+              "isRequired": false,
+              "displayName": "Post Body",
+              "helpText": "Add the body of your post here"
+            },
+            "OptionField": {
+              "id": "562ac0395358780a1f5e6fbc",
+              "isEditable": true,
+              "type": "Option",
+              "isRequired": false,
+              "displayName": "Post Type",
+              "helpText": "Add the body of your post here",
+              "metadata": {
+                "options": [
+                  {
+                    "name": "Feature"
+                  },
+                  {
+                    "name": "News"
+                  },
+                  {
+                    "name": "Product Highlight"
+                  }
+                ]
+              }
+            },
+            "ReferenceField": {
+              "id": "562ac0395358780a1f5e6fbd",
+              "isEditable": true,
+              "type": "Reference",
+              "isRequired": false,
+              "displayName": "Author",
+              "helpText": "Add the post author here",
+              "metadata": {
+                "collectionId": "63692ab61fb2852f582ba8f5"
+              }
+            }
+          }
+        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateFieldRequestStaticField"
@@ -40977,6 +41065,50 @@
         "description": "Details about the field of a collection"
       },
       "CreateField200Response": {
+        "examples": [
+          {
+            "StaticField": {
+              "id": "562ac0395358780a1f5e6fbc",
+              "isEditable": true,
+              "type": "RichText",
+              "isRequired": false,
+              "displayName": "Post Body",
+              "helpText": "Add the body of your post here"
+            },
+            "OptionField": {
+              "id": "562ac0395358780a1f5e6fbc",
+              "isEditable": true,
+              "type": "Option",
+              "isRequired": false,
+              "displayName": "Post Type",
+              "helpText": "Add the body of your post here",
+              "metadata": {
+                "options": [
+                  {
+                    "name": "Feature"
+                  },
+                  {
+                    "name": "News"
+                  },
+                  {
+                    "name": "Product Highlight"
+                  }
+                ]
+              }
+            },
+            "ReferenceField": {
+              "id": "562ac0395358780a1f5e6fbd",
+              "isEditable": true,
+              "type": "Reference",
+              "isRequired": false,
+              "displayName": "Author",
+              "helpText": "Add the post author here",
+              "metadata": {
+                "collectionId": "63692ab61fb2852f582ba8f5"
+              }
+            }
+          }
+        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateField200ResponseStaticField"
@@ -43729,6 +43861,47 @@
         }
       },
       "CreateItemsRequest": {
+        "examples": [
+          {
+            "SingleItemMultipleLocales": {
+              "summary": "Create a single item across multiple locales",
+              "value": {
+                "cmsLocaleIds": [
+                  "66f6e966c9e1dc700a857ca3",
+                  "66f6e966c9e1dc700a857ca4",
+                  "66f6e966c9e1dc700a857ca5"
+                ],
+                "isArchived": false,
+                "isDraft": false,
+                "fieldData": {
+                  "name": "Don\u2019t Panic",
+                  "slug": "dont-panic"
+                }
+              }
+            },
+            "MultipleItemsMultipleLocales": {
+              "summary": "Create multiple items across multiple locales",
+              "value": {
+                "cmsLocaleIds": [
+                  "66f6e966c9e1dc700a857ca3",
+                  "66f6e966c9e1dc700a857ca4"
+                ],
+                "isArchived": false,
+                "isDraft": false,
+                "fieldData": [
+                  {
+                    "name": "Don\u2019t Panic",
+                    "slug": "dont-panic"
+                  },
+                  {
+                    "name": "So Long and Thanks for All the Fish",
+                    "slug": "so-long-and-thanks"
+                  }
+                ]
+              }
+            }
+          }
+        ],
         "required": [
           "fieldData"
         ],
@@ -67470,6 +67643,50 @@
         }
       },
       "CreateCollectionRequestFieldsItem": {
+        "examples": [
+          {
+            "StaticField": {
+              "id": "562ac0395358780a1f5e6fbc",
+              "isEditable": true,
+              "type": "RichText",
+              "isRequired": false,
+              "displayName": "Post Body",
+              "helpText": "Add the body of your post here"
+            },
+            "OptionField": {
+              "id": "562ac0395358780a1f5e6fbc",
+              "isEditable": true,
+              "type": "Option",
+              "isRequired": false,
+              "displayName": "Post Type",
+              "helpText": "Add the body of your post here",
+              "metadata": {
+                "options": [
+                  {
+                    "name": "Feature"
+                  },
+                  {
+                    "name": "News"
+                  },
+                  {
+                    "name": "Product Highlight"
+                  }
+                ]
+              }
+            },
+            "ReferenceField": {
+              "id": "562ac0395358780a1f5e6fbd",
+              "isEditable": true,
+              "type": "Reference",
+              "isRequired": false,
+              "displayName": "Author",
+              "helpText": "Add the post author here",
+              "metadata": {
+                "collectionId": "63692ab61fb2852f582ba8f5"
+              }
+            }
+          }
+        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/CreateCollectionRequestFieldsItemStaticField"
