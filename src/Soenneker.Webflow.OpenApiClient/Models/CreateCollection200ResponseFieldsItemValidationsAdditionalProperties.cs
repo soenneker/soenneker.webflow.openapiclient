@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch1"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch2"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch3"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateCollection200ResponseFieldsItemValidationsAdditionalProperties : IComposedTypeWrapper, IParsable
@@ -45,13 +45,13 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 #else
         public global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4 CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1? CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1 { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5? CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1 CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1 { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -79,6 +79,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 result.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4();
             }
+            else if("CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5();
+            }
             return result;
         }
         /// <summary>
@@ -103,9 +107,9 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 return CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4.GetFieldDeserializers();
             }
-            else if(CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1 != null)
+            else if(CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null)
             {
-                return CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1.GetFieldDeserializers();
+                return CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -132,9 +136,9 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4>(null, CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4);
             }
-            else if(CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1 != null)
+            else if(CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1>(null, CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesMember1);
+                writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5>(null, CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5);
             }
         }
     }

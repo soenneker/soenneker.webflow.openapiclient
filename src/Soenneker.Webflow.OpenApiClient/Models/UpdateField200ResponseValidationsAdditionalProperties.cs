@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch1"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch2"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch3"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesMember1"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch1"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch2"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch3"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesOneOf5"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateField200ResponseValidationsAdditionalProperties : IComposedTypeWrapper, IParsable
@@ -45,13 +45,13 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 #else
         public global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4 UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesMember1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesOneOf5"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesMember1? UpdateField200ResponseValidationsAdditionalPropertiesMember1 { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesOneOf5? UpdateField200ResponseValidationsAdditionalPropertiesOneOf5 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesMember1 UpdateField200ResponseValidationsAdditionalPropertiesMember1 { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesOneOf5 UpdateField200ResponseValidationsAdditionalPropertiesOneOf5 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -79,6 +79,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 result.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4 = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4();
             }
+            else if("UpdateField200ResponseValidationsAdditionalPropertiesOneOf5".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.UpdateField200ResponseValidationsAdditionalPropertiesOneOf5 = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesOneOf5();
+            }
             return result;
         }
         /// <summary>
@@ -103,9 +107,9 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 return UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4.GetFieldDeserializers();
             }
-            else if(UpdateField200ResponseValidationsAdditionalPropertiesMember1 != null)
+            else if(UpdateField200ResponseValidationsAdditionalPropertiesOneOf5 != null)
             {
-                return UpdateField200ResponseValidationsAdditionalPropertiesMember1.GetFieldDeserializers();
+                return UpdateField200ResponseValidationsAdditionalPropertiesOneOf5.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -132,9 +136,9 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4>(null, UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4);
             }
-            else if(UpdateField200ResponseValidationsAdditionalPropertiesMember1 != null)
+            else if(UpdateField200ResponseValidationsAdditionalPropertiesOneOf5 != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesMember1>(null, UpdateField200ResponseValidationsAdditionalPropertiesMember1);
+                writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateField200ResponseValidationsAdditionalPropertiesOneOf5>(null, UpdateField200ResponseValidationsAdditionalPropertiesOneOf5);
             }
         }
     }

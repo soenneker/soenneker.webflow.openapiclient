@@ -67742,9 +67742,12 @@
             "$ref": "#/components/schemas/CreateCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"
           },
           {
-            "type": "object"
+            "$ref": "#/components/schemas/CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"
           }
-        ]
+        ],
+        "properties": {
+          "additionalProperties": {}
+        }
       },
       "CollectionDetails200ResponseFieldsItemValidationsAdditionalProperties": {
         "oneOf": [
@@ -67761,9 +67764,12 @@
             "$ref": "#/components/schemas/CollectionDetails200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"
           },
           {
-            "type": "object"
+            "$ref": "#/components/schemas/CollectionDetails200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"
           }
-        ]
+        ],
+        "properties": {
+          "additionalProperties": {}
+        }
       },
       "PatchCollection200ResponseFieldsItemValidationsAdditionalProperties": {
         "oneOf": [
@@ -67780,9 +67786,12 @@
             "$ref": "#/components/schemas/PatchCollection200ApplicationJsonFieldsItemValidationsAdditionalPropertiesBranch4"
           },
           {
-            "type": "object"
+            "$ref": "#/components/schemas/PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"
           }
-        ]
+        ],
+        "properties": {
+          "additionalProperties": {}
+        }
       },
       "CreateFieldRequestStaticField": {
         "title": "Static Field",
@@ -68121,9 +68130,12 @@
             "$ref": "#/components/schemas/UpdateField200ApplicationJsonValidationsAdditionalPropertiesBranch4"
           },
           {
-            "type": "object"
+            "$ref": "#/components/schemas/UpdateField200ResponseValidationsAdditionalPropertiesOneOf5"
           }
-        ]
+        ],
+        "properties": {
+          "additionalProperties": {}
+        }
       },
       "CreateItemRequestSingleItem": {
         "title": "Single Item",
@@ -69337,6 +69349,30 @@
           }
         },
         "x-fern-type-name": "Reference Field"
+      },
+      "CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5": {
+        "type": "object",
+        "properties": {
+          "additionalProperties": {}
+        }
+      },
+      "CollectionDetails200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5": {
+        "type": "object",
+        "properties": {
+          "additionalProperties": {}
+        }
+      },
+      "PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5": {
+        "type": "object",
+        "properties": {
+          "additionalProperties": {}
+        }
+      },
+      "UpdateField200ResponseValidationsAdditionalPropertiesOneOf5": {
+        "type": "object",
+        "properties": {
+          "additionalProperties": {}
+        }
       },
       "CreateItemsRequestFieldDataSingleCmsItem": {
         "title": "Single CMS Item",
