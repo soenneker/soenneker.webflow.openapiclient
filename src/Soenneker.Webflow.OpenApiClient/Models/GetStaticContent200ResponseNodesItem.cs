@@ -77,33 +77,33 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem();
-            if("GetStaticContent200ResponseNodesItemComponentNode".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("component-instance".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetStaticContent200ResponseNodesItemComponentNode = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItemComponentNode();
             }
-            else if("GetStaticContent200ResponseNodesItemImageNode".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("image".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetStaticContent200ResponseNodesItemImageNode = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItemImageNode();
             }
-            else if("GetStaticContent200ResponseNodesItemSearchButtonNode".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("search-button".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetStaticContent200ResponseNodesItemSearchButtonNode = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItemSearchButtonNode();
             }
-            else if("GetStaticContent200ResponseNodesItemSelectNode".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("select".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetStaticContent200ResponseNodesItemSelectNode = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItemSelectNode();
             }
-            else if("GetStaticContent200ResponseNodesItemSubmitButtonNode".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("submit-button".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetStaticContent200ResponseNodesItemSubmitButtonNode = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItemSubmitButtonNode();
             }
-            else if("GetStaticContent200ResponseNodesItemTextInputNode".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("text-input".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetStaticContent200ResponseNodesItemTextInputNode = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItemTextInputNode();
             }
-            else if("GetStaticContent200ResponseNodesItemTextNodeDom".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("text".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetStaticContent200ResponseNodesItemTextNodeDom = new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItemTextNodeDom();
             }

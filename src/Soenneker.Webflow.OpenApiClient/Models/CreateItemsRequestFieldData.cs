@@ -8,18 +8,18 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsApplicationJsonFieldDataBranch2"/>, <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem"/>, List&lt;global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateItemsRequestFieldData : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsApplicationJsonFieldDataBranch2"/></summary>
+        /// <summary>Composed type representation for type List&lt;global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem&gt;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsApplicationJsonFieldDataBranch2? CreateItemsApplicationJsonFieldDataBranch2 { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem>? CreateItemsRequestFieldDataMultipleCmsItemsItem { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsApplicationJsonFieldDataBranch2 CreateItemsApplicationJsonFieldDataBranch2 { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem> CreateItemsRequestFieldDataMultipleCmsItemsItem { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,13 +39,13 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldData();
-            if("CreateItemsApplicationJsonFieldDataBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.CreateItemsApplicationJsonFieldDataBranch2 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsApplicationJsonFieldDataBranch2();
-            }
-            else if("CreateItemsRequestFieldDataSingleCmsItem".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("CreateItemsRequestFieldDataSingleCmsItem".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CreateItemsRequestFieldDataSingleCmsItem = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem();
+            }
+            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem>(global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem> createItemsRequestFieldDataMultipleCmsItemsItemValue)
+            {
+                result.CreateItemsRequestFieldDataMultipleCmsItemsItem = createItemsRequestFieldDataMultipleCmsItemsItemValue;
             }
             return result;
         }
@@ -55,11 +55,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(CreateItemsApplicationJsonFieldDataBranch2 != null)
-            {
-                return CreateItemsApplicationJsonFieldDataBranch2.GetFieldDeserializers();
-            }
-            else if(CreateItemsRequestFieldDataSingleCmsItem != null)
+            if(CreateItemsRequestFieldDataSingleCmsItem != null)
             {
                 return CreateItemsRequestFieldDataSingleCmsItem.GetFieldDeserializers();
             }
@@ -72,13 +68,13 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(CreateItemsApplicationJsonFieldDataBranch2 != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsApplicationJsonFieldDataBranch2>(null, CreateItemsApplicationJsonFieldDataBranch2);
-            }
-            else if(CreateItemsRequestFieldDataSingleCmsItem != null)
+            if(CreateItemsRequestFieldDataSingleCmsItem != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem>(null, CreateItemsRequestFieldDataSingleCmsItem);
+            }
+            else if(CreateItemsRequestFieldDataMultipleCmsItemsItem != null)
+            {
+                writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem>(null, CreateItemsRequestFieldDataMultipleCmsItemsItem);
             }
         }
     }

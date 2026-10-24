@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Publish
 {
     /// <summary>
-    /// Builds and executes requests for operations under \collections\{collection-id}\items\publish
+    /// Builds and executes requests for operations under \collections\{collectionId}\items\publish
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PublishRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Publish
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PublishRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/publish", pathParameters)
+        public PublishRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/publish", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Publish
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PublishRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/publish", rawUrl)
+        public PublishRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/publish", rawUrl)
         {
         }
         /// <summary>

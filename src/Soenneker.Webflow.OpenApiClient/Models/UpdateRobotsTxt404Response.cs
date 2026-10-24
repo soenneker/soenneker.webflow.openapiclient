@@ -20,10 +20,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Array of errors</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404Response_details>? Details { get; set; }
+        public UntypedNode? Details { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404Response_details> Details { get; set; }
+        public UntypedNode Details { get; set; }
 #endif
         /// <summary>Link to more information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "code", n => { Code = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404ResponseCode>(); } },
-                { "details", n => { Details = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404Response_details>(global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404Response_details.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "details", n => { Details = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "externalReference", n => { ExternalReference = n.GetStringValue(); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },
             };
@@ -82,7 +82,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404ResponseCode>("code", Code);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404Response_details>("details", Details);
+            writer.WriteObjectValue<UntypedNode>("details", Details);
             writer.WriteStringValue("externalReference", ExternalReference);
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteAdditionalData(AdditionalData);

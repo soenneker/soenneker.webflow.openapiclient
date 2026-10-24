@@ -17,14 +17,14 @@ namespace Soenneker.Webflow.OpenApiClient.Collections
     {
         /// <summary>Gets an item from the Soenneker.Webflow.OpenApiClient.collections.item collection</summary>
         /// <param name="position">Unique identifier for a Collection</param>
-        /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Collections.Item.CollectionItemRequestBuilder"/></returns>
-        public global::Soenneker.Webflow.OpenApiClient.Collections.Item.CollectionItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Collections.Item.WithCollectionItemRequestBuilder"/></returns>
+        public global::Soenneker.Webflow.OpenApiClient.Collections.Item.WithCollectionItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("collection%2Did", position);
-                return new global::Soenneker.Webflow.OpenApiClient.Collections.Item.CollectionItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("collectionId", position);
+                return new global::Soenneker.Webflow.OpenApiClient.Collections.Item.WithCollectionItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

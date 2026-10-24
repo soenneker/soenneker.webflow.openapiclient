@@ -34,10 +34,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>List of component properties with overrides for a component instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItem>? PropertyOverrides { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText>? PropertyOverrides { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItem> PropertyOverrides { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText> PropertyOverrides { get; set; }
 #endif
         /// <summary>The type of the node</summary>
         public global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType? Type { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 { "componentId", n => { ComponentId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "propertyOverrides", n => { PropertyOverrides = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItem>(global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "propertyOverrides", n => { PropertyOverrides = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText>(global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType>(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("componentId", ComponentId);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItem>("propertyOverrides", PropertyOverrides);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText>("propertyOverrides", PropertyOverrides);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

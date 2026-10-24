@@ -69,29 +69,29 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("eventType")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItem();
-            if("GetWorkspaceAuditLogs200ResponseItemsItemCustomRole".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("custom_role".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetWorkspaceAuditLogs200ResponseItemsItemCustomRole = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemCustomRole();
             }
-            else if("GetWorkspaceAuditLogs200ResponseItemsItemSettingChange".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("workspace_setting".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetWorkspaceAuditLogs200ResponseItemsItemSettingChange = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemSettingChange();
             }
-            else if("GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("site_membership".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership();
             }
-            else if("GetWorkspaceAuditLogs200ResponseItemsItemUserAccess".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("user_access".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetWorkspaceAuditLogs200ResponseItemsItemUserAccess = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemUserAccess();
             }
-            else if("GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("workspace_invitation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation();
             }
-            else if("GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("workspace_membership".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership();
             }

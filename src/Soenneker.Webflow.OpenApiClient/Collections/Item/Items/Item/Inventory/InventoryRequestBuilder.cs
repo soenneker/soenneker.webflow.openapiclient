@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.Inventory
 {
     /// <summary>
-    /// Builds and executes requests for operations under \collections\{collection-id}\items\{item-id}\inventory
+    /// Builds and executes requests for operations under \collections\{collectionId}\items\{itemId}\inventory
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InventoryRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.Inventory
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InventoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/{item%2Did}/inventory", pathParameters)
+        public InventoryRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/{itemId}/inventory", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.Inventory
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InventoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/{item%2Did}/inventory", rawUrl)
+        public InventoryRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/{itemId}/inventory", rawUrl)
         {
         }
         /// <summary>

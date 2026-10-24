@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Bulk
 {
     /// <summary>
-    /// Builds and executes requests for operations under \collections\{collection-id}\items\bulk
+    /// Builds and executes requests for operations under \collections\{collectionId}\items\bulk
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Bulk
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BulkRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/bulk{?skipInvalidFiles*}", pathParameters)
+        public BulkRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/bulk{?skipInvalidFiles*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Bulk
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public BulkRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/bulk{?skipInvalidFiles*}", rawUrl)
+        public BulkRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/bulk{?skipInvalidFiles*}", rawUrl)
         {
         }
         /// <summary>

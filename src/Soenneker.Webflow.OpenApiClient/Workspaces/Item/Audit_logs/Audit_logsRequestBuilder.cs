@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Workspaces.Item.Audit_logs
 {
     /// <summary>
-    /// Builds and executes requests for operations under \workspaces\{workspaceIdOrSlug-id}\audit_logs
+    /// Builds and executes requests for operations under \workspaces\{workspaceId}\audit_logs
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Audit_logsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Webflow.OpenApiClient.Workspaces.Item.Audit_logs
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Audit_logsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceIdOrSlug%2Did}/audit_logs{?eventType*,from*,limit*,offset*,sortOrder*,to*}", pathParameters)
+        public Audit_logsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceId}/audit_logs{?eventType*,from*,limit*,offset*,sortOrder*,to*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Webflow.OpenApiClient.Workspaces.Item.Audit_logs
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public Audit_logsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceIdOrSlug%2Did}/audit_logs{?eventType*,from*,limit*,offset*,sortOrder*,to*}", rawUrl)
+        public Audit_logsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/workspaces/{workspaceId}/audit_logs{?eventType*,from*,limit*,offset*,sortOrder*,to*}", rawUrl)
         {
         }
         /// <summary>

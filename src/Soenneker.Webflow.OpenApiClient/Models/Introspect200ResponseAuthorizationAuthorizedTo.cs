@@ -17,26 +17,26 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Array of Sites this app is authorized to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_siteIds>? SiteIds { get; set; }
+        public UntypedNode? SiteIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_siteIds> SiteIds { get; set; }
+        public UntypedNode SiteIds { get; set; }
 #endif
         /// <summary>Array of Users this app is authorized to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_userIds>? UserIds { get; set; }
+        public UntypedNode? UserIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_userIds> UserIds { get; set; }
+        public UntypedNode UserIds { get; set; }
 #endif
         /// <summary>Array of Workspaces this app is authorized to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_workspaceIds>? WorkspaceIds { get; set; }
+        public UntypedNode? WorkspaceIds { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_workspaceIds> WorkspaceIds { get; set; }
+        public UntypedNode WorkspaceIds { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "siteIds", n => { SiteIds = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_siteIds>(global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_siteIds.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "userIds", n => { UserIds = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_userIds>(global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_userIds.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "workspaceIds", n => { WorkspaceIds = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_workspaceIds>(global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_workspaceIds.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "siteIds", n => { SiteIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "userIds", n => { UserIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "workspaceIds", n => { WorkspaceIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_siteIds>("siteIds", SiteIds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_userIds>("userIds", UserIds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.Introspect200ResponseAuthorizationAuthorizedTo_workspaceIds>("workspaceIds", WorkspaceIds);
+            writer.WriteObjectValue<UntypedNode>("siteIds", SiteIds);
+            writer.WriteObjectValue<UntypedNode>("userIds", UserIds);
+            writer.WriteObjectValue<UntypedNode>("workspaceIds", WorkspaceIds);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

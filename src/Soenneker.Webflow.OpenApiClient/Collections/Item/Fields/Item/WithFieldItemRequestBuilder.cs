@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Fields.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \collections\{collection-id}\fields\{fieldId}
+    /// Builds and executes requests for operations under \collections\{collectionId}\fields\{fieldId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFieldItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Fields.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFieldItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/fields/{fieldId}", pathParameters)
+        public WithFieldItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/fields/{fieldId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Fields.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFieldItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/fields/{fieldId}", rawUrl)
+        public WithFieldItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/fields/{fieldId}", rawUrl)
         {
         }
         /// <summary>

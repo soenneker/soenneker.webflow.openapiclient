@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Live
 {
     /// <summary>
-    /// Builds and executes requests for operations under \collections\{collection-id}\items\live
+    /// Builds and executes requests for operations under \collections\{collectionId}\items\live
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LiveRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Live
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LiveRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/live{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", pathParameters)
+        public LiveRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/live{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Live
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LiveRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items/live{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", rawUrl)
+        public LiveRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items/live{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", rawUrl)
         {
         }
         /// <summary>

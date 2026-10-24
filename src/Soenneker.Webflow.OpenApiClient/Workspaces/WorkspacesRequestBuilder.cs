@@ -16,15 +16,15 @@ namespace Soenneker.Webflow.OpenApiClient.Workspaces
     public partial class WorkspacesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Webflow.OpenApiClient.workspaces.item collection</summary>
-        /// <param name="position">Unique identifier or slug for a Workspace</param>
-        /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Workspaces.Item.WorkspaceIdOrSlugItemRequestBuilder"/></returns>
-        public global::Soenneker.Webflow.OpenApiClient.Workspaces.Item.WorkspaceIdOrSlugItemRequestBuilder this[string position]
+        /// <param name="position">Unique identifier for a Workspace</param>
+        /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Workspaces.Item.WithWorkspaceItemRequestBuilder"/></returns>
+        public global::Soenneker.Webflow.OpenApiClient.Workspaces.Item.WithWorkspaceItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("workspaceIdOrSlug%2Did", position);
-                return new global::Soenneker.Webflow.OpenApiClient.Workspaces.Item.WorkspaceIdOrSlugItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("workspaceId", position);
+                return new global::Soenneker.Webflow.OpenApiClient.Workspaces.Item.WithWorkspaceItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

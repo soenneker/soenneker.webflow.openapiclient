@@ -34,10 +34,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItem>? Properties { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItemComponentPropertyText>? Properties { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItem> Properties { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItemComponentPropertyText> Properties { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200Response"/> and sets the default values.
@@ -66,7 +66,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             {
                 { "componentId", n => { ComponentId = n.GetStringValue(); } },
                 { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePagination>(global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePagination.CreateFromDiscriminatorValue); } },
-                { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItem>(global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "properties", n => { Properties = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItemComponentPropertyText>(global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItemComponentPropertyText.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePagination>("pagination", Pagination);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItem>("properties", Properties);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentProperties200ResponsePropertiesItemComponentPropertyText>("properties", Properties);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

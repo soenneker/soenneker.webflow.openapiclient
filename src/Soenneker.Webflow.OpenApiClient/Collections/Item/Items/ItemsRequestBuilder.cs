@@ -16,7 +16,7 @@ using System;
 namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
 {
     /// <summary>
-    /// Builds and executes requests for operations under \collections\{collection-id}\items
+    /// Builds and executes requests for operations under \collections\{collectionId}\items
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ItemsRequestBuilder : BaseRequestBuilder
@@ -38,14 +38,14 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
         }
         /// <summary>Gets an item from the Soenneker.Webflow.OpenApiClient.collections.item.items.item collection</summary>
         /// <param name="position">Unique identifier for an Item</param>
-        /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.ItemItemRequestBuilder"/></returns>
-        public global::Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.ItemItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.WithItemItemRequestBuilder"/></returns>
+        public global::Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.WithItemItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("item%2Did", position);
-                return new global::Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.ItemItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("itemId", position);
+                return new global::Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.WithItemItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -53,7 +53,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", pathParameters)
+        public ItemsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", pathParameters)
         {
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collection%2Did}/items{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", rawUrl)
+        public ItemsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/collections/{collectionId}/items{?cmsLocaleId*,createdOn*,filter*,lastPublished*,lastUpdated*,limit*,name*,offset*,skipInvalidFiles*,slug*,sort*,sortBy*,sortOrder*,translatable*}", rawUrl)
         {
         }
         /// <summary>

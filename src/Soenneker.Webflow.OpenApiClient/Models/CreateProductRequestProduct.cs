@@ -14,7 +14,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The fieldData property</summary>
+        /// <summary>Contains content-specific details for a product, covering both standard (e.g., title, description) and custom fields tailored to the product setup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Webflow.OpenApiClient.Models.CreateProductRequestProductFieldData? FieldData { get; set; }
