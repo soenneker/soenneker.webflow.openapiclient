@@ -37,15 +37,13 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldData();
-            if("CreateItemsRequestFieldDataSingleCmsItem".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.CreateItemsRequestFieldDataSingleCmsItem = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem();
-            }
-            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem>(global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem> createItemsRequestFieldDataMultipleCmsItemsItemValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem>(global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem> createItemsRequestFieldDataMultipleCmsItemsItemValue)
             {
                 result.CreateItemsRequestFieldDataMultipleCmsItemsItem = createItemsRequestFieldDataMultipleCmsItemsItemValue;
+            }
+            else {
+                result.CreateItemsRequestFieldDataSingleCmsItem = new global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem();
             }
             return result;
         }
@@ -57,7 +55,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             if(CreateItemsRequestFieldDataSingleCmsItem != null)
             {
-                return CreateItemsRequestFieldDataSingleCmsItem.GetFieldDeserializers();
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CreateItemsRequestFieldDataSingleCmsItem);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -68,13 +66,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(CreateItemsRequestFieldDataSingleCmsItem != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem>(null, CreateItemsRequestFieldDataSingleCmsItem);
-            }
-            else if(CreateItemsRequestFieldDataMultipleCmsItemsItem != null)
+            if(CreateItemsRequestFieldDataMultipleCmsItemsItem != null)
             {
                 writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataMultipleCmsItemsItem>(null, CreateItemsRequestFieldDataMultipleCmsItemsItem);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateItemsRequestFieldDataSingleCmsItem>(null, CreateItemsRequestFieldDataSingleCmsItem);
             }
         }
     }

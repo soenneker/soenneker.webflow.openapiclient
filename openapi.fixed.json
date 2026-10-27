@@ -67361,7 +67361,7 @@
         "x-fern-type-name": "Multiple Live Items"
       },
       "CreateItemsRequestFieldData": {
-        "oneOf": [
+        "anyOf": [
           {
             "$ref": "#/components/schemas/CreateItemsRequestFieldDataSingleCmsItem"
           },
