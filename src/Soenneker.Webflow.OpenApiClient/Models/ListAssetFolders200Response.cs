@@ -12,24 +12,37 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListAssetFolders200Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assetFolders") is { } nullNodeAssetFolders && nullNodeAssetFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetFolders = null;
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A list of Asset folders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem>? AssetFolders { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem>? AssetFolders { get => _explicitNullValueAssetFolders; set { _explicitNullValueAssetFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetFolders"); else _explicitNullProperties?.Remove("assetFolders"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem>? _explicitNullValueAssetFolders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem> AssetFolders { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem> AssetFolders { get => _explicitNullValueAssetFolders; set { _explicitNullValueAssetFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetFolders"); else _explicitNullProperties?.Remove("assetFolders"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem> _explicitNullValueAssetFolders = default!;
 #endif
         /// <summary>Pagination object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination? Pagination { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination Pagination { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200Response"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem>("assetFolders", AssetFolders);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination>("pagination", Pagination);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

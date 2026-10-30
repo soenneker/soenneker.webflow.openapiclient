@@ -12,72 +12,103 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RefundOrder200ResponseStripeDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("chargeId") is { } nullNodeChargeId && nullNodeChargeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChargeId = null;
+            if (parseNode.GetChildNode("customerId") is { } nullNodeCustomerId && nullNodeCustomerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerId = null;
+            if (parseNode.GetChildNode("disputeId") is { } nullNodeDisputeId && nullNodeDisputeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeId = null;
+            if (parseNode.GetChildNode("paymentIntentId") is { } nullNodePaymentIntentId && nullNodePaymentIntentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentIntentId = null;
+            if (parseNode.GetChildNode("paymentMethod") is { } nullNodePaymentMethod && nullNodePaymentMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentMethod = null;
+            if (parseNode.GetChildNode("refundId") is { } nullNodeRefundId && nullNodeRefundId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundId = null;
+            if (parseNode.GetChildNode("refundReason") is { } nullNodeRefundReason && nullNodeRefundReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundReason = null;
+            if (parseNode.GetChildNode("subscriptionId") is { } nullNodeSubscriptionId && nullNodeSubscriptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Stripe-generated charge identifier, or null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChargeId { get; set; }
+        public string? ChargeId { get => _explicitNullValueChargeId; set { _explicitNullValueChargeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeId"); else _explicitNullProperties?.Remove("chargeId"); } }
+        private string? _explicitNullValueChargeId = default!;
 #nullable restore
 #else
-        public string ChargeId { get; set; }
+        public string ChargeId { get => _explicitNullValueChargeId; set { _explicitNullValueChargeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chargeId"); else _explicitNullProperties?.Remove("chargeId"); } }
+        private string _explicitNullValueChargeId = default!;
 #endif
         /// <summary>Stripe-generated customer identifier, or null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomerId { get; set; }
+        public string? CustomerId { get => _explicitNullValueCustomerId; set { _explicitNullValueCustomerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerId"); else _explicitNullProperties?.Remove("customerId"); } }
+        private string? _explicitNullValueCustomerId = default!;
 #nullable restore
 #else
-        public string CustomerId { get; set; }
+        public string CustomerId { get => _explicitNullValueCustomerId; set { _explicitNullValueCustomerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerId"); else _explicitNullProperties?.Remove("customerId"); } }
+        private string _explicitNullValueCustomerId = default!;
 #endif
         /// <summary>Stripe-generated dispute identifier, or null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisputeId { get; set; }
+        public string? DisputeId { get => _explicitNullValueDisputeId; set { _explicitNullValueDisputeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputeId"); else _explicitNullProperties?.Remove("disputeId"); } }
+        private string? _explicitNullValueDisputeId = default!;
 #nullable restore
 #else
-        public string DisputeId { get; set; }
+        public string DisputeId { get => _explicitNullValueDisputeId; set { _explicitNullValueDisputeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputeId"); else _explicitNullProperties?.Remove("disputeId"); } }
+        private string _explicitNullValueDisputeId = default!;
 #endif
         /// <summary>Stripe-generated identifier for the PaymentIntent, or null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentIntentId { get; set; }
+        public string? PaymentIntentId { get => _explicitNullValuePaymentIntentId; set { _explicitNullValuePaymentIntentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentIntentId"); else _explicitNullProperties?.Remove("paymentIntentId"); } }
+        private string? _explicitNullValuePaymentIntentId = default!;
 #nullable restore
 #else
-        public string PaymentIntentId { get; set; }
+        public string PaymentIntentId { get => _explicitNullValuePaymentIntentId; set { _explicitNullValuePaymentIntentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentIntentId"); else _explicitNullProperties?.Remove("paymentIntentId"); } }
+        private string _explicitNullValuePaymentIntentId = default!;
 #endif
         /// <summary>Stripe-generated identifier for the PaymentMethod used</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentMethod { get; set; }
+        public string? PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentMethod"); else _explicitNullProperties?.Remove("paymentMethod"); } }
+        private string? _explicitNullValuePaymentMethod = default!;
 #nullable restore
 #else
-        public string PaymentMethod { get; set; }
+        public string PaymentMethod { get => _explicitNullValuePaymentMethod; set { _explicitNullValuePaymentMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentMethod"); else _explicitNullProperties?.Remove("paymentMethod"); } }
+        private string _explicitNullValuePaymentMethod = default!;
 #endif
         /// <summary>Stripe-generated refund identifier, or null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundId { get; set; }
+        public string? RefundId { get => _explicitNullValueRefundId; set { _explicitNullValueRefundId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundId"); else _explicitNullProperties?.Remove("refundId"); } }
+        private string? _explicitNullValueRefundId = default!;
 #nullable restore
 #else
-        public string RefundId { get; set; }
+        public string RefundId { get => _explicitNullValueRefundId; set { _explicitNullValueRefundId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundId"); else _explicitNullProperties?.Remove("refundId"); } }
+        private string _explicitNullValueRefundId = default!;
 #endif
         /// <summary>Stripe-generated refund reason, or null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundReason { get; set; }
+        public string? RefundReason { get => _explicitNullValueRefundReason; set { _explicitNullValueRefundReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundReason"); else _explicitNullProperties?.Remove("refundReason"); } }
+        private string? _explicitNullValueRefundReason = default!;
 #nullable restore
 #else
-        public string RefundReason { get; set; }
+        public string RefundReason { get => _explicitNullValueRefundReason; set { _explicitNullValueRefundReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundReason"); else _explicitNullProperties?.Remove("refundReason"); } }
+        private string _explicitNullValueRefundReason = default!;
 #endif
         /// <summary>Stripe-generated identifier for the Subscription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubscriptionId { get; set; }
+        public string? SubscriptionId { get => _explicitNullValueSubscriptionId; set { _explicitNullValueSubscriptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionId"); else _explicitNullProperties?.Remove("subscriptionId"); } }
+        private string? _explicitNullValueSubscriptionId = default!;
 #nullable restore
 #else
-        public string SubscriptionId { get; set; }
+        public string SubscriptionId { get => _explicitNullValueSubscriptionId; set { _explicitNullValueSubscriptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptionId"); else _explicitNullProperties?.Remove("subscriptionId"); } }
+        private string _explicitNullValueSubscriptionId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponseStripeDetails"/> and sets the default values.
@@ -94,7 +125,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponseStripeDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponseStripeDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponseStripeDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +160,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("refundId", RefundId);
             writer.WriteStringValue("refundReason", RefundReason);
             writer.WriteStringValue("subscriptionId", SubscriptionId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

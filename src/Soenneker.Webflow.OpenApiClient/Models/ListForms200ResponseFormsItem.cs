@@ -12,92 +12,133 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListForms200ResponseFormsItem : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdOn") is { } nullNodeCreatedOn && nullNodeCreatedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedOn = null;
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("formElementId") is { } nullNodeFormElementId && nullNodeFormElementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormElementId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("lastUpdated") is { } nullNodeLastUpdated && nullNodeLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdated = null;
+            if (parseNode.GetChildNode("pageId") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("pageName") is { } nullNodePageName && nullNodePageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageName = null;
+            if (parseNode.GetChildNode("responseSettings") is { } nullNodeResponseSettings && nullNodeResponseSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseSettings = null;
+            if (parseNode.GetChildNode("siteDomainId") is { } nullNodeSiteDomainId && nullNodeSiteDomainId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteDomainId = null;
+            if (parseNode.GetChildNode("siteId") is { } nullNodeSiteId && nullNodeSiteId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteId = null;
+            if (parseNode.GetChildNode("workspaceId") is { } nullNodeWorkspaceId && nullNodeWorkspaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date that the Form was created on</summary>
-        public DateTimeOffset? CreatedOn { get; set; }
+        public DateTimeOffset? CreatedOn { get => _explicitNullValueCreatedOn; set { _explicitNullValueCreatedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdOn"); else _explicitNullProperties?.Remove("createdOn"); } }
+        private DateTimeOffset? _explicitNullValueCreatedOn = default!;
         /// <summary>The Form name displayed on the site</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>A collection of form field objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemFields? Fields { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemFields? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemFields? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemFields Fields { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemFields Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemFields _explicitNullValueFields = default!;
 #endif
         /// <summary>The unique ID of the Form element</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FormElementId { get; set; }
+        public string? FormElementId { get => _explicitNullValueFormElementId; set { _explicitNullValueFormElementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formElementId"); else _explicitNullProperties?.Remove("formElementId"); } }
+        private string? _explicitNullValueFormElementId = default!;
 #nullable restore
 #else
-        public string FormElementId { get; set; }
+        public string FormElementId { get => _explicitNullValueFormElementId; set { _explicitNullValueFormElementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formElementId"); else _explicitNullProperties?.Remove("formElementId"); } }
+        private string _explicitNullValueFormElementId = default!;
 #endif
         /// <summary>The unique ID for the Form</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Date that the Form was last updated on</summary>
-        public DateTimeOffset? LastUpdated { get; set; }
+        public DateTimeOffset? LastUpdated { get => _explicitNullValueLastUpdated; set { _explicitNullValueLastUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdated"); else _explicitNullProperties?.Remove("lastUpdated"); } }
+        private DateTimeOffset? _explicitNullValueLastUpdated = default!;
         /// <summary>The unique ID for the Page on which the Form is placed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageId { get; set; }
+        public string? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private string? _explicitNullValuePageId = default!;
 #nullable restore
 #else
-        public string PageId { get; set; }
+        public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private string _explicitNullValuePageId = default!;
 #endif
         /// <summary>The user-visible name of the Page where the Form is placed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageName { get; set; }
+        public string? PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string? _explicitNullValuePageName = default!;
 #nullable restore
 #else
-        public string PageName { get; set; }
+        public string PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string _explicitNullValuePageName = default!;
 #endif
         /// <summary>Settings for form responses</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemResponseSettings? ResponseSettings { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemResponseSettings? ResponseSettings { get => _explicitNullValueResponseSettings; set { _explicitNullValueResponseSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseSettings"); else _explicitNullProperties?.Remove("responseSettings"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemResponseSettings? _explicitNullValueResponseSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemResponseSettings ResponseSettings { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemResponseSettings ResponseSettings { get => _explicitNullValueResponseSettings; set { _explicitNullValueResponseSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseSettings"); else _explicitNullProperties?.Remove("responseSettings"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemResponseSettings _explicitNullValueResponseSettings = default!;
 #endif
         /// <summary>The unique ID corresponding to the site&apos;s Domain name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteDomainId { get; set; }
+        public string? SiteDomainId { get => _explicitNullValueSiteDomainId; set { _explicitNullValueSiteDomainId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteDomainId"); else _explicitNullProperties?.Remove("siteDomainId"); } }
+        private string? _explicitNullValueSiteDomainId = default!;
 #nullable restore
 #else
-        public string SiteDomainId { get; set; }
+        public string SiteDomainId { get => _explicitNullValueSiteDomainId; set { _explicitNullValueSiteDomainId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteDomainId"); else _explicitNullProperties?.Remove("siteDomainId"); } }
+        private string _explicitNullValueSiteDomainId = default!;
 #endif
         /// <summary>The unique ID of the Site the Form belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteId { get; set; }
+        public string? SiteId { get => _explicitNullValueSiteId; set { _explicitNullValueSiteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteId"); else _explicitNullProperties?.Remove("siteId"); } }
+        private string? _explicitNullValueSiteId = default!;
 #nullable restore
 #else
-        public string SiteId { get; set; }
+        public string SiteId { get => _explicitNullValueSiteId; set { _explicitNullValueSiteId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteId"); else _explicitNullProperties?.Remove("siteId"); } }
+        private string _explicitNullValueSiteId = default!;
 #endif
         /// <summary>The unique ID of the Workspace the Site belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkspaceId { get; set; }
+        public string? WorkspaceId { get => _explicitNullValueWorkspaceId; set { _explicitNullValueWorkspaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspaceId"); else _explicitNullProperties?.Remove("workspaceId"); } }
+        private string? _explicitNullValueWorkspaceId = default!;
 #nullable restore
 #else
-        public string WorkspaceId { get; set; }
+        public string WorkspaceId { get => _explicitNullValueWorkspaceId; set { _explicitNullValueWorkspaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspaceId"); else _explicitNullProperties?.Remove("workspaceId"); } }
+        private string _explicitNullValueWorkspaceId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItem"/> and sets the default values.
@@ -114,7 +155,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -157,6 +198,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("siteDomainId", SiteDomainId);
             writer.WriteStringValue("siteId", SiteId);
             writer.WriteStringValue("workspaceId", WorkspaceId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

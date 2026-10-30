@@ -12,17 +12,29 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetAnalyzeTopEventsReport200ResponseBucketing : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bucketTimeZone") is { } nullNodeBucketTimeZone && nullNodeBucketTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BucketTimeZone = null;
+            if (parseNode.GetChildNode("granularityPeriod") is { } nullNodeGranularityPeriod && nullNodeGranularityPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GranularityPeriod = null;
+        }
+
         /// <summary>Valid IANA time zone used to align time bucket boundaries. Use canonical names such as `UTC` or `America/New_York`. Bucket timestamps are returned as UTC instants for local bucket starts in this time zone; for example, `America/New_York` local midnight on April 1, 2026 is returned as `2026-04-01T04:00:00.000Z`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BucketTimeZone { get; set; }
+        public string? BucketTimeZone { get => _explicitNullValueBucketTimeZone; set { _explicitNullValueBucketTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketTimeZone"); else _explicitNullProperties?.Remove("bucketTimeZone"); } }
+        private string? _explicitNullValueBucketTimeZone = default!;
 #nullable restore
 #else
-        public string BucketTimeZone { get; set; }
+        public string BucketTimeZone { get => _explicitNullValueBucketTimeZone; set { _explicitNullValueBucketTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketTimeZone"); else _explicitNullProperties?.Remove("bucketTimeZone"); } }
+        private string _explicitNullValueBucketTimeZone = default!;
 #endif
         /// <summary>Bucket size used for this response.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.DayGranularityPeriod? GranularityPeriod { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.DayGranularityPeriod? GranularityPeriod { get => _explicitNullValueGranularityPeriod; set { _explicitNullValueGranularityPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granularityPeriod"); else _explicitNullProperties?.Remove("granularityPeriod"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.DayGranularityPeriod? _explicitNullValueGranularityPeriod = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -31,7 +43,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopEventsReport200ResponseBucketing CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopEventsReport200ResponseBucketing();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopEventsReport200ResponseBucketing(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,7 +65,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bucketTimeZone", BucketTimeZone);
-            writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.DayGranularityPeriod>("granularityPeriod", GranularityPeriod);
+            writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.DayGranularityPeriod>("granularityPeriod", GranularityPeriod);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

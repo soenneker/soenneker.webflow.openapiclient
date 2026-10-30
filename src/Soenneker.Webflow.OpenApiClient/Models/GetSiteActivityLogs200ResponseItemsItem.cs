@@ -11,92 +11,138 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetSiteActivityLogs200ResponseItemsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actorId") is { } nullNodeActorId && nullNodeActorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorId = null;
+            if (parseNode.GetChildNode("actorName") is { } nullNodeActorName && nullNodeActorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorName = null;
+            if (parseNode.GetChildNode("actorType") is { } nullNodeActorType && nullNodeActorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActorType = null;
+            if (parseNode.GetChildNode("createdOn") is { } nullNodeCreatedOn && nullNodeCreatedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedOn = null;
+            if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("lastUpdated") is { } nullNodeLastUpdated && nullNodeLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdated = null;
+            if (parseNode.GetChildNode("newValue") is { } nullNodeNewValue && nullNodeNewValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewValue = null;
+            if (parseNode.GetChildNode("payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
+            if (parseNode.GetChildNode("previousValue") is { } nullNodePreviousValue && nullNodePreviousValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousValue = null;
+            if (parseNode.GetChildNode("resourceId") is { } nullNodeResourceId && nullNodeResourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceId = null;
+            if (parseNode.GetChildNode("resourceName") is { } nullNodeResourceName && nullNodeResourceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceName = null;
+            if (parseNode.GetChildNode("resourceOperation") is { } nullNodeResourceOperation && nullNodeResourceOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceOperation = null;
+            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>Unique identifier of the actor that originated the event. `null` when not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActorId { get; set; }
+        public string? ActorId { get => _explicitNullValueActorId; set { _explicitNullValueActorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actorId"); else _explicitNullProperties?.Remove("actorId"); } }
+        private string? _explicitNullValueActorId = default!;
 #nullable restore
 #else
-        public string ActorId { get; set; }
+        public string ActorId { get => _explicitNullValueActorId; set { _explicitNullValueActorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actorId"); else _explicitNullProperties?.Remove("actorId"); } }
+        private string _explicitNullValueActorId = default!;
 #endif
         /// <summary>Display name of the actor that originated the event. `null` when not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActorName { get; set; }
+        public string? ActorName { get => _explicitNullValueActorName; set { _explicitNullValueActorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actorName"); else _explicitNullProperties?.Remove("actorName"); } }
+        private string? _explicitNullValueActorName = default!;
 #nullable restore
 #else
-        public string ActorName { get; set; }
+        public string ActorName { get => _explicitNullValueActorName; set { _explicitNullValueActorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actorName"); else _explicitNullProperties?.Remove("actorName"); } }
+        private string _explicitNullValueActorName = default!;
 #endif
         /// <summary>The type of actor responsible for the event. `user` for a human who directly triggered or accepted the action, `agent` for a fully autonomous AI agent, `workflow` for a user-created workflow that ran autonomously, and `rule` for an autonomous rule that fired on a trigger. `null` for legacy events.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemActorType? ActorType { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemActorType? ActorType { get => _explicitNullValueActorType; set { _explicitNullValueActorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actorType"); else _explicitNullProperties?.Remove("actorType"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemActorType? _explicitNullValueActorType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The createdOn property</summary>
-        public DateTimeOffset? CreatedOn { get; set; }
+        public DateTimeOffset? CreatedOn { get => _explicitNullValueCreatedOn; set { _explicitNullValueCreatedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdOn"); else _explicitNullProperties?.Remove("createdOn"); } }
+        private DateTimeOffset? _explicitNullValueCreatedOn = default!;
         /// <summary>The event property</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemEvent? Event { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemEvent? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemEvent? _explicitNullValueEvent = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The lastUpdated property</summary>
-        public DateTimeOffset? LastUpdated { get; set; }
+        public DateTimeOffset? LastUpdated { get => _explicitNullValueLastUpdated; set { _explicitNullValueLastUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdated"); else _explicitNullProperties?.Remove("lastUpdated"); } }
+        private DateTimeOffset? _explicitNullValueLastUpdated = default!;
         /// <summary>The newValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewValue { get; set; }
+        public string? NewValue { get => _explicitNullValueNewValue; set { _explicitNullValueNewValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newValue"); else _explicitNullProperties?.Remove("newValue"); } }
+        private string? _explicitNullValueNewValue = default!;
 #nullable restore
 #else
-        public string NewValue { get; set; }
+        public string NewValue { get => _explicitNullValueNewValue; set { _explicitNullValueNewValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newValue"); else _explicitNullProperties?.Remove("newValue"); } }
+        private string _explicitNullValueNewValue = default!;
 #endif
         /// <summary>The payload property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemPayload? Payload { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemPayload? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemPayload? _explicitNullValuePayload = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemPayload Payload { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemPayload Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemPayload _explicitNullValuePayload = default!;
 #endif
         /// <summary>The previousValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousValue { get; set; }
+        public string? PreviousValue { get => _explicitNullValuePreviousValue; set { _explicitNullValuePreviousValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousValue"); else _explicitNullProperties?.Remove("previousValue"); } }
+        private string? _explicitNullValuePreviousValue = default!;
 #nullable restore
 #else
-        public string PreviousValue { get; set; }
+        public string PreviousValue { get => _explicitNullValuePreviousValue; set { _explicitNullValuePreviousValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousValue"); else _explicitNullProperties?.Remove("previousValue"); } }
+        private string _explicitNullValuePreviousValue = default!;
 #endif
         /// <summary>The resourceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceId { get; set; }
+        public string? ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceId"); else _explicitNullProperties?.Remove("resourceId"); } }
+        private string? _explicitNullValueResourceId = default!;
 #nullable restore
 #else
-        public string ResourceId { get; set; }
+        public string ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceId"); else _explicitNullProperties?.Remove("resourceId"); } }
+        private string _explicitNullValueResourceId = default!;
 #endif
         /// <summary>The resourceName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceName { get; set; }
+        public string? ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
+        private string? _explicitNullValueResourceName = default!;
 #nullable restore
 #else
-        public string ResourceName { get; set; }
+        public string ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
+        private string _explicitNullValueResourceName = default!;
 #endif
         /// <summary>The resourceOperation property</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemResourceOperation? ResourceOperation { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemResourceOperation? ResourceOperation { get => _explicitNullValueResourceOperation; set { _explicitNullValueResourceOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceOperation"); else _explicitNullProperties?.Remove("resourceOperation"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemResourceOperation? _explicitNullValueResourceOperation = default!;
         /// <summary>The system that originated the event. `WEBFLOW_AI` for Webflow AI features, `WEBFLOW_MCP` for an external MCP server or Bridge App, `DESIGNER` for human writes from the Designer, and `SYSTEM` for automated Webflow processes such as backups or migrations. `null` for legacy events recorded before attribution was available.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemSource? Source { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemSource? _explicitNullValueSource = default!;
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemUser? User { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemUser User { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemUser _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItem"/> and sets the default values.
@@ -113,7 +159,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -162,6 +208,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemResourceOperation>("resourceOperation", ResourceOperation);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemSource>("source", Source);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetSiteActivityLogs200ResponseItemsItemUser>("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

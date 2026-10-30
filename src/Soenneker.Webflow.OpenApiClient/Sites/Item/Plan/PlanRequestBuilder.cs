@@ -61,6 +61,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Plan
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

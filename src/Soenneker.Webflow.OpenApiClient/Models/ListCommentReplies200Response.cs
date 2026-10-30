@@ -12,24 +12,37 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ListCommentReplies200Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("comments") is { } nullNodeComments && nullNodeComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comments = null;
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The comments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponseCommentsItem>? Comments { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponseCommentsItem>? Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comments"); else _explicitNullProperties?.Remove("comments"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponseCommentsItem>? _explicitNullValueComments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponseCommentsItem> Comments { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponseCommentsItem> Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comments"); else _explicitNullProperties?.Remove("comments"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponseCommentsItem> _explicitNullValueComments = default!;
 #endif
         /// <summary>The pagination property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponsePagination? Pagination { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponsePagination Pagination { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200Response"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponseCommentsItem>("comments", Comments);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentReplies200ResponsePagination>("pagination", Pagination);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

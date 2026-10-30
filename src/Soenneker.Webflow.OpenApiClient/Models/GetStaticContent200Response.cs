@@ -12,42 +12,61 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetStaticContent200Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branchId") is { } nullNodeBranchId && nullNodeBranchId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchId = null;
+            if (parseNode.GetChildNode("nodes") is { } nullNodeNodes && nullNodeNodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nodes = null;
+            if (parseNode.GetChildNode("pageId") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique identifier of a [specific page branch.](https://help.webflow.com/hc/en-us/articles/33961355506195-Page-branching)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BranchId { get; set; }
+        public string? BranchId { get => _explicitNullValueBranchId; set { _explicitNullValueBranchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branchId"); else _explicitNullProperties?.Remove("branchId"); } }
+        private string? _explicitNullValueBranchId = default!;
 #nullable restore
 #else
-        public string BranchId { get; set; }
+        public string BranchId { get => _explicitNullValueBranchId; set { _explicitNullValueBranchId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branchId"); else _explicitNullProperties?.Remove("branchId"); } }
+        private string _explicitNullValueBranchId = default!;
 #endif
         /// <summary>The date the page dom was most recently updated</summary>
         public DateTimeOffset? LastUpdated { get; private set; }
         /// <summary>The nodes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem>? Nodes { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem>? Nodes { get => _explicitNullValueNodes; set { _explicitNullValueNodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodes"); else _explicitNullProperties?.Remove("nodes"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem>? _explicitNullValueNodes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem> Nodes { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem> Nodes { get => _explicitNullValueNodes; set { _explicitNullValueNodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodes"); else _explicitNullProperties?.Remove("nodes"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem> _explicitNullValueNodes = default!;
 #endif
         /// <summary>Page ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageId { get; set; }
+        public string? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private string? _explicitNullValuePageId = default!;
 #nullable restore
 #else
-        public string PageId { get; set; }
+        public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private string _explicitNullValuePageId = default!;
 #endif
         /// <summary>Pagination object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponsePagination? Pagination { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponsePagination Pagination { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200Response"/> and sets the default values.
@@ -64,7 +83,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +111,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponseNodesItem>("nodes", Nodes);
             writer.WriteStringValue("pageId", PageId);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetStaticContent200ResponsePagination>("pagination", Pagination);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

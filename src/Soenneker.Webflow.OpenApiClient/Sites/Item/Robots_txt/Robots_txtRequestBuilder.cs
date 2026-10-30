@@ -63,6 +63,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Robots_txt
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.DeleteRobotsTxt404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.DeleteRobotsTxt429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.DeleteRobotsTxt500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.DeleteRobotsTxt200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.DeleteRobotsTxt200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -94,6 +96,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Robots_txt
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.GetRobotsTxt404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.GetRobotsTxt429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.GetRobotsTxt500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.GetRobotsTxt200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.GetRobotsTxt200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -127,6 +131,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Robots_txt
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.UpdateRobotsTxt200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -160,6 +166,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Robots_txt
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.ReplaceRobotsTxt404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.ReplaceRobotsTxt429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.ReplaceRobotsTxt500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceRobotsTxt200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.ReplaceRobotsTxt200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

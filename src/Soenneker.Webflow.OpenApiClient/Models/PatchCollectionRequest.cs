@@ -12,40 +12,59 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PatchCollectionRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("fieldGroups") is { } nullNodeFieldGroups && nullNodeFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldGroups = null;
+            if (parseNode.GetChildNode("singularName") is { } nullNodeSingularName && nullNodeSingularName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingularName = null;
+            if (parseNode.GetChildNode("slug") is { } nullNodeSlug && nullNodeSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Slug = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Name given to the Collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The list of field groups in the Collection. Replaces the existing field groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequestFieldGroupsItem>? FieldGroups { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequestFieldGroupsItem>? FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldGroups"); else _explicitNullProperties?.Remove("fieldGroups"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequestFieldGroupsItem>? _explicitNullValueFieldGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequestFieldGroupsItem> FieldGroups { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequestFieldGroupsItem> FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldGroups"); else _explicitNullProperties?.Remove("fieldGroups"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequestFieldGroupsItem> _explicitNullValueFieldGroups = default!;
 #endif
         /// <summary>The name of one Item in Collection (e.g. ”Blog Post” if the Collection is called “Blog Posts”)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SingularName { get; set; }
+        public string? SingularName { get => _explicitNullValueSingularName; set { _explicitNullValueSingularName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singularName"); else _explicitNullProperties?.Remove("singularName"); } }
+        private string? _explicitNullValueSingularName = default!;
 #nullable restore
 #else
-        public string SingularName { get; set; }
+        public string SingularName { get => _explicitNullValueSingularName; set { _explicitNullValueSingularName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singularName"); else _explicitNullProperties?.Remove("singularName"); } }
+        private string _explicitNullValueSingularName = default!;
 #endif
         /// <summary>Slug of Collection in Site URL structure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Slug { get; set; }
+        public string? Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string? _explicitNullValueSlug = default!;
 #nullable restore
 #else
-        public string Slug { get; set; }
+        public string Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string _explicitNullValueSlug = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequest"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.PatchCollectionRequestFieldGroupsItem>("fieldGroups", FieldGroups);
             writer.WriteStringValue("singularName", SingularName);
             writer.WriteStringValue("slug", Slug);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

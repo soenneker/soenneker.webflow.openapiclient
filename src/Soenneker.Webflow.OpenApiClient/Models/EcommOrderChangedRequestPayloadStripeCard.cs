@@ -12,34 +12,52 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EcommOrderChangedRequestPayloadStripeCard : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("brand") is { } nullNodeBrand && nullNodeBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Brand = null;
+            if (parseNode.GetChildNode("expires") is { } nullNodeExpires && nullNodeExpires.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expires = null;
+            if (parseNode.GetChildNode("last4") is { } nullNodeLast4 && nullNodeLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last4 = null;
+            if (parseNode.GetChildNode("ownerName") is { } nullNodeOwnerName && nullNodeOwnerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The card&apos;s brand (ie. credit card network)</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardBrand? Brand { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardBrand? Brand { get => _explicitNullValueBrand; set { _explicitNullValueBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("brand"); else _explicitNullProperties?.Remove("brand"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardBrand? _explicitNullValueBrand = default!;
         /// <summary>The card&apos;s expiration date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardExpires? Expires { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardExpires? Expires { get => _explicitNullValueExpires; set { _explicitNullValueExpires = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires"); else _explicitNullProperties?.Remove("expires"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardExpires? _explicitNullValueExpires = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardExpires Expires { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardExpires Expires { get => _explicitNullValueExpires; set { _explicitNullValueExpires = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires"); else _explicitNullProperties?.Remove("expires"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardExpires _explicitNullValueExpires = default!;
 #endif
         /// <summary>The last 4 digits on the card as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Last4 { get; set; }
+        public string? Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        private string? _explicitNullValueLast4 = default!;
 #nullable restore
 #else
-        public string Last4 { get; set; }
+        public string Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        private string _explicitNullValueLast4 = default!;
 #endif
         /// <summary>The name on the card.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OwnerName { get; set; }
+        public string? OwnerName { get => _explicitNullValueOwnerName; set { _explicitNullValueOwnerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerName"); else _explicitNullProperties?.Remove("ownerName"); } }
+        private string? _explicitNullValueOwnerName = default!;
 #nullable restore
 #else
-        public string OwnerName { get; set; }
+        public string OwnerName { get => _explicitNullValueOwnerName; set { _explicitNullValueOwnerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ownerName"); else _explicitNullProperties?.Remove("ownerName"); } }
+        private string _explicitNullValueOwnerName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCardExpires>("expires", Expires);
             writer.WriteStringValue("last4", Last4);
             writer.WriteStringValue("ownerName", OwnerName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

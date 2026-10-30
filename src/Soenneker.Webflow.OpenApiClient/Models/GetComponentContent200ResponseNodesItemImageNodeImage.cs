@@ -12,24 +12,37 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetComponentContent200ResponseNodesItemImageNodeImage : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alt") is { } nullNodeAlt && nullNodeAlt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alt = null;
+            if (parseNode.GetChildNode("assetId") is { } nullNodeAssetId && nullNodeAssetId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The alt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Alt { get; set; }
+        public string? Alt { get => _explicitNullValueAlt; set { _explicitNullValueAlt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt"); else _explicitNullProperties?.Remove("alt"); } }
+        private string? _explicitNullValueAlt = default!;
 #nullable restore
 #else
-        public string Alt { get; set; }
+        public string Alt { get => _explicitNullValueAlt; set { _explicitNullValueAlt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alt"); else _explicitNullProperties?.Remove("alt"); } }
+        private string _explicitNullValueAlt = default!;
 #endif
         /// <summary>The assetId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssetId { get; set; }
+        public string? AssetId { get => _explicitNullValueAssetId; set { _explicitNullValueAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetId"); else _explicitNullProperties?.Remove("assetId"); } }
+        private string? _explicitNullValueAssetId = default!;
 #nullable restore
 #else
-        public string AssetId { get; set; }
+        public string AssetId { get => _explicitNullValueAssetId; set { _explicitNullValueAssetId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetId"); else _explicitNullProperties?.Remove("assetId"); } }
+        private string _explicitNullValueAssetId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemImageNodeImage"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemImageNodeImage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemImageNodeImage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemImageNodeImage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("alt", Alt);
             writer.WriteStringValue("assetId", AssetId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

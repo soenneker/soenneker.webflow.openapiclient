@@ -12,7 +12,17 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateProduct200ResponseProduct : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fieldData") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
+            if (parseNode.GetChildNode("isArchived") is { } nullNodeIsArchived && nullNodeIsArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsArchived = null;
+            if (parseNode.GetChildNode("isDraft") is { } nullNodeIsDraft && nullNodeIsDraft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDraft = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Identifier for the locale of the CMS item</summary>
@@ -28,10 +38,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Contains content-specific details for a product, covering both standard (e.g., title, description) and custom fields tailored to the product setup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData? FieldData { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData? _explicitNullValueFieldData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData FieldData { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData _explicitNullValueFieldData = default!;
 #endif
         /// <summary>Unique identifier for the Product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,9 +54,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public string Id { get; private set; }
 #endif
         /// <summary>Boolean determining if the Product is set to archived</summary>
-        public bool? IsArchived { get; set; }
+        public bool? IsArchived { get => _explicitNullValueIsArchived; set { _explicitNullValueIsArchived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isArchived"); else _explicitNullProperties?.Remove("isArchived"); } }
+        private bool? _explicitNullValueIsArchived = default!;
         /// <summary>Boolean determining if the Product is set to draft</summary>
-        public bool? IsDraft { get; set; }
+        public bool? IsDraft { get => _explicitNullValueIsDraft; set { _explicitNullValueIsDraft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDraft"); else _explicitNullProperties?.Remove("isDraft"); } }
+        private bool? _explicitNullValueIsDraft = default!;
         /// <summary>The date the Product was last published</summary>
         public DateTimeOffset? LastPublished { get; private set; }
         /// <summary>The date the Product was last updated</summary>
@@ -66,7 +80,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProduct CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProduct();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProduct(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +110,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData>("fieldData", FieldData);
             writer.WriteBoolValue("isArchived", IsArchived);
             writer.WriteBoolValue("isDraft", IsDraft);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

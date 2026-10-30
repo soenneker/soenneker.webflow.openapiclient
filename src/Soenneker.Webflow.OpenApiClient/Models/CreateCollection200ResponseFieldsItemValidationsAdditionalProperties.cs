@@ -12,7 +12,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateCollection200ResponseFieldsItemValidationsAdditionalProperties : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="bool"/></summary>
         public bool? Boolean { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5"/></summary>
@@ -47,25 +52,29 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalProperties();
             if("CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 = new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5();
+                
             }
-            else if(parseNode.GetBoolValue() is bool booleanValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool booleanValue)
             {
                 result.Boolean = booleanValue;
             }
-            else if(parseNode.GetDoubleValue() is double doubleValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is (global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal) && parseNode.GetDoubleValue() is double doubleValue)
             {
                 result.Double = doubleValue;
             }
-            else if(parseNode.GetIntValue() is int integerValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger && parseNode.GetIntValue() is int integerValue)
             {
                 result.Integer = integerValue;
             }
-            else if(parseNode.GetStringValue() is string stringValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.Boolean == null && result.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 == null && result.Double == null && result.Integer == null && result.String == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5(), parseNode);
+            if (result.Boolean == null && result.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 == null && result.Double == null && result.Integer == null && result.String == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -85,9 +94,14 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (Boolean == null && CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 == null && Double == null && Integer == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null && Boolean == null && Double == null && Integer == null && String == null) { if (CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null)
             {
+                if (CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5>(null, CreateCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5);
             }
             else if(Boolean != null)

@@ -12,254 +12,354 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetAnalyzeTopPagesReport200ResponseFilter : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("audienceIds") is { } nullNodeAudienceIds && nullNodeAudienceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceIds = null;
+            if (parseNode.GetChildNode("browser") is { } nullNodeBrowser && nullNodeBrowser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Browser = null;
+            if (parseNode.GetChildNode("collectionId") is { } nullNodeCollectionId && nullNodeCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionId = null;
+            if (parseNode.GetChildNode("country") is { } nullNodeCountry && nullNodeCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Country = null;
+            if (parseNode.GetChildNode("dayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("deviceBrand") is { } nullNodeDeviceBrand && nullNodeDeviceBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceBrand = null;
+            if (parseNode.GetChildNode("deviceType") is { } nullNodeDeviceType && nullNodeDeviceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceType = null;
+            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("itemSlug") is { } nullNodeItemSlug && nullNodeItemSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemSlug = null;
+            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("nextCollectionId") is { } nullNodeNextCollectionId && nullNodeNextCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextCollectionId = null;
+            if (parseNode.GetChildNode("nextItemSlug") is { } nullNodeNextItemSlug && nullNodeNextItemSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextItemSlug = null;
+            if (parseNode.GetChildNode("nextPageId") is { } nullNodeNextPageId && nullNodeNextPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageId = null;
+            if (parseNode.GetChildNode("os") is { } nullNodeOs && nullNodeOs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Os = null;
+            if (parseNode.GetChildNode("pageId") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("pagePath") is { } nullNodePagePath && nullNodePagePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagePath = null;
+            if (parseNode.GetChildNode("previousCollectionId") is { } nullNodePreviousCollectionId && nullNodePreviousCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousCollectionId = null;
+            if (parseNode.GetChildNode("previousItemSlug") is { } nullNodePreviousItemSlug && nullNodePreviousItemSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousItemSlug = null;
+            if (parseNode.GetChildNode("previousPageId") is { } nullNodePreviousPageId && nullNodePreviousPageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousPageId = null;
+            if (parseNode.GetChildNode("referrer") is { } nullNodeReferrer && nullNodeReferrer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Referrer = null;
+            if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+            if (parseNode.GetChildNode("timeOfDay") is { } nullNodeTimeOfDay && nullNodeTimeOfDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeOfDay = null;
+            if (parseNode.GetChildNode("timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
+            if (parseNode.GetChildNode("trafficSource") is { } nullNodeTrafficSource && nullNodeTrafficSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficSource = null;
+            if (parseNode.GetChildNode("utmCampaign") is { } nullNodeUtmCampaign && nullNodeUtmCampaign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmCampaign = null;
+            if (parseNode.GetChildNode("utmContent") is { } nullNodeUtmContent && nullNodeUtmContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmContent = null;
+            if (parseNode.GetChildNode("utmMedium") is { } nullNodeUtmMedium && nullNodeUtmMedium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmMedium = null;
+            if (parseNode.GetChildNode("utmSource") is { } nullNodeUtmSource && nullNodeUtmSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmSource = null;
+            if (parseNode.GetChildNode("utmTerm") is { } nullNodeUtmTerm && nullNodeUtmTerm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UtmTerm = null;
+            if (parseNode.GetChildNode("visitStatus") is { } nullNodeVisitStatus && nullNodeVisitStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisitStatus = null;
+        }
+
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds? AudienceIds { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds? AudienceIds { get => _explicitNullValueAudienceIds; set { _explicitNullValueAudienceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceIds"); else _explicitNullProperties?.Remove("audienceIds"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds? _explicitNullValueAudienceIds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds AudienceIds { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds AudienceIds { get => _explicitNullValueAudienceIds; set { _explicitNullValueAudienceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceIds"); else _explicitNullProperties?.Remove("audienceIds"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds _explicitNullValueAudienceIds = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser? Browser { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser? Browser { get => _explicitNullValueBrowser; set { _explicitNullValueBrowser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser"); else _explicitNullProperties?.Remove("browser"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser? _explicitNullValueBrowser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser Browser { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser Browser { get => _explicitNullValueBrowser; set { _explicitNullValueBrowser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browser"); else _explicitNullProperties?.Remove("browser"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser _explicitNullValueBrowser = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCollectionId? CollectionId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCollectionId? CollectionId { get => _explicitNullValueCollectionId; set { _explicitNullValueCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionId"); else _explicitNullProperties?.Remove("collectionId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCollectionId? _explicitNullValueCollectionId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCollectionId CollectionId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCollectionId CollectionId { get => _explicitNullValueCollectionId; set { _explicitNullValueCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionId"); else _explicitNullProperties?.Remove("collectionId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCollectionId _explicitNullValueCollectionId = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCountry? Country { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCountry? Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCountry? _explicitNullValueCountry = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCountry Country { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCountry Country { get => _explicitNullValueCountry; set { _explicitNullValueCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country"); else _explicitNullProperties?.Remove("country"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterCountry _explicitNullValueCountry = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDayOfWeek? DayOfWeek { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDayOfWeek? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDayOfWeek? _explicitNullValueDayOfWeek = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDayOfWeek DayOfWeek { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDayOfWeek DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDayOfWeek _explicitNullValueDayOfWeek = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceBrand? DeviceBrand { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceBrand? DeviceBrand { get => _explicitNullValueDeviceBrand; set { _explicitNullValueDeviceBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceBrand"); else _explicitNullProperties?.Remove("deviceBrand"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceBrand? _explicitNullValueDeviceBrand = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceBrand DeviceBrand { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceBrand DeviceBrand { get => _explicitNullValueDeviceBrand; set { _explicitNullValueDeviceBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceBrand"); else _explicitNullProperties?.Remove("deviceBrand"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceBrand _explicitNullValueDeviceBrand = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceType? DeviceType { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceType? DeviceType { get => _explicitNullValueDeviceType; set { _explicitNullValueDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceType"); else _explicitNullProperties?.Remove("deviceType"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceType? _explicitNullValueDeviceType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceType DeviceType { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceType DeviceType { get => _explicitNullValueDeviceType; set { _explicitNullValueDeviceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deviceType"); else _explicitNullProperties?.Remove("deviceType"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDeviceType _explicitNullValueDeviceType = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDomain? Domain { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDomain? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDomain? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDomain Domain { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDomain Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterDomain _explicitNullValueDomain = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterItemSlug? ItemSlug { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterItemSlug? ItemSlug { get => _explicitNullValueItemSlug; set { _explicitNullValueItemSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemSlug"); else _explicitNullProperties?.Remove("itemSlug"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterItemSlug? _explicitNullValueItemSlug = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterItemSlug ItemSlug { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterItemSlug ItemSlug { get => _explicitNullValueItemSlug; set { _explicitNullValueItemSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemSlug"); else _explicitNullProperties?.Remove("itemSlug"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterItemSlug _explicitNullValueItemSlug = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLanguage? Language { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLanguage? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLanguage? _explicitNullValueLanguage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLanguage Language { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLanguage Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLanguage _explicitNullValueLanguage = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLocale? Locale { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLocale? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLocale? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLocale Locale { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLocale Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterLocale _explicitNullValueLocale = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextCollectionId? NextCollectionId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextCollectionId? NextCollectionId { get => _explicitNullValueNextCollectionId; set { _explicitNullValueNextCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextCollectionId"); else _explicitNullProperties?.Remove("nextCollectionId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextCollectionId? _explicitNullValueNextCollectionId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextCollectionId NextCollectionId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextCollectionId NextCollectionId { get => _explicitNullValueNextCollectionId; set { _explicitNullValueNextCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextCollectionId"); else _explicitNullProperties?.Remove("nextCollectionId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextCollectionId _explicitNullValueNextCollectionId = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextItemSlug? NextItemSlug { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextItemSlug? NextItemSlug { get => _explicitNullValueNextItemSlug; set { _explicitNullValueNextItemSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextItemSlug"); else _explicitNullProperties?.Remove("nextItemSlug"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextItemSlug? _explicitNullValueNextItemSlug = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextItemSlug NextItemSlug { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextItemSlug NextItemSlug { get => _explicitNullValueNextItemSlug; set { _explicitNullValueNextItemSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextItemSlug"); else _explicitNullProperties?.Remove("nextItemSlug"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextItemSlug _explicitNullValueNextItemSlug = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextPageId? NextPageId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextPageId? NextPageId { get => _explicitNullValueNextPageId; set { _explicitNullValueNextPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageId"); else _explicitNullProperties?.Remove("nextPageId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextPageId? _explicitNullValueNextPageId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextPageId NextPageId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextPageId NextPageId { get => _explicitNullValueNextPageId; set { _explicitNullValueNextPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageId"); else _explicitNullProperties?.Remove("nextPageId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterNextPageId _explicitNullValueNextPageId = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterOs? Os { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterOs? Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterOs? _explicitNullValueOs = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterOs Os { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterOs Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterOs _explicitNullValueOs = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPageId? PageId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPageId? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPageId? _explicitNullValuePageId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPageId PageId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPageId PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPageId _explicitNullValuePageId = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPagePath? PagePath { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPagePath? PagePath { get => _explicitNullValuePagePath; set { _explicitNullValuePagePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagePath"); else _explicitNullProperties?.Remove("pagePath"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPagePath? _explicitNullValuePagePath = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPagePath PagePath { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPagePath PagePath { get => _explicitNullValuePagePath; set { _explicitNullValuePagePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagePath"); else _explicitNullProperties?.Remove("pagePath"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPagePath _explicitNullValuePagePath = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousCollectionId? PreviousCollectionId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousCollectionId? PreviousCollectionId { get => _explicitNullValuePreviousCollectionId; set { _explicitNullValuePreviousCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousCollectionId"); else _explicitNullProperties?.Remove("previousCollectionId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousCollectionId? _explicitNullValuePreviousCollectionId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousCollectionId PreviousCollectionId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousCollectionId PreviousCollectionId { get => _explicitNullValuePreviousCollectionId; set { _explicitNullValuePreviousCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousCollectionId"); else _explicitNullProperties?.Remove("previousCollectionId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousCollectionId _explicitNullValuePreviousCollectionId = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousItemSlug? PreviousItemSlug { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousItemSlug? PreviousItemSlug { get => _explicitNullValuePreviousItemSlug; set { _explicitNullValuePreviousItemSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousItemSlug"); else _explicitNullProperties?.Remove("previousItemSlug"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousItemSlug? _explicitNullValuePreviousItemSlug = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousItemSlug PreviousItemSlug { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousItemSlug PreviousItemSlug { get => _explicitNullValuePreviousItemSlug; set { _explicitNullValuePreviousItemSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousItemSlug"); else _explicitNullProperties?.Remove("previousItemSlug"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousItemSlug _explicitNullValuePreviousItemSlug = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousPageId? PreviousPageId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousPageId? PreviousPageId { get => _explicitNullValuePreviousPageId; set { _explicitNullValuePreviousPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousPageId"); else _explicitNullProperties?.Remove("previousPageId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousPageId? _explicitNullValuePreviousPageId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousPageId PreviousPageId { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousPageId PreviousPageId { get => _explicitNullValuePreviousPageId; set { _explicitNullValuePreviousPageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousPageId"); else _explicitNullProperties?.Remove("previousPageId"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterPreviousPageId _explicitNullValuePreviousPageId = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterReferrer? Referrer { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterReferrer? Referrer { get => _explicitNullValueReferrer; set { _explicitNullValueReferrer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referrer"); else _explicitNullProperties?.Remove("referrer"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterReferrer? _explicitNullValueReferrer = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterReferrer Referrer { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterReferrer Referrer { get => _explicitNullValueReferrer; set { _explicitNullValueReferrer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referrer"); else _explicitNullProperties?.Remove("referrer"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterReferrer _explicitNullValueReferrer = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterRegion? Region { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterRegion? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterRegion? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterRegion Region { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterRegion Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterRegion _explicitNullValueRegion = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimeOfDay? TimeOfDay { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimeOfDay? TimeOfDay { get => _explicitNullValueTimeOfDay; set { _explicitNullValueTimeOfDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeOfDay"); else _explicitNullProperties?.Remove("timeOfDay"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimeOfDay? _explicitNullValueTimeOfDay = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimeOfDay TimeOfDay { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimeOfDay TimeOfDay { get => _explicitNullValueTimeOfDay; set { _explicitNullValueTimeOfDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeOfDay"); else _explicitNullProperties?.Remove("timeOfDay"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimeOfDay _explicitNullValueTimeOfDay = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimezone? Timezone { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimezone? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimezone? _explicitNullValueTimezone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimezone Timezone { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimezone Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTimezone _explicitNullValueTimezone = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTrafficSource? TrafficSource { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTrafficSource? TrafficSource { get => _explicitNullValueTrafficSource; set { _explicitNullValueTrafficSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trafficSource"); else _explicitNullProperties?.Remove("trafficSource"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTrafficSource? _explicitNullValueTrafficSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTrafficSource TrafficSource { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTrafficSource TrafficSource { get => _explicitNullValueTrafficSource; set { _explicitNullValueTrafficSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trafficSource"); else _explicitNullProperties?.Remove("trafficSource"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterTrafficSource _explicitNullValueTrafficSource = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmCampaign? UtmCampaign { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmCampaign? UtmCampaign { get => _explicitNullValueUtmCampaign; set { _explicitNullValueUtmCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmCampaign"); else _explicitNullProperties?.Remove("utmCampaign"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmCampaign? _explicitNullValueUtmCampaign = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmCampaign UtmCampaign { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmCampaign UtmCampaign { get => _explicitNullValueUtmCampaign; set { _explicitNullValueUtmCampaign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmCampaign"); else _explicitNullProperties?.Remove("utmCampaign"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmCampaign _explicitNullValueUtmCampaign = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmContent? UtmContent { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmContent? UtmContent { get => _explicitNullValueUtmContent; set { _explicitNullValueUtmContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmContent"); else _explicitNullProperties?.Remove("utmContent"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmContent? _explicitNullValueUtmContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmContent UtmContent { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmContent UtmContent { get => _explicitNullValueUtmContent; set { _explicitNullValueUtmContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmContent"); else _explicitNullProperties?.Remove("utmContent"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmContent _explicitNullValueUtmContent = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmMedium? UtmMedium { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmMedium? UtmMedium { get => _explicitNullValueUtmMedium; set { _explicitNullValueUtmMedium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmMedium"); else _explicitNullProperties?.Remove("utmMedium"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmMedium? _explicitNullValueUtmMedium = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmMedium UtmMedium { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmMedium UtmMedium { get => _explicitNullValueUtmMedium; set { _explicitNullValueUtmMedium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmMedium"); else _explicitNullProperties?.Remove("utmMedium"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmMedium _explicitNullValueUtmMedium = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmSource? UtmSource { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmSource? UtmSource { get => _explicitNullValueUtmSource; set { _explicitNullValueUtmSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmSource"); else _explicitNullProperties?.Remove("utmSource"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmSource? _explicitNullValueUtmSource = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmSource UtmSource { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmSource UtmSource { get => _explicitNullValueUtmSource; set { _explicitNullValueUtmSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmSource"); else _explicitNullProperties?.Remove("utmSource"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmSource _explicitNullValueUtmSource = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmTerm? UtmTerm { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmTerm? UtmTerm { get => _explicitNullValueUtmTerm; set { _explicitNullValueUtmTerm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmTerm"); else _explicitNullProperties?.Remove("utmTerm"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmTerm? _explicitNullValueUtmTerm = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmTerm UtmTerm { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmTerm UtmTerm { get => _explicitNullValueUtmTerm; set { _explicitNullValueUtmTerm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("utmTerm"); else _explicitNullProperties?.Remove("utmTerm"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmTerm _explicitNullValueUtmTerm = default!;
 #endif
         /// <summary>Operators for filtering a single dimension. Specify at least one of `eq`, `in`, `ne`, or `nin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus? VisitStatus { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus? VisitStatus { get => _explicitNullValueVisitStatus; set { _explicitNullValueVisitStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitStatus"); else _explicitNullProperties?.Remove("visitStatus"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus? _explicitNullValueVisitStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus VisitStatus { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus VisitStatus { get => _explicitNullValueVisitStatus; set { _explicitNullValueVisitStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visitStatus"); else _explicitNullProperties?.Remove("visitStatus"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus _explicitNullValueVisitStatus = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -269,7 +369,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -349,7 +449,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmMedium>("utmMedium", UtmMedium);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmSource>("utmSource", UtmSource);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterUtmTerm>("utmTerm", UtmTerm);
-            writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus>("visitStatus", VisitStatus);
+            writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterVisitStatus>("visitStatus", VisitStatus);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

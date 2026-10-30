@@ -11,76 +11,111 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateAsset200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assetUrl") is { } nullNodeAssetUrl && nullNodeAssetUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetUrl = null;
+            if (parseNode.GetChildNode("contentType") is { } nullNodeContentType && nullNodeContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentType = null;
+            if (parseNode.GetChildNode("createdOn") is { } nullNodeCreatedOn && nullNodeCreatedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedOn = null;
+            if (parseNode.GetChildNode("hostedUrl") is { } nullNodeHostedUrl && nullNodeHostedUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostedUrl = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("lastUpdated") is { } nullNodeLastUpdated && nullNodeLastUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdated = null;
+            if (parseNode.GetChildNode("originalFileName") is { } nullNodeOriginalFileName && nullNodeOriginalFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalFileName = null;
+            if (parseNode.GetChildNode("parentFolder") is { } nullNodeParentFolder && nullNodeParentFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentFolder = null;
+            if (parseNode.GetChildNode("uploadDetails") is { } nullNodeUploadDetails && nullNodeUploadDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadDetails = null;
+            if (parseNode.GetChildNode("uploadUrl") is { } nullNodeUploadUrl && nullNodeUploadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>S3 link to the asset</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssetUrl { get; set; }
+        public string? AssetUrl { get => _explicitNullValueAssetUrl; set { _explicitNullValueAssetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetUrl"); else _explicitNullProperties?.Remove("assetUrl"); } }
+        private string? _explicitNullValueAssetUrl = default!;
 #nullable restore
 #else
-        public string AssetUrl { get; set; }
+        public string AssetUrl { get => _explicitNullValueAssetUrl; set { _explicitNullValueAssetUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetUrl"); else _explicitNullProperties?.Remove("assetUrl"); } }
+        private string _explicitNullValueAssetUrl = default!;
 #endif
         /// <summary>The contentType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentType { get; set; }
+        public string? ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentType"); else _explicitNullProperties?.Remove("contentType"); } }
+        private string? _explicitNullValueContentType = default!;
 #nullable restore
 #else
-        public string ContentType { get; set; }
+        public string ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentType"); else _explicitNullProperties?.Remove("contentType"); } }
+        private string _explicitNullValueContentType = default!;
 #endif
         /// <summary>Date the asset metadata was created</summary>
-        public DateTimeOffset? CreatedOn { get; set; }
+        public DateTimeOffset? CreatedOn { get => _explicitNullValueCreatedOn; set { _explicitNullValueCreatedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdOn"); else _explicitNullProperties?.Remove("createdOn"); } }
+        private DateTimeOffset? _explicitNullValueCreatedOn = default!;
         /// <summary>Represents the link to the asset</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostedUrl { get; set; }
+        public string? HostedUrl { get => _explicitNullValueHostedUrl; set { _explicitNullValueHostedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostedUrl"); else _explicitNullProperties?.Remove("hostedUrl"); } }
+        private string? _explicitNullValueHostedUrl = default!;
 #nullable restore
 #else
-        public string HostedUrl { get; set; }
+        public string HostedUrl { get => _explicitNullValueHostedUrl; set { _explicitNullValueHostedUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostedUrl"); else _explicitNullProperties?.Remove("hostedUrl"); } }
+        private string _explicitNullValueHostedUrl = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Date the asset metadata was last updated</summary>
-        public DateTimeOffset? LastUpdated { get; set; }
+        public DateTimeOffset? LastUpdated { get => _explicitNullValueLastUpdated; set { _explicitNullValueLastUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdated"); else _explicitNullProperties?.Remove("lastUpdated"); } }
+        private DateTimeOffset? _explicitNullValueLastUpdated = default!;
         /// <summary>Original file name when uploaded. If not specified at time of upload, it may be extracted from the raw file name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalFileName { get; set; }
+        public string? OriginalFileName { get => _explicitNullValueOriginalFileName; set { _explicitNullValueOriginalFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalFileName"); else _explicitNullProperties?.Remove("originalFileName"); } }
+        private string? _explicitNullValueOriginalFileName = default!;
 #nullable restore
 #else
-        public string OriginalFileName { get; set; }
+        public string OriginalFileName { get => _explicitNullValueOriginalFileName; set { _explicitNullValueOriginalFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalFileName"); else _explicitNullProperties?.Remove("originalFileName"); } }
+        private string _explicitNullValueOriginalFileName = default!;
 #endif
         /// <summary>Parent folder for the asset</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentFolder { get; set; }
+        public string? ParentFolder { get => _explicitNullValueParentFolder; set { _explicitNullValueParentFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentFolder"); else _explicitNullProperties?.Remove("parentFolder"); } }
+        private string? _explicitNullValueParentFolder = default!;
 #nullable restore
 #else
-        public string ParentFolder { get; set; }
+        public string ParentFolder { get => _explicitNullValueParentFolder; set { _explicitNullValueParentFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentFolder"); else _explicitNullProperties?.Remove("parentFolder"); } }
+        private string _explicitNullValueParentFolder = default!;
 #endif
         /// <summary>Metadata for uploading the asset binary</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails? UploadDetails { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails? UploadDetails { get => _explicitNullValueUploadDetails; set { _explicitNullValueUploadDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadDetails"); else _explicitNullProperties?.Remove("uploadDetails"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails? _explicitNullValueUploadDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails UploadDetails { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails UploadDetails { get => _explicitNullValueUploadDetails; set { _explicitNullValueUploadDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadDetails"); else _explicitNullProperties?.Remove("uploadDetails"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails _explicitNullValueUploadDetails = default!;
 #endif
         /// <summary>The uploadUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadUrl { get; set; }
+        public string? UploadUrl { get => _explicitNullValueUploadUrl; set { _explicitNullValueUploadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadUrl"); else _explicitNullProperties?.Remove("uploadUrl"); } }
+        private string? _explicitNullValueUploadUrl = default!;
 #nullable restore
 #else
-        public string UploadUrl { get; set; }
+        public string UploadUrl { get => _explicitNullValueUploadUrl; set { _explicitNullValueUploadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadUrl"); else _explicitNullProperties?.Remove("uploadUrl"); } }
+        private string _explicitNullValueUploadUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200Response"/> and sets the default values.
@@ -97,7 +132,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -136,6 +171,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("parentFolder", ParentFolder);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails>("uploadDetails", UploadDetails);
             writer.WriteStringValue("uploadUrl", UploadUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

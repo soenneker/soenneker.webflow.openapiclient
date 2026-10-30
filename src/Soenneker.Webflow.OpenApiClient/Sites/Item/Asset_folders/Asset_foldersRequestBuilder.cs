@@ -61,6 +61,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Asset_folders
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -94,6 +96,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Asset_folders
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.CreateAssetFolder404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.CreateAssetFolder429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.CreateAssetFolder500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.CreateAssetFolder200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.CreateAssetFolder200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -61,6 +61,8 @@ namespace Soenneker.Webflow.OpenApiClient.Workspaces.Item.Audit_logs
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

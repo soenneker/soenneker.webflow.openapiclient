@@ -12,82 +12,118 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateProductRequestSkuFieldData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("compare-at-price") is { } nullNodeCompareAtPrice && nullNodeCompareAtPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompareAtPrice = null;
+            if (parseNode.GetChildNode("ec-sku-billing-method") is { } nullNodeEcSkuBillingMethod && nullNodeEcSkuBillingMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EcSkuBillingMethod = null;
+            if (parseNode.GetChildNode("ec-sku-subscription-plan") is { } nullNodeEcSkuSubscriptionPlan && nullNodeEcSkuSubscriptionPlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EcSkuSubscriptionPlan = null;
+            if (parseNode.GetChildNode("main-image") is { } nullNodeMainImage && nullNodeMainImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MainImage = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
+            if (parseNode.GetChildNode("sku") is { } nullNodeSku && nullNodeSku.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sku = null;
+            if (parseNode.GetChildNode("sku-properties") is { } nullNodeSkuProperties && nullNodeSkuProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkuProperties = null;
+            if (parseNode.GetChildNode("sku-values") is { } nullNodeSkuValues && nullNodeSkuValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkuValues = null;
+            if (parseNode.GetChildNode("slug") is { } nullNodeSlug && nullNodeSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Slug = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>comparison price of SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataCompareAtPrice? CompareAtPrice { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataCompareAtPrice? CompareAtPrice { get => _explicitNullValueCompareAtPrice; set { _explicitNullValueCompareAtPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compare-at-price"); else _explicitNullProperties?.Remove("compare-at-price"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataCompareAtPrice? _explicitNullValueCompareAtPrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataCompareAtPrice CompareAtPrice { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataCompareAtPrice CompareAtPrice { get => _explicitNullValueCompareAtPrice; set { _explicitNullValueCompareAtPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compare-at-price"); else _explicitNullProperties?.Remove("compare-at-price"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataCompareAtPrice _explicitNullValueCompareAtPrice = default!;
 #endif
         /// <summary>[Billing method](https://help.webflow.com/hc/en-us/articles/33961432087955-Add-and-manage-products-and-categories#billing-methods)for the SKU</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuBillingMethod? EcSkuBillingMethod { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuBillingMethod? EcSkuBillingMethod { get => _explicitNullValueEcSkuBillingMethod; set { _explicitNullValueEcSkuBillingMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec-sku-billing-method"); else _explicitNullProperties?.Remove("ec-sku-billing-method"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuBillingMethod? _explicitNullValueEcSkuBillingMethod = default!;
         /// <summary>[Subscription plan](https://help.webflow.com/hc/en-us/articles/33961432087955-Add-and-manage-products-and-categories#subscription) for the SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuSubscriptionPlan? EcSkuSubscriptionPlan { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuSubscriptionPlan? EcSkuSubscriptionPlan { get => _explicitNullValueEcSkuSubscriptionPlan; set { _explicitNullValueEcSkuSubscriptionPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec-sku-subscription-plan"); else _explicitNullProperties?.Remove("ec-sku-subscription-plan"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuSubscriptionPlan? _explicitNullValueEcSkuSubscriptionPlan = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuSubscriptionPlan EcSkuSubscriptionPlan { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuSubscriptionPlan EcSkuSubscriptionPlan { get => _explicitNullValueEcSkuSubscriptionPlan; set { _explicitNullValueEcSkuSubscriptionPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec-sku-subscription-plan"); else _explicitNullProperties?.Remove("ec-sku-subscription-plan"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataEcSkuSubscriptionPlan _explicitNullValueEcSkuSubscriptionPlan = default!;
 #endif
         /// <summary>The URL for the main image of the SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MainImage { get; set; }
+        public string? MainImage { get => _explicitNullValueMainImage; set { _explicitNullValueMainImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("main-image"); else _explicitNullProperties?.Remove("main-image"); } }
+        private string? _explicitNullValueMainImage = default!;
 #nullable restore
 #else
-        public string MainImage { get; set; }
+        public string MainImage { get => _explicitNullValueMainImage; set { _explicitNullValueMainImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("main-image"); else _explicitNullProperties?.Remove("main-image"); } }
+        private string _explicitNullValueMainImage = default!;
 #endif
         /// <summary>Name of the Product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>price of SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataPrice? Price { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataPrice? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataPrice? _explicitNullValuePrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataPrice Price { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataPrice Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataPrice _explicitNullValuePrice = default!;
 #endif
         /// <summary>A unique identifier for the SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sku { get; set; }
+        public string? Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private string? _explicitNullValueSku = default!;
 #nullable restore
 #else
-        public string Sku { get; set; }
+        public string Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private string _explicitNullValueSku = default!;
 #endif
         /// <summary>The properties of the SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuPropertiesItem>? SkuProperties { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuPropertiesItem>? SkuProperties { get => _explicitNullValueSkuProperties; set { _explicitNullValueSkuProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku-properties"); else _explicitNullProperties?.Remove("sku-properties"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuPropertiesItem>? _explicitNullValueSkuProperties = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuPropertiesItem> SkuProperties { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuPropertiesItem> SkuProperties { get => _explicitNullValueSkuProperties; set { _explicitNullValueSkuProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku-properties"); else _explicitNullProperties?.Remove("sku-properties"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuPropertiesItem> _explicitNullValueSkuProperties = default!;
 #endif
         /// <summary>A mapping between SKU properties and their values, represented as key-value pairs. Each key represents a SKU Property ID (e.g. &quot;color&quot;) and maps to its corresponding SKU Value ID (e.g. &quot;blue&quot;). This structure defines the specific variant combination for a SKU.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuValues? SkuValues { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuValues? SkuValues { get => _explicitNullValueSkuValues; set { _explicitNullValueSkuValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku-values"); else _explicitNullProperties?.Remove("sku-values"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuValues? _explicitNullValueSkuValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuValues SkuValues { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuValues SkuValues { get => _explicitNullValueSkuValues; set { _explicitNullValueSkuValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku-values"); else _explicitNullProperties?.Remove("sku-values"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuValues _explicitNullValueSkuValues = default!;
 #endif
         /// <summary>URL structure of the Product in your site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Slug { get; set; }
+        public string? Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string? _explicitNullValueSlug = default!;
 #nullable restore
 #else
-        public string Slug { get; set; }
+        public string Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string _explicitNullValueSlug = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldData"/> and sets the default values.
@@ -104,7 +140,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -143,6 +179,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuPropertiesItem>("sku-properties", SkuProperties);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSkuFieldDataSkuValues>("sku-values", SkuValues);
             writer.WriteStringValue("slug", Slug);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -67,6 +67,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Comments.Item
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.GetCommentThread404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.GetCommentThread429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.GetCommentThread500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.GetCommentThread200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.GetCommentThread200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -100,6 +102,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Comments.Item
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.ResolveCommentThread404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.ResolveCommentThread429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.ResolveCommentThread500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.ResolveCommentThread200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.ResolveCommentThread200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

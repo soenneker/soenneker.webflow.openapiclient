@@ -11,24 +11,37 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateSite200ResponseLocales : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("primary") is { } nullNodePrimary && nullNodePrimary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Primary = null;
+            if (parseNode.GetChildNode("secondary") is { } nullNodeSecondary && nullNodeSecondary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secondary = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The primary locale for the site or application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesPrimary? Primary { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesPrimary? Primary { get => _explicitNullValuePrimary; set { _explicitNullValuePrimary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary"); else _explicitNullProperties?.Remove("primary"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesPrimary? _explicitNullValuePrimary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesPrimary Primary { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesPrimary Primary { get => _explicitNullValuePrimary; set { _explicitNullValuePrimary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary"); else _explicitNullProperties?.Remove("primary"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesPrimary _explicitNullValuePrimary = default!;
 #endif
         /// <summary>A list of secondary locales available for the site or application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesSecondaryItem>? Secondary { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesSecondaryItem>? Secondary { get => _explicitNullValueSecondary; set { _explicitNullValueSecondary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary"); else _explicitNullProperties?.Remove("secondary"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesSecondaryItem>? _explicitNullValueSecondary = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesSecondaryItem> Secondary { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesSecondaryItem> Secondary { get => _explicitNullValueSecondary; set { _explicitNullValueSecondary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary"); else _explicitNullProperties?.Remove("secondary"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesSecondaryItem> _explicitNullValueSecondary = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocales"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocales CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocales();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocales(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesPrimary>("primary", Primary);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSite200ResponseLocalesSecondaryItem>("secondary", Secondary);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

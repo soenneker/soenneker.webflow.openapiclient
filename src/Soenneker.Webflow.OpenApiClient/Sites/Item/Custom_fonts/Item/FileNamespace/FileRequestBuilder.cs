@@ -65,6 +65,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Custom_fonts.Item.FileNames
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFile404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFile429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFile500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFile202Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFile202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

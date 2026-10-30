@@ -67,6 +67,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Custom_fonts.BatchCreate
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFonts429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFonts500Response.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFonts503Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFonts200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFonts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,96 +12,136 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateAsset200ResponseUploadDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acl") is { } nullNodeAcl && nullNodeAcl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Acl = null;
+            if (parseNode.GetChildNode("bucket") is { } nullNodeBucket && nullNodeBucket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bucket = null;
+            if (parseNode.GetChildNode("Cache-Control") is { } nullNodeCacheControl && nullNodeCacheControl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheControl = null;
+            if (parseNode.GetChildNode("content-type") is { } nullNodeContentType && nullNodeContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentType = null;
+            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("Policy") is { } nullNodePolicy && nullNodePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Policy = null;
+            if (parseNode.GetChildNode("success_action_status") is { } nullNodeSuccessActionStatus && nullNodeSuccessActionStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuccessActionStatus = null;
+            if (parseNode.GetChildNode("X-Amz-Algorithm") is { } nullNodeXAmzAlgorithm && nullNodeXAmzAlgorithm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XAmzAlgorithm = null;
+            if (parseNode.GetChildNode("X-Amz-Credential") is { } nullNodeXAmzCredential && nullNodeXAmzCredential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XAmzCredential = null;
+            if (parseNode.GetChildNode("X-Amz-Date") is { } nullNodeXAmzDate && nullNodeXAmzDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XAmzDate = null;
+            if (parseNode.GetChildNode("X-Amz-Signature") is { } nullNodeXAmzSignature && nullNodeXAmzSignature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XAmzSignature = null;
+        }
+
         /// <summary>The acl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Acl { get; set; }
+        public string? Acl { get => _explicitNullValueAcl; set { _explicitNullValueAcl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acl"); else _explicitNullProperties?.Remove("acl"); } }
+        private string? _explicitNullValueAcl = default!;
 #nullable restore
 #else
-        public string Acl { get; set; }
+        public string Acl { get => _explicitNullValueAcl; set { _explicitNullValueAcl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acl"); else _explicitNullProperties?.Remove("acl"); } }
+        private string _explicitNullValueAcl = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bucket property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Bucket { get; set; }
+        public string? Bucket { get => _explicitNullValueBucket; set { _explicitNullValueBucket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucket"); else _explicitNullProperties?.Remove("bucket"); } }
+        private string? _explicitNullValueBucket = default!;
 #nullable restore
 #else
-        public string Bucket { get; set; }
+        public string Bucket { get => _explicitNullValueBucket; set { _explicitNullValueBucket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucket"); else _explicitNullProperties?.Remove("bucket"); } }
+        private string _explicitNullValueBucket = default!;
 #endif
         /// <summary>The CacheControl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CacheControl { get; set; }
+        public string? CacheControl { get => _explicitNullValueCacheControl; set { _explicitNullValueCacheControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Cache-Control"); else _explicitNullProperties?.Remove("Cache-Control"); } }
+        private string? _explicitNullValueCacheControl = default!;
 #nullable restore
 #else
-        public string CacheControl { get; set; }
+        public string CacheControl { get => _explicitNullValueCacheControl; set { _explicitNullValueCacheControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Cache-Control"); else _explicitNullProperties?.Remove("Cache-Control"); } }
+        private string _explicitNullValueCacheControl = default!;
 #endif
         /// <summary>The contentType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentType { get; set; }
+        public string? ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content-type"); else _explicitNullProperties?.Remove("content-type"); } }
+        private string? _explicitNullValueContentType = default!;
 #nullable restore
 #else
-        public string ContentType { get; set; }
+        public string ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content-type"); else _explicitNullProperties?.Remove("content-type"); } }
+        private string _explicitNullValueContentType = default!;
 #endif
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get; set; }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>The Policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Policy { get; set; }
+        public string? Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Policy"); else _explicitNullProperties?.Remove("Policy"); } }
+        private string? _explicitNullValuePolicy = default!;
 #nullable restore
 #else
-        public string Policy { get; set; }
+        public string Policy { get => _explicitNullValuePolicy; set { _explicitNullValuePolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Policy"); else _explicitNullProperties?.Remove("Policy"); } }
+        private string _explicitNullValuePolicy = default!;
 #endif
         /// <summary>The success_action_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuccessActionStatus { get; set; }
+        public string? SuccessActionStatus { get => _explicitNullValueSuccessActionStatus; set { _explicitNullValueSuccessActionStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_action_status"); else _explicitNullProperties?.Remove("success_action_status"); } }
+        private string? _explicitNullValueSuccessActionStatus = default!;
 #nullable restore
 #else
-        public string SuccessActionStatus { get; set; }
+        public string SuccessActionStatus { get => _explicitNullValueSuccessActionStatus; set { _explicitNullValueSuccessActionStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_action_status"); else _explicitNullProperties?.Remove("success_action_status"); } }
+        private string _explicitNullValueSuccessActionStatus = default!;
 #endif
         /// <summary>The XAmzAlgorithm property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? XAmzAlgorithm { get; set; }
+        public string? XAmzAlgorithm { get => _explicitNullValueXAmzAlgorithm; set { _explicitNullValueXAmzAlgorithm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Algorithm"); else _explicitNullProperties?.Remove("X-Amz-Algorithm"); } }
+        private string? _explicitNullValueXAmzAlgorithm = default!;
 #nullable restore
 #else
-        public string XAmzAlgorithm { get; set; }
+        public string XAmzAlgorithm { get => _explicitNullValueXAmzAlgorithm; set { _explicitNullValueXAmzAlgorithm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Algorithm"); else _explicitNullProperties?.Remove("X-Amz-Algorithm"); } }
+        private string _explicitNullValueXAmzAlgorithm = default!;
 #endif
         /// <summary>The XAmzCredential property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? XAmzCredential { get; set; }
+        public string? XAmzCredential { get => _explicitNullValueXAmzCredential; set { _explicitNullValueXAmzCredential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Credential"); else _explicitNullProperties?.Remove("X-Amz-Credential"); } }
+        private string? _explicitNullValueXAmzCredential = default!;
 #nullable restore
 #else
-        public string XAmzCredential { get; set; }
+        public string XAmzCredential { get => _explicitNullValueXAmzCredential; set { _explicitNullValueXAmzCredential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Credential"); else _explicitNullProperties?.Remove("X-Amz-Credential"); } }
+        private string _explicitNullValueXAmzCredential = default!;
 #endif
         /// <summary>The XAmzDate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? XAmzDate { get; set; }
+        public string? XAmzDate { get => _explicitNullValueXAmzDate; set { _explicitNullValueXAmzDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Date"); else _explicitNullProperties?.Remove("X-Amz-Date"); } }
+        private string? _explicitNullValueXAmzDate = default!;
 #nullable restore
 #else
-        public string XAmzDate { get; set; }
+        public string XAmzDate { get => _explicitNullValueXAmzDate; set { _explicitNullValueXAmzDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Date"); else _explicitNullProperties?.Remove("X-Amz-Date"); } }
+        private string _explicitNullValueXAmzDate = default!;
 #endif
         /// <summary>The XAmzSignature property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? XAmzSignature { get; set; }
+        public string? XAmzSignature { get => _explicitNullValueXAmzSignature; set { _explicitNullValueXAmzSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Signature"); else _explicitNullProperties?.Remove("X-Amz-Signature"); } }
+        private string? _explicitNullValueXAmzSignature = default!;
 #nullable restore
 #else
-        public string XAmzSignature { get; set; }
+        public string XAmzSignature { get => _explicitNullValueXAmzSignature; set { _explicitNullValueXAmzSignature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("X-Amz-Signature"); else _explicitNullProperties?.Remove("X-Amz-Signature"); } }
+        private string _explicitNullValueXAmzSignature = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails"/> and sets the default values.
@@ -118,7 +158,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateAsset200ResponseUploadDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -159,6 +199,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("X-Amz-Credential", XAmzCredential);
             writer.WriteStringValue("X-Amz-Date", XAmzDate);
             writer.WriteStringValue("X-Amz-Signature", XAmzSignature);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

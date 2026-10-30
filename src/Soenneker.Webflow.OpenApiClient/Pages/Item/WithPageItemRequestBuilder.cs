@@ -73,6 +73,8 @@ namespace Soenneker.Webflow.OpenApiClient.Pages.Item
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.GetPageMetadata404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.GetPageMetadata429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.GetPageMetadata500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.GetPageMetadata200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.GetPageMetadata200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -106,6 +108,8 @@ namespace Soenneker.Webflow.OpenApiClient.Pages.Item
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.UpdatePageSettings404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.UpdatePageSettings429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.UpdatePageSettings500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.UpdatePageSettings200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.UpdatePageSettings200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

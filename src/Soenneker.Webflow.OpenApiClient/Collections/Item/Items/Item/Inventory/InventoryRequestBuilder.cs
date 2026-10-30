@@ -65,6 +65,8 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.Inventory
                 { "409", global::Soenneker.Webflow.OpenApiClient.Models.ListInventory409Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.ListInventory429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.ListInventory500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.ListInventory200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.ListInventory200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -102,6 +104,8 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Item.Inventory
                 { "409", global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory409Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

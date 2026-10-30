@@ -11,37 +11,57 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayload : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
+            if (parseNode.GetChildNode("previousRoleName") is { } nullNodePreviousRoleName && nullNodePreviousRoleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviousRoleName = null;
+            if (parseNode.GetChildNode("roleName") is { } nullNodeRoleName && nullNodeRoleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleName = null;
+            if (parseNode.GetChildNode("targetUser") is { } nullNodeTargetUser && nullNodeTargetUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUser = null;
+            if (parseNode.GetChildNode("userType") is { } nullNodeUserType && nullNodeUserType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The method property</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadMethod? Method { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadMethod? _explicitNullValueMethod = default!;
         /// <summary>The previous role that the user had</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviousRoleName { get; set; }
+        public string? PreviousRoleName { get => _explicitNullValuePreviousRoleName; set { _explicitNullValuePreviousRoleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousRoleName"); else _explicitNullProperties?.Remove("previousRoleName"); } }
+        private string? _explicitNullValuePreviousRoleName = default!;
 #nullable restore
 #else
-        public string PreviousRoleName { get; set; }
+        public string PreviousRoleName { get => _explicitNullValuePreviousRoleName; set { _explicitNullValuePreviousRoleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previousRoleName"); else _explicitNullProperties?.Remove("previousRoleName"); } }
+        private string _explicitNullValuePreviousRoleName = default!;
 #endif
         /// <summary>The name of the role that was assigned to the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleName { get; set; }
+        public string? RoleName { get => _explicitNullValueRoleName; set { _explicitNullValueRoleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleName"); else _explicitNullProperties?.Remove("roleName"); } }
+        private string? _explicitNullValueRoleName = default!;
 #nullable restore
 #else
-        public string RoleName { get; set; }
+        public string RoleName { get => _explicitNullValueRoleName; set { _explicitNullValueRoleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleName"); else _explicitNullProperties?.Remove("roleName"); } }
+        private string _explicitNullValueRoleName = default!;
 #endif
         /// <summary>The targetUser property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadTargetUser? TargetUser { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadTargetUser? TargetUser { get => _explicitNullValueTargetUser; set { _explicitNullValueTargetUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUser"); else _explicitNullProperties?.Remove("targetUser"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadTargetUser? _explicitNullValueTargetUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadTargetUser TargetUser { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadTargetUser TargetUser { get => _explicitNullValueTargetUser; set { _explicitNullValueTargetUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUser"); else _explicitNullProperties?.Remove("targetUser"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadTargetUser _explicitNullValueTargetUser = default!;
 #endif
         /// <summary>The userType property</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadUserType? UserType { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadUserType? UserType { get => _explicitNullValueUserType; set { _explicitNullValueUserType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userType"); else _explicitNullProperties?.Remove("userType"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadUserType? _explicitNullValueUserType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayload"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("roleName", RoleName);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadTargetUser>("targetUser", TargetUser);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayloadUserType>("userType", UserType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

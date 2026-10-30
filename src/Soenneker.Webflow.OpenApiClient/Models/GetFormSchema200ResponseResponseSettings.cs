@@ -12,35 +12,53 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetFormSchema200ResponseResponseSettings : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("redirectAction") is { } nullNodeRedirectAction && nullNodeRedirectAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectAction = null;
+            if (parseNode.GetChildNode("redirectMethod") is { } nullNodeRedirectMethod && nullNodeRedirectMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectMethod = null;
+            if (parseNode.GetChildNode("redirectUrl") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
+            if (parseNode.GetChildNode("sendEmailConfirmation") is { } nullNodeSendEmailConfirmation && nullNodeSendEmailConfirmation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmailConfirmation = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The action to take after form submission</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectAction { get; set; }
+        public string? RedirectAction { get => _explicitNullValueRedirectAction; set { _explicitNullValueRedirectAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAction"); else _explicitNullProperties?.Remove("redirectAction"); } }
+        private string? _explicitNullValueRedirectAction = default!;
 #nullable restore
 #else
-        public string RedirectAction { get; set; }
+        public string RedirectAction { get => _explicitNullValueRedirectAction; set { _explicitNullValueRedirectAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAction"); else _explicitNullProperties?.Remove("redirectAction"); } }
+        private string _explicitNullValueRedirectAction = default!;
 #endif
         /// <summary>The HTTP request method to use for the redirectUrl (eg. POST or GET)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectMethod { get; set; }
+        public string? RedirectMethod { get => _explicitNullValueRedirectMethod; set { _explicitNullValueRedirectMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectMethod"); else _explicitNullProperties?.Remove("redirectMethod"); } }
+        private string? _explicitNullValueRedirectMethod = default!;
 #nullable restore
 #else
-        public string RedirectMethod { get; set; }
+        public string RedirectMethod { get => _explicitNullValueRedirectMethod; set { _explicitNullValueRedirectMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectMethod"); else _explicitNullProperties?.Remove("redirectMethod"); } }
+        private string _explicitNullValueRedirectMethod = default!;
 #endif
         /// <summary>The url or path to redirect the user to after form submission</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUrl { get; set; }
+        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
+        private string? _explicitNullValueRedirectUrl = default!;
 #nullable restore
 #else
-        public string RedirectUrl { get; set; }
+        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
+        private string _explicitNullValueRedirectUrl = default!;
 #endif
         /// <summary>Whether to send an email confirmation to the user</summary>
-        public bool? SendEmailConfirmation { get; set; }
+        public bool? SendEmailConfirmation { get => _explicitNullValueSendEmailConfirmation; set { _explicitNullValueSendEmailConfirmation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendEmailConfirmation"); else _explicitNullProperties?.Remove("sendEmailConfirmation"); } }
+        private bool? _explicitNullValueSendEmailConfirmation = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetFormSchema200ResponseResponseSettings"/> and sets the default values.
         /// </summary>
@@ -56,7 +74,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetFormSchema200ResponseResponseSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetFormSchema200ResponseResponseSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetFormSchema200ResponseResponseSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("redirectMethod", RedirectMethod);
             writer.WriteStringValue("redirectUrl", RedirectUrl);
             writer.WriteBoolValue("sendEmailConfirmation", SendEmailConfirmation);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

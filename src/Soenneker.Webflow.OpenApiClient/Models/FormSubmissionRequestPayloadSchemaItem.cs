@@ -11,21 +11,35 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FormSubmissionRequestPayloadSchemaItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fieldElementId") is { } nullNodeFieldElementId && nullNodeFieldElementId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldElementId = null;
+            if (parseNode.GetChildNode("fieldName") is { } nullNodeFieldName && nullNodeFieldName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldName = null;
+            if (parseNode.GetChildNode("fieldType") is { } nullNodeFieldType && nullNodeFieldType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Element ID of the Form Field</summary>
-        public Guid? FieldElementId { get; set; }
+        public Guid? FieldElementId { get => _explicitNullValueFieldElementId; set { _explicitNullValueFieldElementId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldElementId"); else _explicitNullProperties?.Remove("fieldElementId"); } }
+        private Guid? _explicitNullValueFieldElementId = default!;
         /// <summary>Form field name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldName { get; set; }
+        public string? FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldName"); else _explicitNullProperties?.Remove("fieldName"); } }
+        private string? _explicitNullValueFieldName = default!;
 #nullable restore
 #else
-        public string FieldName { get; set; }
+        public string FieldName { get => _explicitNullValueFieldName; set { _explicitNullValueFieldName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldName"); else _explicitNullProperties?.Remove("fieldName"); } }
+        private string _explicitNullValueFieldName = default!;
 #endif
         /// <summary>Form field type</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItemFieldType? FieldType { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItemFieldType? FieldType { get => _explicitNullValueFieldType; set { _explicitNullValueFieldType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldType"); else _explicitNullProperties?.Remove("fieldType"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItemFieldType? _explicitNullValueFieldType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItem"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteGuidValue("fieldElementId", FieldElementId);
             writer.WriteStringValue("fieldName", FieldName);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.FormSubmissionRequestPayloadSchemaItemFieldType>("fieldType", FieldType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

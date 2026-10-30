@@ -12,32 +12,48 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FulfillOrder200ResponseTotals : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("extras") is { } nullNodeExtras && nullNodeExtras.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extras = null;
+            if (parseNode.GetChildNode("subtotal") is { } nullNodeSubtotal && nullNodeSubtotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtotal = null;
+            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of extra items, includes discounts, shipping, and taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsExtrasItem>? Extras { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsExtrasItem>? Extras { get => _explicitNullValueExtras; set { _explicitNullValueExtras = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extras"); else _explicitNullProperties?.Remove("extras"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsExtrasItem>? _explicitNullValueExtras = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsExtrasItem> Extras { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsExtrasItem> Extras { get => _explicitNullValueExtras; set { _explicitNullValueExtras = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extras"); else _explicitNullProperties?.Remove("extras"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsExtrasItem> _explicitNullValueExtras = default!;
 #endif
         /// <summary>The subtotal price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsSubtotal? Subtotal { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsSubtotal? Subtotal { get => _explicitNullValueSubtotal; set { _explicitNullValueSubtotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtotal"); else _explicitNullProperties?.Remove("subtotal"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsSubtotal? _explicitNullValueSubtotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsSubtotal Subtotal { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsSubtotal Subtotal { get => _explicitNullValueSubtotal; set { _explicitNullValueSubtotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtotal"); else _explicitNullProperties?.Remove("subtotal"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsSubtotal _explicitNullValueSubtotal = default!;
 #endif
         /// <summary>The total price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsTotal? Total { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsTotal? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsTotal? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsTotal Total { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsTotal Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsTotal _explicitNullValueTotal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotals"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotals CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotals();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotals(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsExtrasItem>("extras", Extras);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsSubtotal>("subtotal", Subtotal);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponseTotalsTotal>("total", Total);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,7 +12,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateStaticContentRequestNodesItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemComponentInstance"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,29 +78,44 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItem();
             if("UpdateStaticContentRequestNodesItemComponentInstance".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpdateStaticContentRequestNodesItemComponentInstance = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemComponentInstance();
+                
             }
             else if("UpdateStaticContentRequestNodesItemSearchButton".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpdateStaticContentRequestNodesItemSearchButton = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSearchButton();
+                
             }
             else if("UpdateStaticContentRequestNodesItemSelect".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpdateStaticContentRequestNodesItemSelect = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSelect();
+                
             }
             else if("UpdateStaticContentRequestNodesItemSubmitButton".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpdateStaticContentRequestNodesItemSubmitButton = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSubmitButton();
+                
             }
             else if("UpdateStaticContentRequestNodesItemTextInput".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpdateStaticContentRequestNodesItemTextInput = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemTextInput();
+                
             }
             else if("UpdateStaticContentRequestNodesItemTextNode".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpdateStaticContentRequestNodesItemTextNode = new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemTextNode();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("nodeId") != null && parseNode.GetChildNode("text") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("nodeId") != null && parseNode.GetChildNode("propertyOverrides") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("nodeId") != null && parseNode.GetChildNode("choices") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("nodeId") != null && parseNode.GetChildNode("placeholder") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("nodeId") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("nodeId") != null && parseNode.GetChildNode("value") != null))();
+            if (result.UpdateStaticContentRequestNodesItemComponentInstance == null && result.UpdateStaticContentRequestNodesItemSearchButton == null && result.UpdateStaticContentRequestNodesItemSelect == null && result.UpdateStaticContentRequestNodesItemSubmitButton == null && result.UpdateStaticContentRequestNodesItemTextInput == null && result.UpdateStaticContentRequestNodesItemTextNode == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.UpdateStaticContentRequestNodesItemTextNode = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemTextNode(), parseNode);
+            if (result.UpdateStaticContentRequestNodesItemComponentInstance == null && result.UpdateStaticContentRequestNodesItemSearchButton == null && result.UpdateStaticContentRequestNodesItemSelect == null && result.UpdateStaticContentRequestNodesItemSubmitButton == null && result.UpdateStaticContentRequestNodesItemTextInput == null && result.UpdateStaticContentRequestNodesItemTextNode == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.UpdateStaticContentRequestNodesItemComponentInstance = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemComponentInstance(), parseNode);
+            if (result.UpdateStaticContentRequestNodesItemComponentInstance == null && result.UpdateStaticContentRequestNodesItemSearchButton == null && result.UpdateStaticContentRequestNodesItemSelect == null && result.UpdateStaticContentRequestNodesItemSubmitButton == null && result.UpdateStaticContentRequestNodesItemTextInput == null && result.UpdateStaticContentRequestNodesItemTextNode == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.UpdateStaticContentRequestNodesItemSelect = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSelect(), parseNode);
+            if (result.UpdateStaticContentRequestNodesItemComponentInstance == null && result.UpdateStaticContentRequestNodesItemSearchButton == null && result.UpdateStaticContentRequestNodesItemSelect == null && result.UpdateStaticContentRequestNodesItemSubmitButton == null && result.UpdateStaticContentRequestNodesItemTextInput == null && result.UpdateStaticContentRequestNodesItemTextNode == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5) result.UpdateStaticContentRequestNodesItemTextInput = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemTextInput(), parseNode);
+            if (result.UpdateStaticContentRequestNodesItemComponentInstance == null && result.UpdateStaticContentRequestNodesItemSearchButton == null && result.UpdateStaticContentRequestNodesItemSelect == null && result.UpdateStaticContentRequestNodesItemSubmitButton == null && result.UpdateStaticContentRequestNodesItemTextInput == null && result.UpdateStaticContentRequestNodesItemTextNode == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5) result.UpdateStaticContentRequestNodesItemSubmitButton = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSubmitButton(), parseNode);
+            if (result.UpdateStaticContentRequestNodesItemComponentInstance == null && result.UpdateStaticContentRequestNodesItemSearchButton == null && result.UpdateStaticContentRequestNodesItemSelect == null && result.UpdateStaticContentRequestNodesItemSubmitButton == null && result.UpdateStaticContentRequestNodesItemTextInput == null && result.UpdateStaticContentRequestNodesItemTextNode == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4) result.UpdateStaticContentRequestNodesItemSearchButton = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSearchButton(), parseNode);
+            if (result.UpdateStaticContentRequestNodesItemComponentInstance == null && result.UpdateStaticContentRequestNodesItemSearchButton == null && result.UpdateStaticContentRequestNodesItemSelect == null && result.UpdateStaticContentRequestNodesItemSubmitButton == null && result.UpdateStaticContentRequestNodesItemTextInput == null && result.UpdateStaticContentRequestNodesItemTextNode == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -135,29 +155,44 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (UpdateStaticContentRequestNodesItemComponentInstance == null && UpdateStaticContentRequestNodesItemSearchButton == null && UpdateStaticContentRequestNodesItemSelect == null && UpdateStaticContentRequestNodesItemSubmitButton == null && UpdateStaticContentRequestNodesItemTextInput == null && UpdateStaticContentRequestNodesItemTextNode == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (UpdateStaticContentRequestNodesItemComponentInstance != null && UpdateStaticContentRequestNodesItemSearchButton == null && UpdateStaticContentRequestNodesItemSelect == null && UpdateStaticContentRequestNodesItemSubmitButton == null && UpdateStaticContentRequestNodesItemTextInput == null && UpdateStaticContentRequestNodesItemTextNode == null) { if (UpdateStaticContentRequestNodesItemComponentInstance is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateStaticContentRequestNodesItemComponentInstance); return; }
+            if (UpdateStaticContentRequestNodesItemSearchButton != null && UpdateStaticContentRequestNodesItemComponentInstance == null && UpdateStaticContentRequestNodesItemSelect == null && UpdateStaticContentRequestNodesItemSubmitButton == null && UpdateStaticContentRequestNodesItemTextInput == null && UpdateStaticContentRequestNodesItemTextNode == null) { if (UpdateStaticContentRequestNodesItemSearchButton is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateStaticContentRequestNodesItemSearchButton); return; }
+            if (UpdateStaticContentRequestNodesItemSelect != null && UpdateStaticContentRequestNodesItemComponentInstance == null && UpdateStaticContentRequestNodesItemSearchButton == null && UpdateStaticContentRequestNodesItemSubmitButton == null && UpdateStaticContentRequestNodesItemTextInput == null && UpdateStaticContentRequestNodesItemTextNode == null) { if (UpdateStaticContentRequestNodesItemSelect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateStaticContentRequestNodesItemSelect); return; }
+            if (UpdateStaticContentRequestNodesItemSubmitButton != null && UpdateStaticContentRequestNodesItemComponentInstance == null && UpdateStaticContentRequestNodesItemSearchButton == null && UpdateStaticContentRequestNodesItemSelect == null && UpdateStaticContentRequestNodesItemTextInput == null && UpdateStaticContentRequestNodesItemTextNode == null) { if (UpdateStaticContentRequestNodesItemSubmitButton is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateStaticContentRequestNodesItemSubmitButton); return; }
+            if (UpdateStaticContentRequestNodesItemTextInput != null && UpdateStaticContentRequestNodesItemComponentInstance == null && UpdateStaticContentRequestNodesItemSearchButton == null && UpdateStaticContentRequestNodesItemSelect == null && UpdateStaticContentRequestNodesItemSubmitButton == null && UpdateStaticContentRequestNodesItemTextNode == null) { if (UpdateStaticContentRequestNodesItemTextInput is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateStaticContentRequestNodesItemTextInput); return; }
+            if (UpdateStaticContentRequestNodesItemTextNode != null && UpdateStaticContentRequestNodesItemComponentInstance == null && UpdateStaticContentRequestNodesItemSearchButton == null && UpdateStaticContentRequestNodesItemSelect == null && UpdateStaticContentRequestNodesItemSubmitButton == null && UpdateStaticContentRequestNodesItemTextInput == null) { if (UpdateStaticContentRequestNodesItemTextNode is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateStaticContentRequestNodesItemTextNode); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(UpdateStaticContentRequestNodesItemComponentInstance != null)
             {
+                if (UpdateStaticContentRequestNodesItemComponentInstance is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemComponentInstance>(null, UpdateStaticContentRequestNodesItemComponentInstance);
             }
             else if(UpdateStaticContentRequestNodesItemSearchButton != null)
             {
+                if (UpdateStaticContentRequestNodesItemSearchButton is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSearchButton>(null, UpdateStaticContentRequestNodesItemSearchButton);
             }
             else if(UpdateStaticContentRequestNodesItemSelect != null)
             {
+                if (UpdateStaticContentRequestNodesItemSelect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSelect>(null, UpdateStaticContentRequestNodesItemSelect);
             }
             else if(UpdateStaticContentRequestNodesItemSubmitButton != null)
             {
+                if (UpdateStaticContentRequestNodesItemSubmitButton is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemSubmitButton>(null, UpdateStaticContentRequestNodesItemSubmitButton);
             }
             else if(UpdateStaticContentRequestNodesItemTextInput != null)
             {
+                if (UpdateStaticContentRequestNodesItemTextInput is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemTextInput>(null, UpdateStaticContentRequestNodesItemTextInput);
             }
             else if(UpdateStaticContentRequestNodesItemTextNode != null)
             {
+                if (UpdateStaticContentRequestNodesItemTextNode is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateStaticContentRequestNodesItemTextNode>(null, UpdateStaticContentRequestNodesItemTextNode);
             }
         }

@@ -12,26 +12,41 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateProductRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+            if (parseNode.GetChildNode("publishStatus") is { } nullNodePublishStatus && nullNodePublishStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishStatus = null;
+            if (parseNode.GetChildNode("sku") is { } nullNodeSku && nullNodeSku.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sku = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Product object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestProduct? Product { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestProduct? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestProduct? _explicitNullValueProduct = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestProduct Product { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestProduct Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestProduct _explicitNullValueProduct = default!;
 #endif
         /// <summary>Indicate whether your Product should be set as &quot;staging&quot; or &quot;live&quot;</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestPublishStatus? PublishStatus { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestPublishStatus? PublishStatus { get => _explicitNullValuePublishStatus; set { _explicitNullValuePublishStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishStatus"); else _explicitNullProperties?.Remove("publishStatus"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestPublishStatus? _explicitNullValuePublishStatus = default!;
         /// <summary>The SKU object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSku? Sku { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSku? Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSku? _explicitNullValueSku = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSku Sku { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSku Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSku _explicitNullValueSku = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequest"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestProduct>("product", Product);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestPublishStatus>("publishStatus", PublishStatus);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateProductRequestSku>("sku", Sku);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

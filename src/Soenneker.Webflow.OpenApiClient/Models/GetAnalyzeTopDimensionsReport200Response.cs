@@ -12,40 +12,64 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetAnalyzeTopDimensionsReport200Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("dimension") is { } nullNodeDimension && nullNodeDimension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dimension = null;
+            if (parseNode.GetChildNode("filter") is { } nullNodeFilter && nullNodeFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filter = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("metricScope") is { } nullNodeMetricScope && nullNodeMetricScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetricScope = null;
+            if (parseNode.GetChildNode("report") is { } nullNodeReport && nullNodeReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Report = null;
+            if (parseNode.GetChildNode("window") is { } nullNodeWindow && nullNodeWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Window = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Dimension values ranked by `count`, descending. At most `limit` rows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem>? Data { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem> Data { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>The dimension whose top values are ranked.- `country`: ISO 3166-1 alpha-2 country code (e.g., `US`).- `region`: first-level subdivision below country, keyed by ISO 3166-2 code (e.g., `US-CA`, with `name` `California, United States`).- `deviceType`: `desktop`, `mobile`, or `tablet`.- `os`: operating system name (e.g., `iOS`, `Windows NT`).- `browser`: browser name (e.g., `Chrome`, `Safari`).- `language`: the visitor&apos;s stated language preference (from the `Accept-Language` request header).- `locale`: the locale declared on the visited page (the page&apos;s `&lt;html lang&gt;` value).- `referrer`: referrer domain (e.g., `google.com`).- `trafficSource`: traffic source category, keyed by a code: `DN` Direct, `SP` Paid Search, `SO` Organic Search, `CP` Paid Social, `CO` Organic Social, `EM` Email, `RC` Recirculation, `OP` Other Paid, `OT` Other, `AI` Generative AI. `attributeKey` is the code; `name` is the label.- `utmCampaign`: `utm_campaign` value.- `utmContent`: `utm_content` value.- `utmMedium`: `utm_medium` value.- `utmSource`: `utm_source` value.- `utmTerm`: `utm_term` value.- `audienceIds`: Webflow audience identifier. For this dimension, `attributeKey` is the audience ID and `name` is the audience&apos;s display name (falling back to the ID if no display name is set).</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDimension? Dimension { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDimension? Dimension { get => _explicitNullValueDimension; set { _explicitNullValueDimension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dimension"); else _explicitNullProperties?.Remove("dimension"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDimension? _explicitNullValueDimension = default!;
         /// <summary>Filter the top dimensions report by dimension. Each property is an optional set of `AnalyzeFilterOperators` (`eq`, `in`, `ne`, `nin`) applied to the named dimension. Filter a given dimension in one place — either inside `filter` or as a top-level query parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseFilter? Filter { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseFilter? Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseFilter? _explicitNullValueFilter = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseFilter Filter { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseFilter Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseFilter _explicitNullValueFilter = default!;
 #endif
         /// <summary>The row cap that was applied to this response (echoes the resolved request value, including the default).</summary>
-        public int? Limit { get; set; }
+        public int? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private int? _explicitNullValueLimit = default!;
         /// <summary>The unit each row&apos;s `count` is measured in.- `session`: number of sessions attributed to the dimension value.- `user`: number of unique users attributed to the dimension value.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseMetricScope? MetricScope { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseMetricScope? MetricScope { get => _explicitNullValueMetricScope; set { _explicitNullValueMetricScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metricScope"); else _explicitNullProperties?.Remove("metricScope"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseMetricScope? _explicitNullValueMetricScope = default!;
         /// <summary>Discriminator identifying the report type.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.TopDimensionsReport? Report { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.TopDimensionsReport? Report { get => _explicitNullValueReport; set { _explicitNullValueReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report"); else _explicitNullProperties?.Remove("report"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.TopDimensionsReport? _explicitNullValueReport = default!;
         /// <summary>A reporting time window. `endTime` must be greater than `startTime`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseWindow? Window { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseWindow? Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseWindow? _explicitNullValueWindow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseWindow Window { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseWindow Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseWindow _explicitNullValueWindow = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200Response"/> and sets the default values.
@@ -62,7 +86,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -95,6 +119,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseMetricScope>("metricScope", MetricScope);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.TopDimensionsReport>("report", Report);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseWindow>("window", Window);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

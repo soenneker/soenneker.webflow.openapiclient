@@ -12,30 +12,46 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReplaceCustomFontFileRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("axes") is { } nullNodeAxes && nullNodeAxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Axes = null;
+            if (parseNode.GetChildNode("fileHash") is { } nullNodeFileHash && nullNodeFileHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileHash = null;
+            if (parseNode.GetChildNode("fileName") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
+        }
+
         /// <summary>Variable font axes for the replacement binary. Required when the existing font has a non-empty `axes` array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequestAxesItem>? Axes { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequestAxesItem>? Axes { get => _explicitNullValueAxes; set { _explicitNullValueAxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("axes"); else _explicitNullProperties?.Remove("axes"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequestAxesItem>? _explicitNullValueAxes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequestAxesItem> Axes { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequestAxesItem> Axes { get => _explicitNullValueAxes; set { _explicitNullValueAxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("axes"); else _explicitNullProperties?.Remove("axes"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequestAxesItem> _explicitNullValueAxes = default!;
 #endif
         /// <summary>Lowercase hex MD5 hash of the font binary (exactly 32 characters)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileHash { get; set; }
+        public string? FileHash { get => _explicitNullValueFileHash; set { _explicitNullValueFileHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileHash"); else _explicitNullProperties?.Remove("fileHash"); } }
+        private string? _explicitNullValueFileHash = default!;
 #nullable restore
 #else
-        public string FileHash { get; set; }
+        public string FileHash { get => _explicitNullValueFileHash; set { _explicitNullValueFileHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileHash"); else _explicitNullProperties?.Remove("fileHash"); } }
+        private string _explicitNullValueFileHash = default!;
 #endif
         /// <summary>File name including extension. Accepted extensions are `.woff2`, `.woff`, `.ttf`, `.otf`, and `.eot`. Maximum 256 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileName { get; set; }
+        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileName"); else _explicitNullProperties?.Remove("fileName"); } }
+        private string? _explicitNullValueFileName = default!;
 #nullable restore
 #else
-        public string FileName { get; set; }
+        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileName"); else _explicitNullProperties?.Remove("fileName"); } }
+        private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.ReplaceCustomFontFileRequestAxesItem>("axes", Axes);
             writer.WriteStringValue("fileHash", FileHash);
-            writer.WriteStringValue("fileName", FileName);
+            writer.WriteStringValue("fileName", FileName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

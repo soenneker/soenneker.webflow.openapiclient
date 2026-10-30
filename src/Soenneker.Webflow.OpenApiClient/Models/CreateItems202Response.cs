@@ -12,16 +12,30 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateItems202Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cmsLocaleIds") is { } nullNodeCmsLocaleIds && nullNodeCmsLocaleIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CmsLocaleIds = null;
+            if (parseNode.GetChildNode("fieldData") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isArchived") is { } nullNodeIsArchived && nullNodeIsArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsArchived = null;
+            if (parseNode.GetChildNode("isDraft") is { } nullNodeIsDraft && nullNodeIsDraft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDraft = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Array of identifiers for the locales where the item will be created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CmsLocaleIds { get; set; }
+        public List<string>? CmsLocaleIds { get => _explicitNullValueCmsLocaleIds; set { _explicitNullValueCmsLocaleIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cmsLocaleIds"); else _explicitNullProperties?.Remove("cmsLocaleIds"); } }
+        private List<string>? _explicitNullValueCmsLocaleIds = default!;
 #nullable restore
 #else
-        public List<string> CmsLocaleIds { get; set; }
+        public List<string> CmsLocaleIds { get => _explicitNullValueCmsLocaleIds; set { _explicitNullValueCmsLocaleIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cmsLocaleIds"); else _explicitNullProperties?.Remove("cmsLocaleIds"); } }
+        private List<string> _explicitNullValueCmsLocaleIds = default!;
 #endif
         /// <summary>The date the item was created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -34,23 +48,29 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The fieldData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202ResponseFieldData? FieldData { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202ResponseFieldData? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202ResponseFieldData? _explicitNullValueFieldData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202ResponseFieldData FieldData { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202ResponseFieldData FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202ResponseFieldData _explicitNullValueFieldData = default!;
 #endif
         /// <summary>Unique identifier for the Item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Boolean determining if the Item is set to archived</summary>
-        public bool? IsArchived { get; set; }
+        public bool? IsArchived { get => _explicitNullValueIsArchived; set { _explicitNullValueIsArchived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isArchived"); else _explicitNullProperties?.Remove("isArchived"); } }
+        private bool? _explicitNullValueIsArchived = default!;
         /// <summary>Whether the item is created in a draft state. A new item has never been published, so `isDraft: true` gives it a `Draft` status. Set `isDraft: false` to queue the item to publish on the next site publish.</summary>
-        public bool? IsDraft { get; set; }
+        public bool? IsDraft { get => _explicitNullValueIsDraft; set { _explicitNullValueIsDraft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDraft"); else _explicitNullProperties?.Remove("isDraft"); } }
+        private bool? _explicitNullValueIsDraft = default!;
         /// <summary>The date the item was last published</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,7 +104,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateItems202Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,6 +136,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isArchived", IsArchived);
             writer.WriteBoolValue("isDraft", IsDraft);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

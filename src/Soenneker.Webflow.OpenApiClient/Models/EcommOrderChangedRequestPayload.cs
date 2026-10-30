@@ -11,112 +11,181 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EcommOrderChangedRequestPayload : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("acceptedOn") is { } nullNodeAcceptedOn && nullNodeAcceptedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedOn = null;
+            if (parseNode.GetChildNode("allAddresses") is { } nullNodeAllAddresses && nullNodeAllAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllAddresses = null;
+            if (parseNode.GetChildNode("applicationFee") is { } nullNodeApplicationFee && nullNodeApplicationFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationFee = null;
+            if (parseNode.GetChildNode("billingAddress") is { } nullNodeBillingAddress && nullNodeBillingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingAddress = null;
+            if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("customData") is { } nullNodeCustomData && nullNodeCustomData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomData = null;
+            if (parseNode.GetChildNode("customerInfo") is { } nullNodeCustomerInfo && nullNodeCustomerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerInfo = null;
+            if (parseNode.GetChildNode("customerPaid") is { } nullNodeCustomerPaid && nullNodeCustomerPaid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPaid = null;
+            if (parseNode.GetChildNode("disputedOn") is { } nullNodeDisputedOn && nullNodeDisputedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputedOn = null;
+            if (parseNode.GetChildNode("disputeLastStatus") is { } nullNodeDisputeLastStatus && nullNodeDisputeLastStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeLastStatus = null;
+            if (parseNode.GetChildNode("disputeUpdatedOn") is { } nullNodeDisputeUpdatedOn && nullNodeDisputeUpdatedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeUpdatedOn = null;
+            if (parseNode.GetChildNode("downloadFiles") is { } nullNodeDownloadFiles && nullNodeDownloadFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadFiles = null;
+            if (parseNode.GetChildNode("fulfilledOn") is { } nullNodeFulfilledOn && nullNodeFulfilledOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FulfilledOn = null;
+            if (parseNode.GetChildNode("hasDownloads") is { } nullNodeHasDownloads && nullNodeHasDownloads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasDownloads = null;
+            if (parseNode.GetChildNode("isCustomerDeleted") is { } nullNodeIsCustomerDeleted && nullNodeIsCustomerDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCustomerDeleted = null;
+            if (parseNode.GetChildNode("isShippingRequired") is { } nullNodeIsShippingRequired && nullNodeIsShippingRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsShippingRequired = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("netAmount") is { } nullNodeNetAmount && nullNodeNetAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetAmount = null;
+            if (parseNode.GetChildNode("orderComment") is { } nullNodeOrderComment && nullNodeOrderComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderComment = null;
+            if (parseNode.GetChildNode("paymentProcessor") is { } nullNodePaymentProcessor && nullNodePaymentProcessor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentProcessor = null;
+            if (parseNode.GetChildNode("paypalDetails") is { } nullNodePaypalDetails && nullNodePaypalDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaypalDetails = null;
+            if (parseNode.GetChildNode("purchasedItems") is { } nullNodePurchasedItems && nullNodePurchasedItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchasedItems = null;
+            if (parseNode.GetChildNode("purchasedItemsCount") is { } nullNodePurchasedItemsCount && nullNodePurchasedItemsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchasedItemsCount = null;
+            if (parseNode.GetChildNode("refundedOn") is { } nullNodeRefundedOn && nullNodeRefundedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundedOn = null;
+            if (parseNode.GetChildNode("shippingAddress") is { } nullNodeShippingAddress && nullNodeShippingAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingAddress = null;
+            if (parseNode.GetChildNode("shippingProvider") is { } nullNodeShippingProvider && nullNodeShippingProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingProvider = null;
+            if (parseNode.GetChildNode("shippingTracking") is { } nullNodeShippingTracking && nullNodeShippingTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingTracking = null;
+            if (parseNode.GetChildNode("shippingTrackingURL") is { } nullNodeShippingTrackingURL && nullNodeShippingTrackingURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingTrackingURL = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("stripeCard") is { } nullNodeStripeCard && nullNodeStripeCard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeCard = null;
+            if (parseNode.GetChildNode("stripeDetails") is { } nullNodeStripeDetails && nullNodeStripeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeDetails = null;
+            if (parseNode.GetChildNode("totals") is { } nullNodeTotals && nullNodeTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Totals = null;
+        }
+
         /// <summary>The ISO8601 timestamp that an Order was placed.</summary>
-        public DateTimeOffset? AcceptedOn { get; set; }
+        public DateTimeOffset? AcceptedOn { get => _explicitNullValueAcceptedOn; set { _explicitNullValueAcceptedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedOn"); else _explicitNullProperties?.Remove("acceptedOn"); } }
+        private DateTimeOffset? _explicitNullValueAcceptedOn = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>All addresses provided by the customer during the ordering flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadAllAddressesItem>? AllAddresses { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadAllAddressesItem>? AllAddresses { get => _explicitNullValueAllAddresses; set { _explicitNullValueAllAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allAddresses"); else _explicitNullProperties?.Remove("allAddresses"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadAllAddressesItem>? _explicitNullValueAllAddresses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadAllAddressesItem> AllAddresses { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadAllAddressesItem> AllAddresses { get => _explicitNullValueAllAddresses; set { _explicitNullValueAllAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allAddresses"); else _explicitNullProperties?.Remove("allAddresses"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadAllAddressesItem> _explicitNullValueAllAddresses = default!;
 #endif
         /// <summary>The application fee assessed by the platform</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadApplicationFee? ApplicationFee { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadApplicationFee? ApplicationFee { get => _explicitNullValueApplicationFee; set { _explicitNullValueApplicationFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicationFee"); else _explicitNullProperties?.Remove("applicationFee"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadApplicationFee? _explicitNullValueApplicationFee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadApplicationFee ApplicationFee { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadApplicationFee ApplicationFee { get => _explicitNullValueApplicationFee; set { _explicitNullValueApplicationFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicationFee"); else _explicitNullProperties?.Remove("applicationFee"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadApplicationFee _explicitNullValueApplicationFee = default!;
 #endif
         /// <summary>The billing address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadBillingAddress? BillingAddress { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadBillingAddress? BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingAddress"); else _explicitNullProperties?.Remove("billingAddress"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadBillingAddress? _explicitNullValueBillingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadBillingAddress BillingAddress { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadBillingAddress BillingAddress { get => _explicitNullValueBillingAddress; set { _explicitNullValueBillingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingAddress"); else _explicitNullProperties?.Remove("billingAddress"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadBillingAddress _explicitNullValueBillingAddress = default!;
 #endif
         /// <summary>A comment string for this Order, which is editable by API user (not used by Webflow).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comment { get; set; }
+        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private string? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public string Comment { get; set; }
+        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private string _explicitNullValueComment = default!;
 #endif
         /// <summary>An array of additional inputs for custom order data gathering. Each object in the array represents an input with a name, and a textInput, textArea, or checkbox value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomDataItem>? CustomData { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomDataItem>? CustomData { get => _explicitNullValueCustomData; set { _explicitNullValueCustomData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customData"); else _explicitNullProperties?.Remove("customData"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomDataItem>? _explicitNullValueCustomData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomDataItem> CustomData { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomDataItem> CustomData { get => _explicitNullValueCustomData; set { _explicitNullValueCustomData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customData"); else _explicitNullProperties?.Remove("customData"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomDataItem> _explicitNullValueCustomData = default!;
 #endif
         /// <summary>An object with the keys `fullName` and `email`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerInfo? CustomerInfo { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerInfo? CustomerInfo { get => _explicitNullValueCustomerInfo; set { _explicitNullValueCustomerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerInfo"); else _explicitNullProperties?.Remove("customerInfo"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerInfo? _explicitNullValueCustomerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerInfo CustomerInfo { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerInfo CustomerInfo { get => _explicitNullValueCustomerInfo; set { _explicitNullValueCustomerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerInfo"); else _explicitNullProperties?.Remove("customerInfo"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerInfo _explicitNullValueCustomerInfo = default!;
 #endif
         /// <summary>The total paid by the customer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerPaid? CustomerPaid { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerPaid? CustomerPaid { get => _explicitNullValueCustomerPaid; set { _explicitNullValueCustomerPaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPaid"); else _explicitNullProperties?.Remove("customerPaid"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerPaid? _explicitNullValueCustomerPaid = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerPaid CustomerPaid { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerPaid CustomerPaid { get => _explicitNullValueCustomerPaid; set { _explicitNullValueCustomerPaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPaid"); else _explicitNullProperties?.Remove("customerPaid"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadCustomerPaid _explicitNullValueCustomerPaid = default!;
 #endif
         /// <summary>When an Order is marked as &apos;disputed&apos;, this field represents the timestamp of the fulfillment in ISO8601 format. Otherwise, it is null.</summary>
-        public DateTimeOffset? DisputedOn { get; set; }
+        public DateTimeOffset? DisputedOn { get => _explicitNullValueDisputedOn; set { _explicitNullValueDisputedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputedOn"); else _explicitNullProperties?.Remove("disputedOn"); } }
+        private DateTimeOffset? _explicitNullValueDisputedOn = default!;
         /// <summary>If an order was disputed by the customer, then this key will be set with the [dispute&apos;s status](https://stripe.com/docs/api#dispute_object-status).</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDisputeLastStatus? DisputeLastStatus { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDisputeLastStatus? DisputeLastStatus { get => _explicitNullValueDisputeLastStatus; set { _explicitNullValueDisputeLastStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputeLastStatus"); else _explicitNullProperties?.Remove("disputeLastStatus"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDisputeLastStatus? _explicitNullValueDisputeLastStatus = default!;
         /// <summary>If an Order has been disputed by the customer, this key will be set to the ISO8601 timestamp of the last update received. If the Order is not disputed, the key will be null.</summary>
-        public DateTimeOffset? DisputeUpdatedOn { get; set; }
+        public DateTimeOffset? DisputeUpdatedOn { get => _explicitNullValueDisputeUpdatedOn; set { _explicitNullValueDisputeUpdatedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputeUpdatedOn"); else _explicitNullProperties?.Remove("disputeUpdatedOn"); } }
+        private DateTimeOffset? _explicitNullValueDisputeUpdatedOn = default!;
         /// <summary>An array of downloadable file objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDownloadFilesItem>? DownloadFiles { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDownloadFilesItem>? DownloadFiles { get => _explicitNullValueDownloadFiles; set { _explicitNullValueDownloadFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadFiles"); else _explicitNullProperties?.Remove("downloadFiles"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDownloadFilesItem>? _explicitNullValueDownloadFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDownloadFilesItem> DownloadFiles { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDownloadFilesItem> DownloadFiles { get => _explicitNullValueDownloadFiles; set { _explicitNullValueDownloadFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadFiles"); else _explicitNullProperties?.Remove("downloadFiles"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadDownloadFilesItem> _explicitNullValueDownloadFiles = default!;
 #endif
         /// <summary>When an Order is marked as &apos;fulfilled&apos;, this field represents the timestamp of the fulfillment in ISO8601 format. Otherwise, it is null.</summary>
-        public DateTimeOffset? FulfilledOn { get; set; }
+        public DateTimeOffset? FulfilledOn { get => _explicitNullValueFulfilledOn; set { _explicitNullValueFulfilledOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fulfilledOn"); else _explicitNullProperties?.Remove("fulfilledOn"); } }
+        private DateTimeOffset? _explicitNullValueFulfilledOn = default!;
         /// <summary>A boolean indicating whether the order contains one or more purchased items that are downloadable.</summary>
-        public bool? HasDownloads { get; set; }
+        public bool? HasDownloads { get => _explicitNullValueHasDownloads; set { _explicitNullValueHasDownloads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasDownloads"); else _explicitNullProperties?.Remove("hasDownloads"); } }
+        private bool? _explicitNullValueHasDownloads = default!;
         /// <summary>A boolean indicating whether the customer has been deleted from the site.</summary>
-        public bool? IsCustomerDeleted { get; set; }
+        public bool? IsCustomerDeleted { get => _explicitNullValueIsCustomerDeleted; set { _explicitNullValueIsCustomerDeleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isCustomerDeleted"); else _explicitNullProperties?.Remove("isCustomerDeleted"); } }
+        private bool? _explicitNullValueIsCustomerDeleted = default!;
         /// <summary>A boolean indicating whether the order contains one or more purchased items that require shipping.</summary>
-        public bool? IsShippingRequired { get; set; }
+        public bool? IsShippingRequired { get => _explicitNullValueIsShippingRequired; set { _explicitNullValueIsShippingRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isShippingRequired"); else _explicitNullProperties?.Remove("isShippingRequired"); } }
+        private bool? _explicitNullValueIsShippingRequired = default!;
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadMetadata? Metadata { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadMetadata? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadMetadata? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadMetadata Metadata { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadMetadata Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadMetadata _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The net amount after application fees</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadNetAmount? NetAmount { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadNetAmount? NetAmount { get => _explicitNullValueNetAmount; set { _explicitNullValueNetAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("netAmount"); else _explicitNullProperties?.Remove("netAmount"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadNetAmount? _explicitNullValueNetAmount = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadNetAmount NetAmount { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadNetAmount NetAmount { get => _explicitNullValueNetAmount; set { _explicitNullValueNetAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("netAmount"); else _explicitNullProperties?.Remove("netAmount"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadNetAmount _explicitNullValueNetAmount = default!;
 #endif
         /// <summary>A comment that the customer left when making their Order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderComment { get; set; }
+        public string? OrderComment { get => _explicitNullValueOrderComment; set { _explicitNullValueOrderComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderComment"); else _explicitNullProperties?.Remove("orderComment"); } }
+        private string? _explicitNullValueOrderComment = default!;
 #nullable restore
 #else
-        public string OrderComment { get; set; }
+        public string OrderComment { get => _explicitNullValueOrderComment; set { _explicitNullValueOrderComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderComment"); else _explicitNullProperties?.Remove("orderComment"); } }
+        private string _explicitNullValueOrderComment = default!;
 #endif
         /// <summary>The order ID. Will usually be 6 hex characters, but can also be 9hex characters if the site has a very large number of Orders.Randomly assigned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,88 +198,111 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>A string indicating the payment processor used for this order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentProcessor { get; set; }
+        public string? PaymentProcessor { get => _explicitNullValuePaymentProcessor; set { _explicitNullValuePaymentProcessor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentProcessor"); else _explicitNullProperties?.Remove("paymentProcessor"); } }
+        private string? _explicitNullValuePaymentProcessor = default!;
 #nullable restore
 #else
-        public string PaymentProcessor { get; set; }
+        public string PaymentProcessor { get => _explicitNullValuePaymentProcessor; set { _explicitNullValuePaymentProcessor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentProcessor"); else _explicitNullProperties?.Remove("paymentProcessor"); } }
+        private string _explicitNullValuePaymentProcessor = default!;
 #endif
         /// <summary>The paypalDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPaypalDetails? PaypalDetails { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPaypalDetails? PaypalDetails { get => _explicitNullValuePaypalDetails; set { _explicitNullValuePaypalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypalDetails"); else _explicitNullProperties?.Remove("paypalDetails"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPaypalDetails? _explicitNullValuePaypalDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPaypalDetails PaypalDetails { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPaypalDetails PaypalDetails { get => _explicitNullValuePaypalDetails; set { _explicitNullValuePaypalDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paypalDetails"); else _explicitNullProperties?.Remove("paypalDetails"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPaypalDetails _explicitNullValuePaypalDetails = default!;
 #endif
         /// <summary>An array of all things that the Customer purchased.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPurchasedItemsItem>? PurchasedItems { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPurchasedItemsItem>? PurchasedItems { get => _explicitNullValuePurchasedItems; set { _explicitNullValuePurchasedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchasedItems"); else _explicitNullProperties?.Remove("purchasedItems"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPurchasedItemsItem>? _explicitNullValuePurchasedItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPurchasedItemsItem> PurchasedItems { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPurchasedItemsItem> PurchasedItems { get => _explicitNullValuePurchasedItems; set { _explicitNullValuePurchasedItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchasedItems"); else _explicitNullProperties?.Remove("purchasedItems"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadPurchasedItemsItem> _explicitNullValuePurchasedItems = default!;
 #endif
         /// <summary>The sum of all &apos;count&apos; fields in &apos;purchasedItems&apos;.</summary>
-        public double? PurchasedItemsCount { get; set; }
+        public double? PurchasedItemsCount { get => _explicitNullValuePurchasedItemsCount; set { _explicitNullValuePurchasedItemsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchasedItemsCount"); else _explicitNullProperties?.Remove("purchasedItemsCount"); } }
+        private double? _explicitNullValuePurchasedItemsCount = default!;
         /// <summary>When an Order is marked as &apos;refunded&apos;, this field represents the timestamp of the fulfillment in ISO8601 format. Otherwise, it is null.</summary>
-        public DateTimeOffset? RefundedOn { get; set; }
+        public DateTimeOffset? RefundedOn { get => _explicitNullValueRefundedOn; set { _explicitNullValueRefundedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundedOn"); else _explicitNullProperties?.Remove("refundedOn"); } }
+        private DateTimeOffset? _explicitNullValueRefundedOn = default!;
         /// <summary>The shipping address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadShippingAddress? ShippingAddress { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadShippingAddress? ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingAddress"); else _explicitNullProperties?.Remove("shippingAddress"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadShippingAddress? _explicitNullValueShippingAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadShippingAddress ShippingAddress { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadShippingAddress ShippingAddress { get => _explicitNullValueShippingAddress; set { _explicitNullValueShippingAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingAddress"); else _explicitNullProperties?.Remove("shippingAddress"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadShippingAddress _explicitNullValueShippingAddress = default!;
 #endif
         /// <summary>A string editable by the API user to note the shipping provider used (not used by Webflow).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingProvider { get; set; }
+        public string? ShippingProvider { get => _explicitNullValueShippingProvider; set { _explicitNullValueShippingProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingProvider"); else _explicitNullProperties?.Remove("shippingProvider"); } }
+        private string? _explicitNullValueShippingProvider = default!;
 #nullable restore
 #else
-        public string ShippingProvider { get; set; }
+        public string ShippingProvider { get => _explicitNullValueShippingProvider; set { _explicitNullValueShippingProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingProvider"); else _explicitNullProperties?.Remove("shippingProvider"); } }
+        private string _explicitNullValueShippingProvider = default!;
 #endif
         /// <summary>A string editable by the API user to note the shipping tracking number for the order (not used by Webflow).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingTracking { get; set; }
+        public string? ShippingTracking { get => _explicitNullValueShippingTracking; set { _explicitNullValueShippingTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTracking"); else _explicitNullProperties?.Remove("shippingTracking"); } }
+        private string? _explicitNullValueShippingTracking = default!;
 #nullable restore
 #else
-        public string ShippingTracking { get; set; }
+        public string ShippingTracking { get => _explicitNullValueShippingTracking; set { _explicitNullValueShippingTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTracking"); else _explicitNullProperties?.Remove("shippingTracking"); } }
+        private string _explicitNullValueShippingTracking = default!;
 #endif
         /// <summary>The shippingTrackingURL property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingTrackingURL { get; set; }
+        public string? ShippingTrackingURL { get => _explicitNullValueShippingTrackingURL; set { _explicitNullValueShippingTrackingURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTrackingURL"); else _explicitNullProperties?.Remove("shippingTrackingURL"); } }
+        private string? _explicitNullValueShippingTrackingURL = default!;
 #nullable restore
 #else
-        public string ShippingTrackingURL { get; set; }
+        public string ShippingTrackingURL { get => _explicitNullValueShippingTrackingURL; set { _explicitNullValueShippingTrackingURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTrackingURL"); else _explicitNullProperties?.Remove("shippingTrackingURL"); } }
+        private string _explicitNullValueShippingTrackingURL = default!;
 #endif
         /// <summary>The status of the Order</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStatus? Status { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStatus? _explicitNullValueStatus = default!;
         /// <summary>Details on the card used to fulfill this order, if this order was finalized with Stripe.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard? StripeCard { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard? StripeCard { get => _explicitNullValueStripeCard; set { _explicitNullValueStripeCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeCard"); else _explicitNullProperties?.Remove("stripeCard"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard? _explicitNullValueStripeCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard StripeCard { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard StripeCard { get => _explicitNullValueStripeCard; set { _explicitNullValueStripeCard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeCard"); else _explicitNullProperties?.Remove("stripeCard"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard _explicitNullValueStripeCard = default!;
 #endif
         /// <summary>An object with various Stripe IDs, useful for linking into the stripe dashboard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeDetails? StripeDetails { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeDetails? StripeDetails { get => _explicitNullValueStripeDetails; set { _explicitNullValueStripeDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeDetails"); else _explicitNullProperties?.Remove("stripeDetails"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeDetails? _explicitNullValueStripeDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeDetails StripeDetails { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeDetails StripeDetails { get => _explicitNullValueStripeDetails; set { _explicitNullValueStripeDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeDetails"); else _explicitNullProperties?.Remove("stripeDetails"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeDetails _explicitNullValueStripeDetails = default!;
 #endif
         /// <summary>An object describing various pricing totals</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotals? Totals { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotals? Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotals? _explicitNullValueTotals = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotals Totals { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotals Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotals _explicitNullValueTotals = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayload"/> and sets the default values.
@@ -227,7 +319,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -311,6 +403,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeCard>("stripeCard", StripeCard);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadStripeDetails>("stripeDetails", StripeDetails);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotals>("totals", Totals);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

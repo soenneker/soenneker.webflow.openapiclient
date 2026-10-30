@@ -65,6 +65,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Orders.Item.Unfulfill
                 { "409", global::Soenneker.Webflow.OpenApiClient.Models.UnfulfillOrder409Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.UnfulfillOrder429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.UnfulfillOrder500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.UnfulfillOrder200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.UnfulfillOrder200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

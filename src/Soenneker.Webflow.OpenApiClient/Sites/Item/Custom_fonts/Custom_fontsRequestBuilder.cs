@@ -88,6 +88,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Custom_fonts
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.ListCustomFonts404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.ListCustomFonts429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.ListCustomFonts500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.ListCustomFonts200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.ListCustomFonts200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -127,6 +129,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Custom_fonts
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.CreateCustomFont429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.CreateCustomFont500Response.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Webflow.OpenApiClient.Models.CreateCustomFont503Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.CreateCustomFont202Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.CreateCustomFont202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

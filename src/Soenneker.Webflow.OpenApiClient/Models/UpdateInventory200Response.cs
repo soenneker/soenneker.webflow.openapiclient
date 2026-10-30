@@ -12,7 +12,16 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateInventory200Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("inventoryType") is { } nullNodeInventoryType && nullNodeInventoryType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InventoryType = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unique identifier for a SKU item</summary>
@@ -24,9 +33,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public string Id { get; private set; }
 #endif
         /// <summary>infinite or finite</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200ResponseInventoryType? InventoryType { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200ResponseInventoryType? InventoryType { get => _explicitNullValueInventoryType; set { _explicitNullValueInventoryType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inventoryType"); else _explicitNullProperties?.Remove("inventoryType"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200ResponseInventoryType? _explicitNullValueInventoryType = default!;
         /// <summary>Total quantity of items remaining in inventory (if inventoryType is finite)</summary>
-        public double? Quantity { get; set; }
+        public double? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private double? _explicitNullValueQuantity = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200Response"/> and sets the default values.
         /// </summary>
@@ -42,7 +53,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +77,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventory200ResponseInventoryType>("inventoryType", InventoryType);
             writer.WriteDoubleValue("quantity", Quantity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

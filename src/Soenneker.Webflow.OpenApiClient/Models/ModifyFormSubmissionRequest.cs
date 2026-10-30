@@ -11,16 +11,26 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ModifyFormSubmissionRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("formSubmissionData") is { } nullNodeFormSubmissionData && nullNodeFormSubmissionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormSubmissionData = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An existing **hidden field** defined on the form schema, and the corresponding value to set</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequestFormSubmissionData? FormSubmissionData { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequestFormSubmissionData? FormSubmissionData { get => _explicitNullValueFormSubmissionData; set { _explicitNullValueFormSubmissionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissionData"); else _explicitNullProperties?.Remove("formSubmissionData"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequestFormSubmissionData? _explicitNullValueFormSubmissionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequestFormSubmissionData FormSubmissionData { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequestFormSubmissionData FormSubmissionData { get => _explicitNullValueFormSubmissionData; set { _explicitNullValueFormSubmissionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissionData"); else _explicitNullProperties?.Remove("formSubmissionData"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequestFormSubmissionData _explicitNullValueFormSubmissionData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequest"/> and sets the default values.
@@ -37,7 +47,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,6 +68,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionRequestFormSubmissionData>("formSubmissionData", FormSubmissionData);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -74,6 +74,8 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Comments
                 { "404", global::Soenneker.Webflow.OpenApiClient.Models.ListCommentThreads404Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.ListCommentThreads429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.ListCommentThreads500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.ListCommentThreads200Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.ListCommentThreads200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

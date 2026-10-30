@@ -12,46 +12,71 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetAnalyzeTopPagesReport200Response : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bucketing") is { } nullNodeBucketing && nullNodeBucketing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bucketing = null;
+            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("filter") is { } nullNodeFilter && nullNodeFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filter = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("report") is { } nullNodeReport && nullNodeReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Report = null;
+            if (parseNode.GetChildNode("sortBy") is { } nullNodeSortBy && nullNodeSortBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SortBy = null;
+            if (parseNode.GetChildNode("window") is { } nullNodeWindow && nullNodeWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Window = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Daily bucketing applied to a response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseBucketing? Bucketing { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseBucketing? Bucketing { get => _explicitNullValueBucketing; set { _explicitNullValueBucketing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketing"); else _explicitNullProperties?.Remove("bucketing"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseBucketing? _explicitNullValueBucketing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseBucketing Bucketing { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseBucketing Bucketing { get => _explicitNullValueBucketing; set { _explicitNullValueBucketing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketing"); else _explicitNullProperties?.Remove("bucketing"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseBucketing _explicitNullValueBucketing = default!;
 #endif
         /// <summary>Pages ranked by `sortBy`, descending. At most `limit` rows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseDataItem>? Data { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseDataItem>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseDataItem> Data { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>Filter the top pages report by dimension. Each property is an optional set of `AnalyzeFilterOperators` (`eq`, `in`, `ne`, `nin`) applied to the named dimension. Filter a given dimension in one place — either inside `filter` or as a top-level query parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter? Filter { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter? Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter? _explicitNullValueFilter = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter Filter { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilter _explicitNullValueFilter = default!;
 #endif
         /// <summary>The row cap that was applied to this response (echoes the resolved request value, including the default).</summary>
-        public int? Limit { get; set; }
+        public int? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private int? _explicitNullValueLimit = default!;
         /// <summary>Discriminator identifying the report type.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.TopPagesReport? Report { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.TopPagesReport? Report { get => _explicitNullValueReport; set { _explicitNullValueReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report"); else _explicitNullProperties?.Remove("report"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.TopPagesReport? _explicitNullValueReport = default!;
         /// <summary>The metric used to rank rows in the response, descending. Row-level `sessionCount`, `userCount`, and `pageviewCount` are always all returned regardless of `sortBy`.- `session`: rank by session count (default).- `user`: rank by unique user count.- `pageview`: rank by pageview count.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseSortBy? SortBy { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseSortBy? SortBy { get => _explicitNullValueSortBy; set { _explicitNullValueSortBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sortBy"); else _explicitNullProperties?.Remove("sortBy"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseSortBy? _explicitNullValueSortBy = default!;
         /// <summary>A reporting time window. `endTime` must be greater than `startTime`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseWindow? Window { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseWindow? Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseWindow? _explicitNullValueWindow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseWindow Window { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseWindow Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseWindow _explicitNullValueWindow = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200Response"/> and sets the default values.
@@ -68,7 +93,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,6 +126,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.TopPagesReport>("report", Report);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseSortBy>("sortBy", SortBy);
             writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseWindow>("window", Window);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,63 +12,94 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateProduct200ResponseProductFieldData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("default-sku") is { } nullNodeDefaultSku && nullNodeDefaultSku.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultSku = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("ec-product-type") is { } nullNodeEcProductType && nullNodeEcProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EcProductType = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("shippable") is { } nullNodeShippable && nullNodeShippable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shippable = null;
+            if (parseNode.GetChildNode("sku-properties") is { } nullNodeSkuProperties && nullNodeSkuProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkuProperties = null;
+            if (parseNode.GetChildNode("slug") is { } nullNodeSlug && nullNodeSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Slug = null;
+            if (parseNode.GetChildNode("tax-category") is { } nullNodeTaxCategory && nullNodeTaxCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxCategory = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The category your product belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Category { get; set; }
+        public List<string>? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        private List<string>? _explicitNullValueCategory = default!;
 #nullable restore
 #else
-        public List<string> Category { get; set; }
+        public List<string> Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        private List<string> _explicitNullValueCategory = default!;
 #endif
         /// <summary>The default SKU associated with this product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultSku { get; set; }
+        public string? DefaultSku { get => _explicitNullValueDefaultSku; set { _explicitNullValueDefaultSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default-sku"); else _explicitNullProperties?.Remove("default-sku"); } }
+        private string? _explicitNullValueDefaultSku = default!;
 #nullable restore
 #else
-        public string DefaultSku { get; set; }
+        public string DefaultSku { get => _explicitNullValueDefaultSku; set { _explicitNullValueDefaultSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default-sku"); else _explicitNullProperties?.Remove("default-sku"); } }
+        private string _explicitNullValueDefaultSku = default!;
 #endif
         /// <summary>A description of your product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>&lt;a href=&quot;https://university.webflow.com/lesson/add-and-manage-products-and-categories?topics=ecommerce#how-to-understand-product-types&quot;&gt;Product types.&lt;/a&gt; Enums reflect the following values in order: Physical, Digital, Service, Advanced&quot;</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataEcProductType? EcProductType { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataEcProductType? EcProductType { get => _explicitNullValueEcProductType; set { _explicitNullValueEcProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ec-product-type"); else _explicitNullProperties?.Remove("ec-product-type"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataEcProductType? _explicitNullValueEcProductType = default!;
         /// <summary>Name of the Product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Boolean determining if the Product is shippable</summary>
-        public bool? Shippable { get; set; }
+        public bool? Shippable { get => _explicitNullValueShippable; set { _explicitNullValueShippable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippable"); else _explicitNullProperties?.Remove("shippable"); } }
+        private bool? _explicitNullValueShippable = default!;
         /// <summary>Variant types to include in SKUs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataSkuPropertiesItem>? SkuProperties { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataSkuPropertiesItem>? SkuProperties { get => _explicitNullValueSkuProperties; set { _explicitNullValueSkuProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku-properties"); else _explicitNullProperties?.Remove("sku-properties"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataSkuPropertiesItem>? _explicitNullValueSkuProperties = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataSkuPropertiesItem> SkuProperties { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataSkuPropertiesItem> SkuProperties { get => _explicitNullValueSkuProperties; set { _explicitNullValueSkuProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku-properties"); else _explicitNullProperties?.Remove("sku-properties"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataSkuPropertiesItem> _explicitNullValueSkuProperties = default!;
 #endif
         /// <summary>URL structure of the Product in your site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Slug { get; set; }
+        public string? Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string? _explicitNullValueSlug = default!;
 #nullable restore
 #else
-        public string Slug { get; set; }
+        public string Slug { get => _explicitNullValueSlug; set { _explicitNullValueSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slug"); else _explicitNullProperties?.Remove("slug"); } }
+        private string _explicitNullValueSlug = default!;
 #endif
         /// <summary>Product tax class</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataTaxCategory? TaxCategory { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataTaxCategory? TaxCategory { get => _explicitNullValueTaxCategory; set { _explicitNullValueTaxCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tax-category"); else _explicitNullProperties?.Remove("tax-category"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataTaxCategory? _explicitNullValueTaxCategory = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData"/> and sets the default values.
         /// </summary>
@@ -84,7 +115,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -121,6 +152,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataSkuPropertiesItem>("sku-properties", SkuProperties);
             writer.WriteStringValue("slug", Slug);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateProduct200ResponseProductFieldDataTaxCategory>("tax-category", TaxCategory);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

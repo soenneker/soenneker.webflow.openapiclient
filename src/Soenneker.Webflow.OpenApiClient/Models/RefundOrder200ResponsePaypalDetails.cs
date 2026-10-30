@@ -11,56 +11,81 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RefundOrder200ResponsePaypalDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("captureId") is { } nullNodeCaptureId && nullNodeCaptureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptureId = null;
+            if (parseNode.GetChildNode("disputeId") is { } nullNodeDisputeId && nullNodeDisputeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisputeId = null;
+            if (parseNode.GetChildNode("orderId") is { } nullNodeOrderId && nullNodeOrderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderId = null;
+            if (parseNode.GetChildNode("payerId") is { } nullNodePayerId && nullNodePayerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayerId = null;
+            if (parseNode.GetChildNode("refundId") is { } nullNodeRefundId && nullNodeRefundId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundId = null;
+            if (parseNode.GetChildNode("refundReason") is { } nullNodeRefundReason && nullNodeRefundReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundReason = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>PayPal capture identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaptureId { get; set; }
+        public string? CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captureId"); else _explicitNullProperties?.Remove("captureId"); } }
+        private string? _explicitNullValueCaptureId = default!;
 #nullable restore
 #else
-        public string CaptureId { get; set; }
+        public string CaptureId { get => _explicitNullValueCaptureId; set { _explicitNullValueCaptureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captureId"); else _explicitNullProperties?.Remove("captureId"); } }
+        private string _explicitNullValueCaptureId = default!;
 #endif
         /// <summary>PayPal dispute identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisputeId { get; set; }
+        public string? DisputeId { get => _explicitNullValueDisputeId; set { _explicitNullValueDisputeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputeId"); else _explicitNullProperties?.Remove("disputeId"); } }
+        private string? _explicitNullValueDisputeId = default!;
 #nullable restore
 #else
-        public string DisputeId { get; set; }
+        public string DisputeId { get => _explicitNullValueDisputeId; set { _explicitNullValueDisputeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disputeId"); else _explicitNullProperties?.Remove("disputeId"); } }
+        private string _explicitNullValueDisputeId = default!;
 #endif
         /// <summary>PayPal order identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderId { get; set; }
+        public string? OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderId"); else _explicitNullProperties?.Remove("orderId"); } }
+        private string? _explicitNullValueOrderId = default!;
 #nullable restore
 #else
-        public string OrderId { get; set; }
+        public string OrderId { get => _explicitNullValueOrderId; set { _explicitNullValueOrderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderId"); else _explicitNullProperties?.Remove("orderId"); } }
+        private string _explicitNullValueOrderId = default!;
 #endif
         /// <summary>PayPal payer identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PayerId { get; set; }
+        public string? PayerId { get => _explicitNullValuePayerId; set { _explicitNullValuePayerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payerId"); else _explicitNullProperties?.Remove("payerId"); } }
+        private string? _explicitNullValuePayerId = default!;
 #nullable restore
 #else
-        public string PayerId { get; set; }
+        public string PayerId { get => _explicitNullValuePayerId; set { _explicitNullValuePayerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payerId"); else _explicitNullProperties?.Remove("payerId"); } }
+        private string _explicitNullValuePayerId = default!;
 #endif
         /// <summary>PayPal refund identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundId { get; set; }
+        public string? RefundId { get => _explicitNullValueRefundId; set { _explicitNullValueRefundId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundId"); else _explicitNullProperties?.Remove("refundId"); } }
+        private string? _explicitNullValueRefundId = default!;
 #nullable restore
 #else
-        public string RefundId { get; set; }
+        public string RefundId { get => _explicitNullValueRefundId; set { _explicitNullValueRefundId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundId"); else _explicitNullProperties?.Remove("refundId"); } }
+        private string _explicitNullValueRefundId = default!;
 #endif
         /// <summary>PayPal-issued reason for the refund</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefundReason { get; set; }
+        public string? RefundReason { get => _explicitNullValueRefundReason; set { _explicitNullValueRefundReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundReason"); else _explicitNullProperties?.Remove("refundReason"); } }
+        private string? _explicitNullValueRefundReason = default!;
 #nullable restore
 #else
-        public string RefundReason { get; set; }
+        public string RefundReason { get => _explicitNullValueRefundReason; set { _explicitNullValueRefundReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundReason"); else _explicitNullProperties?.Remove("refundReason"); } }
+        private string _explicitNullValueRefundReason = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponsePaypalDetails"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponsePaypalDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponsePaypalDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.RefundOrder200ResponsePaypalDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("payerId", PayerId);
             writer.WriteStringValue("refundId", RefundId);
             writer.WriteStringValue("refundReason", RefundReason);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

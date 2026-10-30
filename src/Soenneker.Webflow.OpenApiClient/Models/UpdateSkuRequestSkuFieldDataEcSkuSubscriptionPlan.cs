@@ -12,13 +12,25 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlan : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("frequency") is { } nullNodeFrequency && nullNodeFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frequency = null;
+            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("trial") is { } nullNodeTrial && nullNodeTrial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trial = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Frequncy of billing within interval</summary>
-        public double? Frequency { get; set; }
+        public double? Frequency { get => _explicitNullValueFrequency; set { _explicitNullValueFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frequency"); else _explicitNullProperties?.Remove("frequency"); } }
+        private double? _explicitNullValueFrequency = default!;
         /// <summary>Interval of subscription renewal</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlanInterval? Interval { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlanInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlanInterval? _explicitNullValueInterval = default!;
         /// <summary>The plans property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -28,7 +40,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlanPlansItem> Plans { get; private set; }
 #endif
         /// <summary>Number of days of a trial</summary>
-        public double? Trial { get; set; }
+        public double? Trial { get => _explicitNullValueTrial; set { _explicitNullValueTrial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial"); else _explicitNullProperties?.Remove("trial"); } }
+        private double? _explicitNullValueTrial = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlan"/> and sets the default values.
         /// </summary>
@@ -44,7 +57,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlan CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlan();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlan(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +83,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteDoubleValue("frequency", Frequency);
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSkuRequestSkuFieldDataEcSkuSubscriptionPlanInterval>("interval", Interval);
             writer.WriteDoubleValue("trial", Trial);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

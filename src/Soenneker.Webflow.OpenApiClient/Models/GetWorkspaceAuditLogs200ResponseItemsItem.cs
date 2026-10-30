@@ -12,7 +12,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetWorkspaceAuditLogs200ResponseItemsItem : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemCustomRole"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,29 +78,32 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItem();
             if("custom_role".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GetWorkspaceAuditLogs200ResponseItemsItemCustomRole = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemCustomRole();
+                
             }
             else if("workspace_setting".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GetWorkspaceAuditLogs200ResponseItemsItemSettingChange = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemSettingChange();
+                
             }
             else if("site_membership".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership();
+                
             }
             else if("user_access".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GetWorkspaceAuditLogs200ResponseItemsItemUserAccess = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemUserAccess();
+                
             }
             else if("workspace_invitation".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation();
+                
             }
             else if("workspace_membership".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership = new global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            if (result.GetWorkspaceAuditLogs200ResponseItemsItemCustomRole == null && result.GetWorkspaceAuditLogs200ResponseItemsItemSettingChange == null && result.GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership == null && result.GetWorkspaceAuditLogs200ResponseItemsItemUserAccess == null && result.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation == null && result.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -135,29 +143,44 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (GetWorkspaceAuditLogs200ResponseItemsItemCustomRole == null && GetWorkspaceAuditLogs200ResponseItemsItemSettingChange == null && GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership == null && GetWorkspaceAuditLogs200ResponseItemsItemUserAccess == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (GetWorkspaceAuditLogs200ResponseItemsItemCustomRole != null && GetWorkspaceAuditLogs200ResponseItemsItemSettingChange == null && GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership == null && GetWorkspaceAuditLogs200ResponseItemsItemUserAccess == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership == null) { if (GetWorkspaceAuditLogs200ResponseItemsItemCustomRole is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GetWorkspaceAuditLogs200ResponseItemsItemCustomRole); return; }
+            if (GetWorkspaceAuditLogs200ResponseItemsItemSettingChange != null && GetWorkspaceAuditLogs200ResponseItemsItemCustomRole == null && GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership == null && GetWorkspaceAuditLogs200ResponseItemsItemUserAccess == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership == null) { if (GetWorkspaceAuditLogs200ResponseItemsItemSettingChange is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GetWorkspaceAuditLogs200ResponseItemsItemSettingChange); return; }
+            if (GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership != null && GetWorkspaceAuditLogs200ResponseItemsItemCustomRole == null && GetWorkspaceAuditLogs200ResponseItemsItemSettingChange == null && GetWorkspaceAuditLogs200ResponseItemsItemUserAccess == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership == null) { if (GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership); return; }
+            if (GetWorkspaceAuditLogs200ResponseItemsItemUserAccess != null && GetWorkspaceAuditLogs200ResponseItemsItemCustomRole == null && GetWorkspaceAuditLogs200ResponseItemsItemSettingChange == null && GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership == null) { if (GetWorkspaceAuditLogs200ResponseItemsItemUserAccess is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GetWorkspaceAuditLogs200ResponseItemsItemUserAccess); return; }
+            if (GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation != null && GetWorkspaceAuditLogs200ResponseItemsItemCustomRole == null && GetWorkspaceAuditLogs200ResponseItemsItemSettingChange == null && GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership == null && GetWorkspaceAuditLogs200ResponseItemsItemUserAccess == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership == null) { if (GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation); return; }
+            if (GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership != null && GetWorkspaceAuditLogs200ResponseItemsItemCustomRole == null && GetWorkspaceAuditLogs200ResponseItemsItemSettingChange == null && GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership == null && GetWorkspaceAuditLogs200ResponseItemsItemUserAccess == null && GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation == null) { if (GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(GetWorkspaceAuditLogs200ResponseItemsItemCustomRole != null)
             {
+                if (GetWorkspaceAuditLogs200ResponseItemsItemCustomRole is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemCustomRole>(null, GetWorkspaceAuditLogs200ResponseItemsItemCustomRole);
             }
             else if(GetWorkspaceAuditLogs200ResponseItemsItemSettingChange != null)
             {
+                if (GetWorkspaceAuditLogs200ResponseItemsItemSettingChange is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemSettingChange>(null, GetWorkspaceAuditLogs200ResponseItemsItemSettingChange);
             }
             else if(GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership != null)
             {
+                if (GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership>(null, GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership);
             }
             else if(GetWorkspaceAuditLogs200ResponseItemsItemUserAccess != null)
             {
+                if (GetWorkspaceAuditLogs200ResponseItemsItemUserAccess is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemUserAccess>(null, GetWorkspaceAuditLogs200ResponseItemsItemUserAccess);
             }
             else if(GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation != null)
             {
+                if (GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation>(null, GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation);
             }
             else if(GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership != null)
             {
+                if (GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership>(null, GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership);
             }
         }

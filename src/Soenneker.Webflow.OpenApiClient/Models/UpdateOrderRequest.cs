@@ -12,40 +12,59 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateOrderRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("shippingProvider") is { } nullNodeShippingProvider && nullNodeShippingProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingProvider = null;
+            if (parseNode.GetChildNode("shippingTracking") is { } nullNodeShippingTracking && nullNodeShippingTracking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingTracking = null;
+            if (parseNode.GetChildNode("shippingTrackingURL") is { } nullNodeShippingTrackingURL && nullNodeShippingTrackingURL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingTrackingURL = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Arbitrary data for your records</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comment { get; set; }
+        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private string? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public string Comment { get; set; }
+        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private string _explicitNullValueComment = default!;
 #endif
         /// <summary>Company or method used to ship order</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingProvider { get; set; }
+        public string? ShippingProvider { get => _explicitNullValueShippingProvider; set { _explicitNullValueShippingProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingProvider"); else _explicitNullProperties?.Remove("shippingProvider"); } }
+        private string? _explicitNullValueShippingProvider = default!;
 #nullable restore
 #else
-        public string ShippingProvider { get; set; }
+        public string ShippingProvider { get => _explicitNullValueShippingProvider; set { _explicitNullValueShippingProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingProvider"); else _explicitNullProperties?.Remove("shippingProvider"); } }
+        private string _explicitNullValueShippingProvider = default!;
 #endif
         /// <summary>Tracking number for order shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingTracking { get; set; }
+        public string? ShippingTracking { get => _explicitNullValueShippingTracking; set { _explicitNullValueShippingTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTracking"); else _explicitNullProperties?.Remove("shippingTracking"); } }
+        private string? _explicitNullValueShippingTracking = default!;
 #nullable restore
 #else
-        public string ShippingTracking { get; set; }
+        public string ShippingTracking { get => _explicitNullValueShippingTracking; set { _explicitNullValueShippingTracking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTracking"); else _explicitNullProperties?.Remove("shippingTracking"); } }
+        private string _explicitNullValueShippingTracking = default!;
 #endif
         /// <summary>URL to track order shipment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingTrackingURL { get; set; }
+        public string? ShippingTrackingURL { get => _explicitNullValueShippingTrackingURL; set { _explicitNullValueShippingTrackingURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTrackingURL"); else _explicitNullProperties?.Remove("shippingTrackingURL"); } }
+        private string? _explicitNullValueShippingTrackingURL = default!;
 #nullable restore
 #else
-        public string ShippingTrackingURL { get; set; }
+        public string ShippingTrackingURL { get => _explicitNullValueShippingTrackingURL; set { _explicitNullValueShippingTrackingURL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingTrackingURL"); else _explicitNullProperties?.Remove("shippingTrackingURL"); } }
+        private string _explicitNullValueShippingTrackingURL = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateOrderRequest"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.UpdateOrderRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.UpdateOrderRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.UpdateOrderRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("shippingProvider", ShippingProvider);
             writer.WriteStringValue("shippingTracking", ShippingTracking);
             writer.WriteStringValue("shippingTrackingURL", ShippingTrackingURL);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

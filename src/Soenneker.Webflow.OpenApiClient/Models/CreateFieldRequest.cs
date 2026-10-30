@@ -12,7 +12,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateFieldRequest : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestOptionField"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,17 +54,26 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             var result = new global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequest();
             if("CreateFieldRequestOptionField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CreateFieldRequestOptionField = new global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestOptionField();
+                
             }
             else if("CreateFieldRequestReferenceField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CreateFieldRequestReferenceField = new global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestReferenceField();
+                
             }
             else if("CreateFieldRequestStaticField".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CreateFieldRequestStaticField = new global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestStaticField();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("Color".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "DateTime".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Email".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "File".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Image".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Link".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "MultiImage".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Number".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Phone".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "PlainText".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "RichText".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Switch".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "VideoLink".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("displayName") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("Option".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("displayName") != null && parseNode.GetChildNode("metadata") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("MultiReference".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Reference".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("displayName") != null && parseNode.GetChildNode("metadata") != null))();
+            if (result.CreateFieldRequestOptionField == null && result.CreateFieldRequestReferenceField == null && result.CreateFieldRequestStaticField == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.CreateFieldRequestStaticField = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestStaticField(), parseNode);
+            if (result.CreateFieldRequestOptionField == null && result.CreateFieldRequestReferenceField == null && result.CreateFieldRequestStaticField == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.CreateFieldRequestOptionField = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestOptionField(), parseNode);
+            if (result.CreateFieldRequestOptionField == null && result.CreateFieldRequestReferenceField == null && result.CreateFieldRequestStaticField == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.CreateFieldRequestReferenceField = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestReferenceField(), parseNode);
+            if (result.CreateFieldRequestOptionField == null && result.CreateFieldRequestReferenceField == null && result.CreateFieldRequestStaticField == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +101,26 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (CreateFieldRequestOptionField == null && CreateFieldRequestReferenceField == null && CreateFieldRequestStaticField == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (CreateFieldRequestOptionField != null && CreateFieldRequestReferenceField == null && CreateFieldRequestStaticField == null) { if (CreateFieldRequestOptionField is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateFieldRequestOptionField); return; }
+            if (CreateFieldRequestReferenceField != null && CreateFieldRequestOptionField == null && CreateFieldRequestStaticField == null) { if (CreateFieldRequestReferenceField is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateFieldRequestReferenceField); return; }
+            if (CreateFieldRequestStaticField != null && CreateFieldRequestOptionField == null && CreateFieldRequestReferenceField == null) { if (CreateFieldRequestStaticField is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CreateFieldRequestStaticField); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(CreateFieldRequestOptionField != null)
             {
+                if (CreateFieldRequestOptionField is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestOptionField>(null, CreateFieldRequestOptionField);
             }
             else if(CreateFieldRequestReferenceField != null)
             {
+                if (CreateFieldRequestReferenceField is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestReferenceField>(null, CreateFieldRequestReferenceField);
             }
             else if(CreateFieldRequestStaticField != null)
             {
+                if (CreateFieldRequestStaticField is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateFieldRequestStaticField>(null, CreateFieldRequestStaticField);
             }
         }

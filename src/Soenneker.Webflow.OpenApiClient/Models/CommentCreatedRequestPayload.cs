@@ -12,16 +12,29 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CommentCreatedRequestPayload : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("author") is { } nullNodeAuthor && nullNodeAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Author = null;
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("isResolved") is { } nullNodeIsResolved && nullNodeIsResolved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsResolved = null;
+            if (parseNode.GetChildNode("mentionedUsers") is { } nullNodeMentionedUsers && nullNodeMentionedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MentionedUsers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadAuthor? Author { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadAuthor? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadAuthor? _explicitNullValueAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadAuthor Author { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadAuthor Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadAuthor _explicitNullValueAuthor = default!;
 #endif
         /// <summary>The breakpoint the comment was left on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -42,10 +55,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The content of the comment reply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string _explicitNullValueContent = default!;
 #endif
         /// <summary>The date the item was created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +71,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public string CreatedOn { get; private set; }
 #endif
         /// <summary>Boolean determining if the comment thread is resolved</summary>
-        public bool? IsResolved { get; set; }
+        public bool? IsResolved { get => _explicitNullValueIsResolved; set { _explicitNullValueIsResolved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isResolved"); else _explicitNullProperties?.Remove("isResolved"); } }
+        private bool? _explicitNullValueIsResolved = default!;
         /// <summary>The date the item was last updated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,10 +92,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>List of mentioned users. This is an empty array until email notifications are sent, which can take up to 5 minutes after the comment is created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadMentionedUsersItem>? MentionedUsers { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadMentionedUsersItem>? MentionedUsers { get => _explicitNullValueMentionedUsers; set { _explicitNullValueMentionedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mentionedUsers"); else _explicitNullProperties?.Remove("mentionedUsers"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadMentionedUsersItem>? _explicitNullValueMentionedUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadMentionedUsersItem> MentionedUsers { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadMentionedUsersItem> MentionedUsers { get => _explicitNullValueMentionedUsers; set { _explicitNullValueMentionedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mentionedUsers"); else _explicitNullProperties?.Remove("mentionedUsers"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadMentionedUsersItem> _explicitNullValueMentionedUsers = default!;
 #endif
         /// <summary>The page unique identifier, or for CMS item comments, the template page ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -131,7 +149,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -168,6 +186,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("content", Content);
             writer.WriteBoolValue("isResolved", IsResolved);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CommentCreatedRequestPayloadMentionedUsersItem>("mentionedUsers", MentionedUsers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

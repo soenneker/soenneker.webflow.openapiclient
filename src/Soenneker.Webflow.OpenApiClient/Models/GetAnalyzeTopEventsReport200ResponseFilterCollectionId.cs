@@ -12,38 +12,57 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetAnalyzeTopEventsReport200ResponseFilterCollectionId : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("eq") is { } nullNodeEq && nullNodeEq.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Eq = null;
+            if (parseNode.GetChildNode("in") is { } nullNodeIn && nullNodeIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) In = null;
+            if (parseNode.GetChildNode("ne") is { } nullNodeNe && nullNodeNe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ne = null;
+            if (parseNode.GetChildNode("nin") is { } nullNodeNin && nullNodeNin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nin = null;
+        }
+
         /// <summary>Match values exactly equal to the provided value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Eq { get; set; }
+        public string? Eq { get => _explicitNullValueEq; set { _explicitNullValueEq = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eq"); else _explicitNullProperties?.Remove("eq"); } }
+        private string? _explicitNullValueEq = default!;
 #nullable restore
 #else
-        public string Eq { get; set; }
+        public string Eq { get => _explicitNullValueEq; set { _explicitNullValueEq = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eq"); else _explicitNullProperties?.Remove("eq"); } }
+        private string _explicitNullValueEq = default!;
 #endif
         /// <summary>Match values in the provided list. Use indexed bracket notation — `filter[&lt;dimension&gt;][in][0]=value1&amp;filter[&lt;dimension&gt;][in][1]=value2`. Comma-separated values (for example, `filter[&lt;dimension&gt;][in]=value1,value2`) are not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? In { get; set; }
+        public List<string>? In { get => _explicitNullValueIn; set { _explicitNullValueIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in"); else _explicitNullProperties?.Remove("in"); } }
+        private List<string>? _explicitNullValueIn = default!;
 #nullable restore
 #else
-        public List<string> In { get; set; }
+        public List<string> In { get => _explicitNullValueIn; set { _explicitNullValueIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("in"); else _explicitNullProperties?.Remove("in"); } }
+        private List<string> _explicitNullValueIn = default!;
 #endif
         /// <summary>Exclude values exactly equal to the provided value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ne { get; set; }
+        public string? Ne { get => _explicitNullValueNe; set { _explicitNullValueNe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ne"); else _explicitNullProperties?.Remove("ne"); } }
+        private string? _explicitNullValueNe = default!;
 #nullable restore
 #else
-        public string Ne { get; set; }
+        public string Ne { get => _explicitNullValueNe; set { _explicitNullValueNe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ne"); else _explicitNullProperties?.Remove("ne"); } }
+        private string _explicitNullValueNe = default!;
 #endif
         /// <summary>Exclude values in the provided list. Use indexed bracket notation — `filter[&lt;dimension&gt;][nin][0]=value1&amp;filter[&lt;dimension&gt;][nin][1]=value2`. Comma-separated values (for example, `filter[&lt;dimension&gt;][nin]=value1,value2`) are not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Nin { get; set; }
+        public List<string>? Nin { get => _explicitNullValueNin; set { _explicitNullValueNin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nin"); else _explicitNullProperties?.Remove("nin"); } }
+        private List<string>? _explicitNullValueNin = default!;
 #nullable restore
 #else
-        public List<string> Nin { get; set; }
+        public List<string> Nin { get => _explicitNullValueNin; set { _explicitNullValueNin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nin"); else _explicitNullProperties?.Remove("nin"); } }
+        private List<string> _explicitNullValueNin = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopEventsReport200ResponseFilterCollectionId CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopEventsReport200ResponseFilterCollectionId();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopEventsReport200ResponseFilterCollectionId(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,7 +98,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteStringValue("eq", Eq);
             writer.WriteCollectionOfPrimitiveValues<string>("in", In);
             writer.WriteStringValue("ne", Ne);
-            writer.WriteCollectionOfPrimitiveValues<string>("nin", Nin);
+            writer.WriteCollectionOfPrimitiveValues<string>("nin", Nin);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

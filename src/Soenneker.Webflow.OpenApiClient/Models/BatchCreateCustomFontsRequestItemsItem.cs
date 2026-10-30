@@ -11,45 +11,70 @@ namespace Soenneker.Webflow.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BatchCreateCustomFontsRequestItemsItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("axes") is { } nullNodeAxes && nullNodeAxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Axes = null;
+            if (parseNode.GetChildNode("fileHash") is { } nullNodeFileHash && nullNodeFileHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileHash = null;
+            if (parseNode.GetChildNode("fileName") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
+            if (parseNode.GetChildNode("fontDisplay") is { } nullNodeFontDisplay && nullNodeFontDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontDisplay = null;
+            if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("italic") is { } nullNodeItalic && nullNodeItalic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Italic = null;
+            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+        }
+
         /// <summary>Variable font axes. Omit or pass an empty array for static fonts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemAxesItem>? Axes { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemAxesItem>? Axes { get => _explicitNullValueAxes; set { _explicitNullValueAxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("axes"); else _explicitNullProperties?.Remove("axes"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemAxesItem>? _explicitNullValueAxes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemAxesItem> Axes { get; set; }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemAxesItem> Axes { get => _explicitNullValueAxes; set { _explicitNullValueAxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("axes"); else _explicitNullProperties?.Remove("axes"); } }
+        private List<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemAxesItem> _explicitNullValueAxes = default!;
 #endif
         /// <summary>Lowercase hex MD5 hash of the font binary (exactly 32 characters)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileHash { get; set; }
+        public string? FileHash { get => _explicitNullValueFileHash; set { _explicitNullValueFileHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileHash"); else _explicitNullProperties?.Remove("fileHash"); } }
+        private string? _explicitNullValueFileHash = default!;
 #nullable restore
 #else
-        public string FileHash { get; set; }
+        public string FileHash { get => _explicitNullValueFileHash; set { _explicitNullValueFileHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileHash"); else _explicitNullProperties?.Remove("fileHash"); } }
+        private string _explicitNullValueFileHash = default!;
 #endif
         /// <summary>File name including extension. Accepted extensions are `.woff2`, `.woff`, `.ttf`, `.otf`, and `.eot`. Maximum 256 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileName { get; set; }
+        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileName"); else _explicitNullProperties?.Remove("fileName"); } }
+        private string? _explicitNullValueFileName = default!;
 #nullable restore
 #else
-        public string FileName { get; set; }
+        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileName"); else _explicitNullProperties?.Remove("fileName"); } }
+        private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>CSS font-display value</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemFontDisplay? FontDisplay { get; set; }
+        public global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemFontDisplay? FontDisplay { get => _explicitNullValueFontDisplay; set { _explicitNullValueFontDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontDisplay"); else _explicitNullProperties?.Remove("fontDisplay"); } }
+        private global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemFontDisplay? _explicitNullValueFontDisplay = default!;
         /// <summary>The CSS font-family name (1-256 characters). Commas are stripped server-side.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FontFamily { get; set; }
+        public string? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private string? _explicitNullValueFontFamily = default!;
 #nullable restore
 #else
-        public string FontFamily { get; set; }
+        public string FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private string _explicitNullValueFontFamily = default!;
 #endif
         /// <summary>Whether the font is italic</summary>
-        public bool? Italic { get; set; }
+        public bool? Italic { get => _explicitNullValueItalic; set { _explicitNullValueItalic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("italic"); else _explicitNullProperties?.Remove("italic"); } }
+        private bool? _explicitNullValueItalic = default!;
         /// <summary>CSS font-weight value (1-1000)</summary>
-        public int? Weight { get; set; }
+        public int? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        private int? _explicitNullValueWeight = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -58,7 +83,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public static global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,7 +115,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFontsRequestItemsItemFontDisplay>("fontDisplay", FontDisplay);
             writer.WriteStringValue("fontFamily", FontFamily);
             writer.WriteBoolValue("italic", Italic);
-            writer.WriteIntValue("weight", Weight);
+            writer.WriteIntValue("weight", Weight);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

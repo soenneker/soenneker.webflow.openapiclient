@@ -65,6 +65,8 @@ namespace Soenneker.Webflow.OpenApiClient.Collections.Item.Items.Publish
                 { "409", global::Soenneker.Webflow.OpenApiClient.Models.PublishItem409Response.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Webflow.OpenApiClient.Models.PublishItem429Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Webflow.OpenApiClient.Models.PublishItem500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Webflow.OpenApiClient.Models.PublishItem202Response>(requestInfo, global::Soenneker.Webflow.OpenApiClient.Models.PublishItem202Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
