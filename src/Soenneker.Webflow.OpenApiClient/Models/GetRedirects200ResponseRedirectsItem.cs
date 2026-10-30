@@ -18,8 +18,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fromUrl") is { } nullNodeFromUrl && nullNodeFromUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromUrl = null;
-            if (parseNode.GetChildNode("toUrl") is { } nullNodeToUrl && nullNodeToUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToUrl = null;
+            if (parseNode.GetChildNode("fromUrl") is null) { _explicitNullValueFromUrl = default!; _explicitNullProperties?.Remove("fromUrl"); }
+            else if (parseNode.GetChildNode("fromUrl") is { } nullNodeFromUrl && nullNodeFromUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromUrl = null;
+            if (parseNode.GetChildNode("toUrl") is null) { _explicitNullValueToUrl = default!; _explicitNullProperties?.Remove("toUrl"); }
+            else if (parseNode.GetChildNode("toUrl") is { } nullNodeToUrl && nullNodeToUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,11 +29,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The source URL path that will be redirected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromUrl { get => _explicitNullValueFromUrl; set { _explicitNullValueFromUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromUrl"); else _explicitNullProperties?.Remove("fromUrl"); } }
+        public string? FromUrl { get => _explicitNullValueFromUrl; set { _explicitNullValueFromUrl = value; AdditionalData?.Remove("fromUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromUrl"); else _explicitNullProperties?.Remove("fromUrl"); } }
         private string? _explicitNullValueFromUrl = default!;
 #nullable restore
 #else
-        public string FromUrl { get => _explicitNullValueFromUrl; set { _explicitNullValueFromUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromUrl"); else _explicitNullProperties?.Remove("fromUrl"); } }
+        public string FromUrl { get => _explicitNullValueFromUrl; set { _explicitNullValueFromUrl = value; AdditionalData?.Remove("fromUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromUrl"); else _explicitNullProperties?.Remove("fromUrl"); } }
         private string _explicitNullValueFromUrl = default!;
 #endif
         /// <summary>The ID of the specific redirect rule</summary>
@@ -45,11 +47,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The target URL path where the user or client will be redirected.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToUrl { get => _explicitNullValueToUrl; set { _explicitNullValueToUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toUrl"); else _explicitNullProperties?.Remove("toUrl"); } }
+        public string? ToUrl { get => _explicitNullValueToUrl; set { _explicitNullValueToUrl = value; AdditionalData?.Remove("toUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toUrl"); else _explicitNullProperties?.Remove("toUrl"); } }
         private string? _explicitNullValueToUrl = default!;
 #nullable restore
 #else
-        public string ToUrl { get => _explicitNullValueToUrl; set { _explicitNullValueToUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toUrl"); else _explicitNullProperties?.Remove("toUrl"); } }
+        public string ToUrl { get => _explicitNullValueToUrl; set { _explicitNullValueToUrl = value; AdditionalData?.Remove("toUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toUrl"); else _explicitNullProperties?.Remove("toUrl"); } }
         private string _explicitNullValueToUrl = default!;
 #endif
         /// <summary>

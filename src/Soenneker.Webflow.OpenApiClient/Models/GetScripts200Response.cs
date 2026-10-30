@@ -18,8 +18,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
-            if (parseNode.GetChildNode("registeredScripts") is { } nullNodeRegisteredScripts && nullNodeRegisteredScripts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegisteredScripts = null;
+            if (parseNode.GetChildNode("pagination") is null) { _explicitNullValuePagination = default!; _explicitNullProperties?.Remove("pagination"); }
+            else if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("registeredScripts") is null) { _explicitNullValueRegisteredScripts = default!; _explicitNullProperties?.Remove("registeredScripts"); }
+            else if (parseNode.GetChildNode("registeredScripts") is { } nullNodeRegisteredScripts && nullNodeRegisteredScripts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegisteredScripts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Pagination object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>The registeredScripts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponseRegisteredScriptsItem>? RegisteredScripts { get => _explicitNullValueRegisteredScripts; set { _explicitNullValueRegisteredScripts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registeredScripts"); else _explicitNullProperties?.Remove("registeredScripts"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponseRegisteredScriptsItem>? RegisteredScripts { get => _explicitNullValueRegisteredScripts; set { _explicitNullValueRegisteredScripts = value; AdditionalData?.Remove("registeredScripts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registeredScripts"); else _explicitNullProperties?.Remove("registeredScripts"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponseRegisteredScriptsItem>? _explicitNullValueRegisteredScripts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponseRegisteredScriptsItem> RegisteredScripts { get => _explicitNullValueRegisteredScripts; set { _explicitNullValueRegisteredScripts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registeredScripts"); else _explicitNullProperties?.Remove("registeredScripts"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponseRegisteredScriptsItem> RegisteredScripts { get => _explicitNullValueRegisteredScripts; set { _explicitNullValueRegisteredScripts = value; AdditionalData?.Remove("registeredScripts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registeredScripts"); else _explicitNullProperties?.Remove("registeredScripts"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.GetScripts200ResponseRegisteredScriptsItem> _explicitNullValueRegisteredScripts = default!;
 #endif
         /// <summary>

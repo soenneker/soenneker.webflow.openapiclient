@@ -17,7 +17,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sites") is { } nullNodeSites && nullNodeSites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sites = null;
+            if (parseNode.GetChildNode("sites") is null) { _explicitNullValueSites = default!; _explicitNullProperties?.Remove("sites"); }
+            else if (parseNode.GetChildNode("sites") is { } nullNodeSites && nullNodeSites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sites = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The sites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSites200ResponseSitesItem>? Sites { get => _explicitNullValueSites; set { _explicitNullValueSites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sites"); else _explicitNullProperties?.Remove("sites"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSites200ResponseSitesItem>? Sites { get => _explicitNullValueSites; set { _explicitNullValueSites = value; AdditionalData?.Remove("sites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sites"); else _explicitNullProperties?.Remove("sites"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListSites200ResponseSitesItem>? _explicitNullValueSites = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSites200ResponseSitesItem> Sites { get => _explicitNullValueSites; set { _explicitNullValueSites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sites"); else _explicitNullProperties?.Remove("sites"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSites200ResponseSitesItem> Sites { get => _explicitNullValueSites; set { _explicitNullValueSites = value; AdditionalData?.Remove("sites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sites"); else _explicitNullProperties?.Remove("sites"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListSites200ResponseSitesItem> _explicitNullValueSites = default!;
 #endif
         /// <summary>

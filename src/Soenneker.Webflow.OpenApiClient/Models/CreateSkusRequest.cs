@@ -18,23 +18,25 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("publishStatus") is { } nullNodePublishStatus && nullNodePublishStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishStatus = null;
-            if (parseNode.GetChildNode("skus") is { } nullNodeSkus && nullNodeSkus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skus = null;
+            if (parseNode.GetChildNode("publishStatus") is null) { _explicitNullValuePublishStatus = default!; _explicitNullProperties?.Remove("publishStatus"); }
+            else if (parseNode.GetChildNode("publishStatus") is { } nullNodePublishStatus && nullNodePublishStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishStatus = null;
+            if (parseNode.GetChildNode("skus") is null) { _explicitNullValueSkus = default!; _explicitNullProperties?.Remove("skus"); }
+            else if (parseNode.GetChildNode("skus") is { } nullNodeSkus && nullNodeSkus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicate whether your Product should be set as &quot;staging&quot; or &quot;live&quot;</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestPublishStatus? PublishStatus { get => _explicitNullValuePublishStatus; set { _explicitNullValuePublishStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishStatus"); else _explicitNullProperties?.Remove("publishStatus"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestPublishStatus? PublishStatus { get => _explicitNullValuePublishStatus; set { _explicitNullValuePublishStatus = value; AdditionalData?.Remove("publishStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishStatus"); else _explicitNullProperties?.Remove("publishStatus"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestPublishStatus? _explicitNullValuePublishStatus = default!;
         /// <summary>An array of the SKU data your are adding</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem>? Skus { get => _explicitNullValueSkus; set { _explicitNullValueSkus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skus"); else _explicitNullProperties?.Remove("skus"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem>? Skus { get => _explicitNullValueSkus; set { _explicitNullValueSkus = value; AdditionalData?.Remove("skus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skus"); else _explicitNullProperties?.Remove("skus"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem>? _explicitNullValueSkus = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem> Skus { get => _explicitNullValueSkus; set { _explicitNullValueSkus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skus"); else _explicitNullProperties?.Remove("skus"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem> Skus { get => _explicitNullValueSkus; set { _explicitNullValueSkus = value; AdditionalData?.Remove("skus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skus"); else _explicitNullProperties?.Remove("skus"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem> _explicitNullValueSkus = default!;
 #endif
         /// <summary>
@@ -62,7 +64,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "publishStatus", n => { PublishStatus = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestPublishStatus>(); } },
+                { "publishStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestPublishStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePublishStatus = default; _explicitNullProperties?.Remove("publishStatus"); AdditionalData["publishStatus"] = unknown; } else { PublishStatus = parsed; AdditionalData.Remove("publishStatus"); } } },
                 { "skus", n => { Skus = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem>(global::Soenneker.Webflow.OpenApiClient.Models.CreateSkusRequestSkusItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

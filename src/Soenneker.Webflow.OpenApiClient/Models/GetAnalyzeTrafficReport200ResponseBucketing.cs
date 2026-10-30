@@ -18,8 +18,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bucketTimeZone") is { } nullNodeBucketTimeZone && nullNodeBucketTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BucketTimeZone = null;
-            if (parseNode.GetChildNode("granularityPeriod") is { } nullNodeGranularityPeriod && nullNodeGranularityPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GranularityPeriod = null;
+            if (parseNode.GetChildNode("bucketTimeZone") is null) { _explicitNullValueBucketTimeZone = default!; _explicitNullProperties?.Remove("bucketTimeZone"); }
+            else if (parseNode.GetChildNode("bucketTimeZone") is { } nullNodeBucketTimeZone && nullNodeBucketTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BucketTimeZone = null;
+            if (parseNode.GetChildNode("granularityPeriod") is null) { _explicitNullValueGranularityPeriod = default!; _explicitNullProperties?.Remove("granularityPeriod"); }
+            else if (parseNode.GetChildNode("granularityPeriod") is { } nullNodeGranularityPeriod && nullNodeGranularityPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GranularityPeriod = null;
         }
 
         /// <summary>Valid IANA time zone used to align time bucket boundaries. Use canonical names such as `UTC` or `America/New_York`. Bucket timestamps are returned as UTC instants for local bucket starts in this time zone; for example, `America/New_York` local midnight on April 1, 2026 is returned as `2026-04-01T04:00:00.000Z`.</summary>

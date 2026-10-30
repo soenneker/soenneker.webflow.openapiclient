@@ -18,8 +18,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
-            if (parseNode.GetChildNode("triggerType") is { } nullNodeTriggerType && nullNodeTriggerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerType = null;
+            if (parseNode.GetChildNode("payload") is null) { _explicitNullValuePayload = default!; _explicitNullProperties?.Remove("payload"); }
+            else if (parseNode.GetChildNode("payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
+            if (parseNode.GetChildNode("triggerType") is null) { _explicitNullValueTriggerType = default!; _explicitNullProperties?.Remove("triggerType"); }
+            else if (parseNode.GetChildNode("triggerType") is { } nullNodeTriggerType && nullNodeTriggerType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The payload property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; AdditionalData?.Remove("payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload? _explicitNullValuePayload = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; AdditionalData?.Remove("payload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload _explicitNullValuePayload = default!;
 #endif
         /// <summary>The type of event that triggered the request</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedTriggerType? TriggerType { get => _explicitNullValueTriggerType; set { _explicitNullValueTriggerType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerType"); else _explicitNullProperties?.Remove("triggerType"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedTriggerType? TriggerType { get => _explicitNullValueTriggerType; set { _explicitNullValueTriggerType = value; AdditionalData?.Remove("triggerType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerType"); else _explicitNullProperties?.Remove("triggerType"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedTriggerType? _explicitNullValueTriggerType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequest"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "payload", n => { Payload = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload>(global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedRequestPayload.CreateFromDiscriminatorValue); } },
-                { "triggerType", n => { TriggerType = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedTriggerType>(); } },
+                { "triggerType", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.CollectionItemChangedTriggerType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTriggerType = default; _explicitNullProperties?.Remove("triggerType"); AdditionalData["triggerType"] = unknown; } else { TriggerType = parsed; AdditionalData.Remove("triggerType"); } } },
             };
         }
         /// <summary>

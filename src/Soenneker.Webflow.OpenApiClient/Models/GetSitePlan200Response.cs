@@ -17,27 +17,30 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("pricingInfo") is { } nullNodePricingInfo && nullNodePricingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingInfo = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pricingInfo") is null) { _explicitNullValuePricingInfo = default!; _explicitNullProperties?.Remove("pricingInfo"); }
+            else if (parseNode.GetChildNode("pricingInfo") is { } nullNodePricingInfo && nullNodePricingInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingInfo = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the hosting plan.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseId? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseId? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseId? _explicitNullValueId = default!;
         /// <summary>Name of the hosting plan.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseName? _explicitNullValueName = default!;
         /// <summary>URL for more information about Webflow hosting plan pricing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PricingInfo { get => _explicitNullValuePricingInfo; set { _explicitNullValuePricingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricingInfo"); else _explicitNullProperties?.Remove("pricingInfo"); } }
+        public string? PricingInfo { get => _explicitNullValuePricingInfo; set { _explicitNullValuePricingInfo = value; AdditionalData?.Remove("pricingInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricingInfo"); else _explicitNullProperties?.Remove("pricingInfo"); } }
         private string? _explicitNullValuePricingInfo = default!;
 #nullable restore
 #else
-        public string PricingInfo { get => _explicitNullValuePricingInfo; set { _explicitNullValuePricingInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricingInfo"); else _explicitNullProperties?.Remove("pricingInfo"); } }
+        public string PricingInfo { get => _explicitNullValuePricingInfo; set { _explicitNullValuePricingInfo = value; AdditionalData?.Remove("pricingInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricingInfo"); else _explicitNullProperties?.Remove("pricingInfo"); } }
         private string _explicitNullValuePricingInfo = default!;
 #endif
         /// <summary>
@@ -65,8 +68,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "id", n => { Id = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseId>(); } },
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseName>(); } },
+                { "id", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseId>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueId = default; _explicitNullProperties?.Remove("id"); AdditionalData["id"] = unknown; } else { Id = parsed; AdditionalData.Remove("id"); } } },
+                { "name", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetSitePlan200ResponseName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueName = default; _explicitNullProperties?.Remove("name"); AdditionalData["name"] = unknown; } else { Name = parsed; AdditionalData.Remove("name"); } } },
                 { "pricingInfo", n => { PricingInfo = n.GetStringValue(); } },
             };
         }

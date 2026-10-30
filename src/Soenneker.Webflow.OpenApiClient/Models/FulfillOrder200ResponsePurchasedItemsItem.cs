@@ -18,32 +18,46 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
-            if (parseNode.GetChildNode("length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
-            if (parseNode.GetChildNode("productName") is { } nullNodeProductName && nullNodeProductName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductName = null;
-            if (parseNode.GetChildNode("productSlug") is { } nullNodeProductSlug && nullNodeProductSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSlug = null;
-            if (parseNode.GetChildNode("rowTotal") is { } nullNodeRowTotal && nullNodeRowTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowTotal = null;
-            if (parseNode.GetChildNode("variantId") is { } nullNodeVariantId && nullNodeVariantId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantId = null;
-            if (parseNode.GetChildNode("variantImage") is { } nullNodeVariantImage && nullNodeVariantImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantImage = null;
-            if (parseNode.GetChildNode("variantName") is { } nullNodeVariantName && nullNodeVariantName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantName = null;
-            if (parseNode.GetChildNode("variantPrice") is { } nullNodeVariantPrice && nullNodeVariantPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantPrice = null;
-            if (parseNode.GetChildNode("variantSKU") is { } nullNodeVariantSKU && nullNodeVariantSKU.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantSKU = null;
-            if (parseNode.GetChildNode("variantSlug") is { } nullNodeVariantSlug && nullNodeVariantSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantSlug = null;
-            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
-            if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("height") is null) { _explicitNullValueHeight = default!; _explicitNullProperties?.Remove("height"); }
+            else if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("length") is null) { _explicitNullValueLength = default!; _explicitNullProperties?.Remove("length"); }
+            else if (parseNode.GetChildNode("length") is { } nullNodeLength && nullNodeLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Length = null;
+            if (parseNode.GetChildNode("productName") is null) { _explicitNullValueProductName = default!; _explicitNullProperties?.Remove("productName"); }
+            else if (parseNode.GetChildNode("productName") is { } nullNodeProductName && nullNodeProductName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductName = null;
+            if (parseNode.GetChildNode("productSlug") is null) { _explicitNullValueProductSlug = default!; _explicitNullProperties?.Remove("productSlug"); }
+            else if (parseNode.GetChildNode("productSlug") is { } nullNodeProductSlug && nullNodeProductSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductSlug = null;
+            if (parseNode.GetChildNode("rowTotal") is null) { _explicitNullValueRowTotal = default!; _explicitNullProperties?.Remove("rowTotal"); }
+            else if (parseNode.GetChildNode("rowTotal") is { } nullNodeRowTotal && nullNodeRowTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowTotal = null;
+            if (parseNode.GetChildNode("variantId") is null) { _explicitNullValueVariantId = default!; _explicitNullProperties?.Remove("variantId"); }
+            else if (parseNode.GetChildNode("variantId") is { } nullNodeVariantId && nullNodeVariantId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantId = null;
+            if (parseNode.GetChildNode("variantImage") is null) { _explicitNullValueVariantImage = default!; _explicitNullProperties?.Remove("variantImage"); }
+            else if (parseNode.GetChildNode("variantImage") is { } nullNodeVariantImage && nullNodeVariantImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantImage = null;
+            if (parseNode.GetChildNode("variantName") is null) { _explicitNullValueVariantName = default!; _explicitNullProperties?.Remove("variantName"); }
+            else if (parseNode.GetChildNode("variantName") is { } nullNodeVariantName && nullNodeVariantName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantName = null;
+            if (parseNode.GetChildNode("variantPrice") is null) { _explicitNullValueVariantPrice = default!; _explicitNullProperties?.Remove("variantPrice"); }
+            else if (parseNode.GetChildNode("variantPrice") is { } nullNodeVariantPrice && nullNodeVariantPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantPrice = null;
+            if (parseNode.GetChildNode("variantSKU") is null) { _explicitNullValueVariantSKU = default!; _explicitNullProperties?.Remove("variantSKU"); }
+            else if (parseNode.GetChildNode("variantSKU") is { } nullNodeVariantSKU && nullNodeVariantSKU.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantSKU = null;
+            if (parseNode.GetChildNode("variantSlug") is null) { _explicitNullValueVariantSlug = default!; _explicitNullProperties?.Remove("variantSlug"); }
+            else if (parseNode.GetChildNode("variantSlug") is { } nullNodeVariantSlug && nullNodeVariantSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantSlug = null;
+            if (parseNode.GetChildNode("weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("weight"); }
+            else if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("width") is null) { _explicitNullValueWidth = default!; _explicitNullProperties?.Remove("width"); }
+            else if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of Item purchased.</summary>
-        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private double? _explicitNullValueCount = default!;
         /// <summary>The physical height of the variant if provided, or null</summary>
-        public double? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        public double? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
         private double? _explicitNullValueHeight = default!;
         /// <summary>The physical length of the variant if provided, or null</summary>
-        public double? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
+        public double? Length { get => _explicitNullValueLength; set { _explicitNullValueLength = value; AdditionalData?.Remove("length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("length"); else _explicitNullProperties?.Remove("length"); } }
         private double? _explicitNullValueLength = default!;
         /// <summary>The unique identifier for the Product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,98 +70,98 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>User-facing name of the Product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductName { get => _explicitNullValueProductName; set { _explicitNullValueProductName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productName"); else _explicitNullProperties?.Remove("productName"); } }
+        public string? ProductName { get => _explicitNullValueProductName; set { _explicitNullValueProductName = value; AdditionalData?.Remove("productName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productName"); else _explicitNullProperties?.Remove("productName"); } }
         private string? _explicitNullValueProductName = default!;
 #nullable restore
 #else
-        public string ProductName { get => _explicitNullValueProductName; set { _explicitNullValueProductName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productName"); else _explicitNullProperties?.Remove("productName"); } }
+        public string ProductName { get => _explicitNullValueProductName; set { _explicitNullValueProductName = value; AdditionalData?.Remove("productName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productName"); else _explicitNullProperties?.Remove("productName"); } }
         private string _explicitNullValueProductName = default!;
 #endif
         /// <summary>Slug for the Product</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductSlug { get => _explicitNullValueProductSlug; set { _explicitNullValueProductSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productSlug"); else _explicitNullProperties?.Remove("productSlug"); } }
+        public string? ProductSlug { get => _explicitNullValueProductSlug; set { _explicitNullValueProductSlug = value; AdditionalData?.Remove("productSlug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productSlug"); else _explicitNullProperties?.Remove("productSlug"); } }
         private string? _explicitNullValueProductSlug = default!;
 #nullable restore
 #else
-        public string ProductSlug { get => _explicitNullValueProductSlug; set { _explicitNullValueProductSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productSlug"); else _explicitNullProperties?.Remove("productSlug"); } }
+        public string ProductSlug { get => _explicitNullValueProductSlug; set { _explicitNullValueProductSlug = value; AdditionalData?.Remove("productSlug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productSlug"); else _explicitNullProperties?.Remove("productSlug"); } }
         private string _explicitNullValueProductSlug = default!;
 #endif
         /// <summary>The total for the row</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemRowTotal? RowTotal { get => _explicitNullValueRowTotal; set { _explicitNullValueRowTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowTotal"); else _explicitNullProperties?.Remove("rowTotal"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemRowTotal? RowTotal { get => _explicitNullValueRowTotal; set { _explicitNullValueRowTotal = value; AdditionalData?.Remove("rowTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowTotal"); else _explicitNullProperties?.Remove("rowTotal"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemRowTotal? _explicitNullValueRowTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemRowTotal RowTotal { get => _explicitNullValueRowTotal; set { _explicitNullValueRowTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowTotal"); else _explicitNullProperties?.Remove("rowTotal"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemRowTotal RowTotal { get => _explicitNullValueRowTotal; set { _explicitNullValueRowTotal = value; AdditionalData?.Remove("rowTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowTotal"); else _explicitNullProperties?.Remove("rowTotal"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemRowTotal _explicitNullValueRowTotal = default!;
 #endif
         /// <summary>Identifier for the Product Variant (SKU)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
+        public string? VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
         private string? _explicitNullValueVariantId = default!;
 #nullable restore
 #else
-        public string VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
+        public string VariantId { get => _explicitNullValueVariantId; set { _explicitNullValueVariantId = value; AdditionalData?.Remove("variantId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantId"); else _explicitNullProperties?.Remove("variantId"); } }
         private string _explicitNullValueVariantId = default!;
 #endif
         /// <summary>The variantImage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantImage? VariantImage { get => _explicitNullValueVariantImage; set { _explicitNullValueVariantImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantImage"); else _explicitNullProperties?.Remove("variantImage"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantImage? VariantImage { get => _explicitNullValueVariantImage; set { _explicitNullValueVariantImage = value; AdditionalData?.Remove("variantImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantImage"); else _explicitNullProperties?.Remove("variantImage"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantImage? _explicitNullValueVariantImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantImage VariantImage { get => _explicitNullValueVariantImage; set { _explicitNullValueVariantImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantImage"); else _explicitNullProperties?.Remove("variantImage"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantImage VariantImage { get => _explicitNullValueVariantImage; set { _explicitNullValueVariantImage = value; AdditionalData?.Remove("variantImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantImage"); else _explicitNullProperties?.Remove("variantImage"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantImage _explicitNullValueVariantImage = default!;
 #endif
         /// <summary>User-facing name of the Product Variant (SKU)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariantName { get => _explicitNullValueVariantName; set { _explicitNullValueVariantName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantName"); else _explicitNullProperties?.Remove("variantName"); } }
+        public string? VariantName { get => _explicitNullValueVariantName; set { _explicitNullValueVariantName = value; AdditionalData?.Remove("variantName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantName"); else _explicitNullProperties?.Remove("variantName"); } }
         private string? _explicitNullValueVariantName = default!;
 #nullable restore
 #else
-        public string VariantName { get => _explicitNullValueVariantName; set { _explicitNullValueVariantName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantName"); else _explicitNullProperties?.Remove("variantName"); } }
+        public string VariantName { get => _explicitNullValueVariantName; set { _explicitNullValueVariantName = value; AdditionalData?.Remove("variantName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantName"); else _explicitNullProperties?.Remove("variantName"); } }
         private string _explicitNullValueVariantName = default!;
 #endif
         /// <summary>The price corresponding to the variant</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantPrice? VariantPrice { get => _explicitNullValueVariantPrice; set { _explicitNullValueVariantPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantPrice"); else _explicitNullProperties?.Remove("variantPrice"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantPrice? VariantPrice { get => _explicitNullValueVariantPrice; set { _explicitNullValueVariantPrice = value; AdditionalData?.Remove("variantPrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantPrice"); else _explicitNullProperties?.Remove("variantPrice"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantPrice? _explicitNullValueVariantPrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantPrice VariantPrice { get => _explicitNullValueVariantPrice; set { _explicitNullValueVariantPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantPrice"); else _explicitNullProperties?.Remove("variantPrice"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantPrice VariantPrice { get => _explicitNullValueVariantPrice; set { _explicitNullValueVariantPrice = value; AdditionalData?.Remove("variantPrice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantPrice"); else _explicitNullProperties?.Remove("variantPrice"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItemVariantPrice _explicitNullValueVariantPrice = default!;
 #endif
         /// <summary>The user-defined custom SKU of the Product Variant (SKU)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariantSKU { get => _explicitNullValueVariantSKU; set { _explicitNullValueVariantSKU = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSKU"); else _explicitNullProperties?.Remove("variantSKU"); } }
+        public string? VariantSKU { get => _explicitNullValueVariantSKU; set { _explicitNullValueVariantSKU = value; AdditionalData?.Remove("variantSKU"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSKU"); else _explicitNullProperties?.Remove("variantSKU"); } }
         private string? _explicitNullValueVariantSKU = default!;
 #nullable restore
 #else
-        public string VariantSKU { get => _explicitNullValueVariantSKU; set { _explicitNullValueVariantSKU = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSKU"); else _explicitNullProperties?.Remove("variantSKU"); } }
+        public string VariantSKU { get => _explicitNullValueVariantSKU; set { _explicitNullValueVariantSKU = value; AdditionalData?.Remove("variantSKU"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSKU"); else _explicitNullProperties?.Remove("variantSKU"); } }
         private string _explicitNullValueVariantSKU = default!;
 #endif
         /// <summary>Slug for the Product Variant (SKU)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariantSlug { get => _explicitNullValueVariantSlug; set { _explicitNullValueVariantSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSlug"); else _explicitNullProperties?.Remove("variantSlug"); } }
+        public string? VariantSlug { get => _explicitNullValueVariantSlug; set { _explicitNullValueVariantSlug = value; AdditionalData?.Remove("variantSlug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSlug"); else _explicitNullProperties?.Remove("variantSlug"); } }
         private string? _explicitNullValueVariantSlug = default!;
 #nullable restore
 #else
-        public string VariantSlug { get => _explicitNullValueVariantSlug; set { _explicitNullValueVariantSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSlug"); else _explicitNullProperties?.Remove("variantSlug"); } }
+        public string VariantSlug { get => _explicitNullValueVariantSlug; set { _explicitNullValueVariantSlug = value; AdditionalData?.Remove("variantSlug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantSlug"); else _explicitNullProperties?.Remove("variantSlug"); } }
         private string _explicitNullValueVariantSlug = default!;
 #endif
         /// <summary>The physical weight of the variant if provided, or null</summary>
-        public double? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        public double? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
         private double? _explicitNullValueWeight = default!;
         /// <summary>The physical width of the variant if provided, or null</summary>
-        public double? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        public double? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
         private double? _explicitNullValueWidth = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrder200ResponsePurchasedItemsItem"/> and sets the default values.

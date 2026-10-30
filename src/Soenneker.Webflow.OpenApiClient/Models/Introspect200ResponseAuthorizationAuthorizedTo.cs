@@ -17,9 +17,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("siteIds") is { } nullNodeSiteIds && nullNodeSiteIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteIds = null;
-            if (parseNode.GetChildNode("userIds") is { } nullNodeUserIds && nullNodeUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserIds = null;
-            if (parseNode.GetChildNode("workspaceIds") is { } nullNodeWorkspaceIds && nullNodeWorkspaceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceIds = null;
+            if (parseNode.GetChildNode("siteIds") is null) { _explicitNullValueSiteIds = default!; _explicitNullProperties?.Remove("siteIds"); }
+            else if (parseNode.GetChildNode("siteIds") is { } nullNodeSiteIds && nullNodeSiteIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteIds = null;
+            if (parseNode.GetChildNode("userIds") is null) { _explicitNullValueUserIds = default!; _explicitNullProperties?.Remove("userIds"); }
+            else if (parseNode.GetChildNode("userIds") is { } nullNodeUserIds && nullNodeUserIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserIds = null;
+            if (parseNode.GetChildNode("workspaceIds") is null) { _explicitNullValueWorkspaceIds = default!; _explicitNullProperties?.Remove("workspaceIds"); }
+            else if (parseNode.GetChildNode("workspaceIds") is { } nullNodeWorkspaceIds && nullNodeWorkspaceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Array of Sites this app is authorized to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SiteIds { get => _explicitNullValueSiteIds; set { _explicitNullValueSiteIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteIds"); else _explicitNullProperties?.Remove("siteIds"); } }
+        public UntypedNode? SiteIds { get => _explicitNullValueSiteIds; set { _explicitNullValueSiteIds = value; AdditionalData?.Remove("siteIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteIds"); else _explicitNullProperties?.Remove("siteIds"); } }
         private UntypedNode? _explicitNullValueSiteIds = default!;
 #nullable restore
 #else
-        public UntypedNode SiteIds { get => _explicitNullValueSiteIds; set { _explicitNullValueSiteIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteIds"); else _explicitNullProperties?.Remove("siteIds"); } }
+        public UntypedNode SiteIds { get => _explicitNullValueSiteIds; set { _explicitNullValueSiteIds = value; AdditionalData?.Remove("siteIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("siteIds"); else _explicitNullProperties?.Remove("siteIds"); } }
         private UntypedNode _explicitNullValueSiteIds = default!;
 #endif
         /// <summary>Array of Users this app is authorized to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userIds"); else _explicitNullProperties?.Remove("userIds"); } }
+        public UntypedNode? UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; AdditionalData?.Remove("userIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userIds"); else _explicitNullProperties?.Remove("userIds"); } }
         private UntypedNode? _explicitNullValueUserIds = default!;
 #nullable restore
 #else
-        public UntypedNode UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userIds"); else _explicitNullProperties?.Remove("userIds"); } }
+        public UntypedNode UserIds { get => _explicitNullValueUserIds; set { _explicitNullValueUserIds = value; AdditionalData?.Remove("userIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userIds"); else _explicitNullProperties?.Remove("userIds"); } }
         private UntypedNode _explicitNullValueUserIds = default!;
 #endif
         /// <summary>Array of Workspaces this app is authorized to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? WorkspaceIds { get => _explicitNullValueWorkspaceIds; set { _explicitNullValueWorkspaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspaceIds"); else _explicitNullProperties?.Remove("workspaceIds"); } }
+        public UntypedNode? WorkspaceIds { get => _explicitNullValueWorkspaceIds; set { _explicitNullValueWorkspaceIds = value; AdditionalData?.Remove("workspaceIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspaceIds"); else _explicitNullProperties?.Remove("workspaceIds"); } }
         private UntypedNode? _explicitNullValueWorkspaceIds = default!;
 #nullable restore
 #else
-        public UntypedNode WorkspaceIds { get => _explicitNullValueWorkspaceIds; set { _explicitNullValueWorkspaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspaceIds"); else _explicitNullProperties?.Remove("workspaceIds"); } }
+        public UntypedNode WorkspaceIds { get => _explicitNullValueWorkspaceIds; set { _explicitNullValueWorkspaceIds = value; AdditionalData?.Remove("workspaceIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspaceIds"); else _explicitNullProperties?.Remove("workspaceIds"); } }
         private UntypedNode _explicitNullValueWorkspaceIds = default!;
 #endif
         /// <summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("formSubmissions") is { } nullNodeFormSubmissions && nullNodeFormSubmissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormSubmissions = null;
-            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("formSubmissions") is null) { _explicitNullValueFormSubmissions = default!; _explicitNullProperties?.Remove("formSubmissions"); }
+            else if (parseNode.GetChildNode("formSubmissions") is { } nullNodeFormSubmissions && nullNodeFormSubmissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormSubmissions = null;
+            if (parseNode.GetChildNode("pagination") is null) { _explicitNullValuePagination = default!; _explicitNullProperties?.Remove("pagination"); }
+            else if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The formSubmissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponseFormSubmissionsItem>? FormSubmissions { get => _explicitNullValueFormSubmissions; set { _explicitNullValueFormSubmissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissions"); else _explicitNullProperties?.Remove("formSubmissions"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponseFormSubmissionsItem>? FormSubmissions { get => _explicitNullValueFormSubmissions; set { _explicitNullValueFormSubmissions = value; AdditionalData?.Remove("formSubmissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissions"); else _explicitNullProperties?.Remove("formSubmissions"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponseFormSubmissionsItem>? _explicitNullValueFormSubmissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponseFormSubmissionsItem> FormSubmissions { get => _explicitNullValueFormSubmissions; set { _explicitNullValueFormSubmissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissions"); else _explicitNullProperties?.Remove("formSubmissions"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponseFormSubmissionsItem> FormSubmissions { get => _explicitNullValueFormSubmissions; set { _explicitNullValueFormSubmissions = value; AdditionalData?.Remove("formSubmissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissions"); else _explicitNullProperties?.Remove("formSubmissions"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponseFormSubmissionsItem> _explicitNullValueFormSubmissions = default!;
 #endif
         /// <summary>Pagination object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.ListSubmissions200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>

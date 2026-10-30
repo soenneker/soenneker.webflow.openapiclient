@@ -1001,7 +1001,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateSite403Response"
+                  "$ref": "#/components/schemas/DeleteSite403Response"
                 }
               }
             }
@@ -3929,7 +3929,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetSiteActivityLogs403Response"
+                  "$ref": "#/components/schemas/DeleteSite403Response"
                 }
               }
             }
@@ -80161,22 +80161,26 @@
           "id": {
             "type": "string",
             "description": "Unique identifier for the Item",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "workspaceId": {
             "type": "string",
             "description": "Unique identifier of the workspace",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "siteId": {
             "type": "string",
             "description": "Unique identifier of the site",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "collectionId": {
             "type": "string",
             "description": "Unique identifier of the collection",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "cmsLocaleId": {
             "type": [
@@ -80184,7 +80188,8 @@
               "string"
             ],
             "description": "Unique identifier of the CMS locale for this item",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "lastPublished": {
             "type": [
@@ -80242,22 +80247,26 @@
           "id": {
             "type": "string",
             "description": "Unique identifier for the Item",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "workspaceId": {
             "type": "string",
             "description": "Unique identifier of the workspace",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "siteId": {
             "type": "string",
             "description": "Unique identifier of the site",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "collectionId": {
             "type": "string",
             "description": "Unique identifier of the collection",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "cmsLocaleId": {
             "type": [
@@ -80265,7 +80274,8 @@
               "string"
             ],
             "description": "Unique identifier of the CMS locale for this item",
-            "format": "uuid"
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "lastPublished": {
             "type": [
@@ -80339,8 +80349,9 @@
           "cmsLocaleId": {
             "type": "string",
             "description": "Unique identifier of the CMS locale for this item",
-            "format": "uuid",
-            "example": "681442a144bb80bd00480fda"
+            "example": "681442a144bb80bd00480fda",
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "lastPublished": {
             "type": [
@@ -80402,8 +80413,9 @@
               "string"
             ],
             "description": "Unique identifier of the CMS locale for this item",
-            "format": "uuid",
-            "example": "681442a144bb80bd00480fda"
+            "example": "681442a144bb80bd00480fda",
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "lastPublished": {
             "type": [
@@ -80465,8 +80477,9 @@
               "string"
             ],
             "description": "Unique identifier of the CMS locale for this item",
-            "format": "uuid",
-            "example": "681442a144bb80bd00480fda"
+            "example": "681442a144bb80bd00480fda",
+            "x-client-original-format": "uuid",
+            "x-client-format-repair": "documented-24-hex-identifier"
           },
           "lastPublished": {
             "type": [

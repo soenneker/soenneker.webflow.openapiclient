@@ -18,8 +18,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("nodeId") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
-            if (parseNode.GetChildNode("propertyOverrides") is { } nullNodePropertyOverrides && nullNodePropertyOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyOverrides = null;
+            if (parseNode.GetChildNode("nodeId") is null) { _explicitNullValueNodeId = default!; _explicitNullProperties?.Remove("nodeId"); }
+            else if (parseNode.GetChildNode("nodeId") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
+            if (parseNode.GetChildNode("propertyOverrides") is null) { _explicitNullValuePropertyOverrides = default!; _explicitNullProperties?.Remove("propertyOverrides"); }
+            else if (parseNode.GetChildNode("propertyOverrides") is { } nullNodePropertyOverrides && nullNodePropertyOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyOverrides = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Node UUID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; AdditionalData?.Remove("nodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
         private string? _explicitNullValueNodeId = default!;
 #nullable restore
 #else
-        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; AdditionalData?.Remove("nodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
         private string _explicitNullValueNodeId = default!;
 #endif
         /// <summary>A list of component instance properties to override within the specified secondary locale.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateComponentContentRequestNodesItemComponentInstancePropertyOverridesItem>? PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateComponentContentRequestNodesItemComponentInstancePropertyOverridesItem>? PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; AdditionalData?.Remove("propertyOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateComponentContentRequestNodesItemComponentInstancePropertyOverridesItem>? _explicitNullValuePropertyOverrides = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateComponentContentRequestNodesItemComponentInstancePropertyOverridesItem> PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateComponentContentRequestNodesItemComponentInstancePropertyOverridesItem> PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; AdditionalData?.Remove("propertyOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.UpdateComponentContentRequestNodesItemComponentInstancePropertyOverridesItem> _explicitNullValuePropertyOverrides = default!;
 #endif
         /// <summary>

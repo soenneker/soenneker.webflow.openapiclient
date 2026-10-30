@@ -18,12 +18,18 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bucketing") is { } nullNodeBucketing && nullNodeBucketing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bucketing = null;
-            if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
-            if (parseNode.GetChildNode("filter") is { } nullNodeFilter && nullNodeFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filter = null;
-            if (parseNode.GetChildNode("metricScope") is { } nullNodeMetricScope && nullNodeMetricScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetricScope = null;
-            if (parseNode.GetChildNode("report") is { } nullNodeReport && nullNodeReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Report = null;
-            if (parseNode.GetChildNode("window") is { } nullNodeWindow && nullNodeWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Window = null;
+            if (parseNode.GetChildNode("bucketing") is null) { _explicitNullValueBucketing = default!; _explicitNullProperties?.Remove("bucketing"); }
+            else if (parseNode.GetChildNode("bucketing") is { } nullNodeBucketing && nullNodeBucketing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bucketing = null;
+            if (parseNode.GetChildNode("data") is null) { _explicitNullValueData = default!; _explicitNullProperties?.Remove("data"); }
+            else if (parseNode.GetChildNode("data") is { } nullNodeData && nullNodeData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Data = null;
+            if (parseNode.GetChildNode("filter") is null) { _explicitNullValueFilter = default!; _explicitNullProperties?.Remove("filter"); }
+            else if (parseNode.GetChildNode("filter") is { } nullNodeFilter && nullNodeFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filter = null;
+            if (parseNode.GetChildNode("metricScope") is null) { _explicitNullValueMetricScope = default!; _explicitNullProperties?.Remove("metricScope"); }
+            else if (parseNode.GetChildNode("metricScope") is { } nullNodeMetricScope && nullNodeMetricScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetricScope = null;
+            if (parseNode.GetChildNode("report") is null) { _explicitNullValueReport = default!; _explicitNullProperties?.Remove("report"); }
+            else if (parseNode.GetChildNode("report") is { } nullNodeReport && nullNodeReport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Report = null;
+            if (parseNode.GetChildNode("window") is null) { _explicitNullValueWindow = default!; _explicitNullProperties?.Remove("window"); }
+            else if (parseNode.GetChildNode("window") is { } nullNodeWindow && nullNodeWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Window = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,47 +37,47 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Daily bucketing applied to a response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing? Bucketing { get => _explicitNullValueBucketing; set { _explicitNullValueBucketing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketing"); else _explicitNullProperties?.Remove("bucketing"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing? Bucketing { get => _explicitNullValueBucketing; set { _explicitNullValueBucketing = value; AdditionalData?.Remove("bucketing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketing"); else _explicitNullProperties?.Remove("bucketing"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing? _explicitNullValueBucketing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing Bucketing { get => _explicitNullValueBucketing; set { _explicitNullValueBucketing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketing"); else _explicitNullProperties?.Remove("bucketing"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing Bucketing { get => _explicitNullValueBucketing; set { _explicitNullValueBucketing = value; AdditionalData?.Remove("bucketing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketing"); else _explicitNullProperties?.Remove("bucketing"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing _explicitNullValueBucketing = default!;
 #endif
         /// <summary>Time-ordered series of data points covering the requested window.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem>? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem>? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem> Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem> _explicitNullValueData = default!;
 #endif
         /// <summary>Filter the traffic report by dimension. Each property is an optional set of `AnalyzeFilterOperators` (`eq`, `in`, `ne`, `nin`) applied to the named dimension. Filter a given dimension in one place — either inside `filter` or as a top-level query parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter? Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter? Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; AdditionalData?.Remove("filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter? _explicitNullValueFilter = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; AdditionalData?.Remove("filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter _explicitNullValueFilter = default!;
 #endif
         /// <summary>The unit each `count` data point is measured in.- `session`: number of sessions.- `user`: number of unique users.- `pageview`: number of pageviews.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseMetricScope? MetricScope { get => _explicitNullValueMetricScope; set { _explicitNullValueMetricScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metricScope"); else _explicitNullProperties?.Remove("metricScope"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseMetricScope? MetricScope { get => _explicitNullValueMetricScope; set { _explicitNullValueMetricScope = value; AdditionalData?.Remove("metricScope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metricScope"); else _explicitNullProperties?.Remove("metricScope"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseMetricScope? _explicitNullValueMetricScope = default!;
         /// <summary>Discriminator identifying the report type.</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.TrafficReport? Report { get => _explicitNullValueReport; set { _explicitNullValueReport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report"); else _explicitNullProperties?.Remove("report"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.TrafficReport? Report { get => _explicitNullValueReport; set { _explicitNullValueReport = value; AdditionalData?.Remove("report"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report"); else _explicitNullProperties?.Remove("report"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.TrafficReport? _explicitNullValueReport = default!;
         /// <summary>A reporting time window. `endTime` must be greater than `startTime`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow? Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow? Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; AdditionalData?.Remove("window"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow? _explicitNullValueWindow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow Window { get => _explicitNullValueWindow; set { _explicitNullValueWindow = value; AdditionalData?.Remove("window"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("window"); else _explicitNullProperties?.Remove("window"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow _explicitNullValueWindow = default!;
 #endif
         /// <summary>
@@ -102,8 +108,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
                 { "bucketing", n => { Bucketing = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing>(global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseBucketing.CreateFromDiscriminatorValue); } },
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem>(global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "filter", n => { Filter = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter>(global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseFilter.CreateFromDiscriminatorValue); } },
-                { "metricScope", n => { MetricScope = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseMetricScope>(); } },
-                { "report", n => { Report = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.TrafficReport>(); } },
+                { "metricScope", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseMetricScope>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMetricScope = default; _explicitNullProperties?.Remove("metricScope"); AdditionalData["metricScope"] = unknown; } else { MetricScope = parsed; AdditionalData.Remove("metricScope"); } } },
+                { "report", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.TrafficReport>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReport = default; _explicitNullProperties?.Remove("report"); AdditionalData["report"] = unknown; } else { Report = parsed; AdditionalData.Remove("report"); } } },
                 { "window", n => { Window = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow>(global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTrafficReport200ResponseWindow.CreateFromDiscriminatorValue); } },
             };
         }

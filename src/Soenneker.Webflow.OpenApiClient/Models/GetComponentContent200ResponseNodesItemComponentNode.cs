@@ -18,10 +18,14 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("componentId") is { } nullNodeComponentId && nullNodeComponentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentId = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("propertyOverrides") is { } nullNodePropertyOverrides && nullNodePropertyOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyOverrides = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("componentId") is null) { _explicitNullValueComponentId = default!; _explicitNullProperties?.Remove("componentId"); }
+            else if (parseNode.GetChildNode("componentId") is { } nullNodeComponentId && nullNodeComponentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("propertyOverrides") is null) { _explicitNullValuePropertyOverrides = default!; _explicitNullProperties?.Remove("propertyOverrides"); }
+            else if (parseNode.GetChildNode("propertyOverrides") is { } nullNodePropertyOverrides && nullNodePropertyOverrides.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyOverrides = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,35 +33,35 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The unique identifier of the component</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentId"); else _explicitNullProperties?.Remove("componentId"); } }
+        public string? ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; AdditionalData?.Remove("componentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentId"); else _explicitNullProperties?.Remove("componentId"); } }
         private string? _explicitNullValueComponentId = default!;
 #nullable restore
 #else
-        public string ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentId"); else _explicitNullProperties?.Remove("componentId"); } }
+        public string ComponentId { get => _explicitNullValueComponentId; set { _explicitNullValueComponentId = value; AdditionalData?.Remove("componentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentId"); else _explicitNullProperties?.Remove("componentId"); } }
         private string _explicitNullValueComponentId = default!;
 #endif
         /// <summary>The unique identifier of the component instance node</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>List of component properties with overrides for a component instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText>? PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText>? PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; AdditionalData?.Remove("propertyOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText>? _explicitNullValuePropertyOverrides = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText> PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText> PropertyOverrides { get => _explicitNullValuePropertyOverrides; set { _explicitNullValuePropertyOverrides = value; AdditionalData?.Remove("propertyOverrides"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyOverrides"); else _explicitNullProperties?.Remove("propertyOverrides"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText> _explicitNullValuePropertyOverrides = default!;
 #endif
         /// <summary>The type of the node</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNode"/> and sets the default values.
@@ -87,7 +91,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
                 { "componentId", n => { ComponentId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "propertyOverrides", n => { PropertyOverrides = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText>(global::Soenneker.Webflow.OpenApiClient.Models.GetComponentContent200ResponseNodesItemComponentNodePropertyOverridesItemComponentPropertyText.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.ComponentInstanceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

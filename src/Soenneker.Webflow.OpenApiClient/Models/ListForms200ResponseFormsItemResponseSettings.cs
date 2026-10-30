@@ -18,10 +18,14 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("redirectAction") is { } nullNodeRedirectAction && nullNodeRedirectAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectAction = null;
-            if (parseNode.GetChildNode("redirectMethod") is { } nullNodeRedirectMethod && nullNodeRedirectMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectMethod = null;
-            if (parseNode.GetChildNode("redirectUrl") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
-            if (parseNode.GetChildNode("sendEmailConfirmation") is { } nullNodeSendEmailConfirmation && nullNodeSendEmailConfirmation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmailConfirmation = null;
+            if (parseNode.GetChildNode("redirectAction") is null) { _explicitNullValueRedirectAction = default!; _explicitNullProperties?.Remove("redirectAction"); }
+            else if (parseNode.GetChildNode("redirectAction") is { } nullNodeRedirectAction && nullNodeRedirectAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectAction = null;
+            if (parseNode.GetChildNode("redirectMethod") is null) { _explicitNullValueRedirectMethod = default!; _explicitNullProperties?.Remove("redirectMethod"); }
+            else if (parseNode.GetChildNode("redirectMethod") is { } nullNodeRedirectMethod && nullNodeRedirectMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectMethod = null;
+            if (parseNode.GetChildNode("redirectUrl") is null) { _explicitNullValueRedirectUrl = default!; _explicitNullProperties?.Remove("redirectUrl"); }
+            else if (parseNode.GetChildNode("redirectUrl") is { } nullNodeRedirectUrl && nullNodeRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUrl = null;
+            if (parseNode.GetChildNode("sendEmailConfirmation") is null) { _explicitNullValueSendEmailConfirmation = default!; _explicitNullProperties?.Remove("sendEmailConfirmation"); }
+            else if (parseNode.GetChildNode("sendEmailConfirmation") is { } nullNodeSendEmailConfirmation && nullNodeSendEmailConfirmation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmailConfirmation = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,35 +33,35 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The action to take after form submission</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectAction { get => _explicitNullValueRedirectAction; set { _explicitNullValueRedirectAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAction"); else _explicitNullProperties?.Remove("redirectAction"); } }
+        public string? RedirectAction { get => _explicitNullValueRedirectAction; set { _explicitNullValueRedirectAction = value; AdditionalData?.Remove("redirectAction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAction"); else _explicitNullProperties?.Remove("redirectAction"); } }
         private string? _explicitNullValueRedirectAction = default!;
 #nullable restore
 #else
-        public string RedirectAction { get => _explicitNullValueRedirectAction; set { _explicitNullValueRedirectAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAction"); else _explicitNullProperties?.Remove("redirectAction"); } }
+        public string RedirectAction { get => _explicitNullValueRedirectAction; set { _explicitNullValueRedirectAction = value; AdditionalData?.Remove("redirectAction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectAction"); else _explicitNullProperties?.Remove("redirectAction"); } }
         private string _explicitNullValueRedirectAction = default!;
 #endif
         /// <summary>The HTTP request method to use for the redirectUrl (eg. POST or GET)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectMethod { get => _explicitNullValueRedirectMethod; set { _explicitNullValueRedirectMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectMethod"); else _explicitNullProperties?.Remove("redirectMethod"); } }
+        public string? RedirectMethod { get => _explicitNullValueRedirectMethod; set { _explicitNullValueRedirectMethod = value; AdditionalData?.Remove("redirectMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectMethod"); else _explicitNullProperties?.Remove("redirectMethod"); } }
         private string? _explicitNullValueRedirectMethod = default!;
 #nullable restore
 #else
-        public string RedirectMethod { get => _explicitNullValueRedirectMethod; set { _explicitNullValueRedirectMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectMethod"); else _explicitNullProperties?.Remove("redirectMethod"); } }
+        public string RedirectMethod { get => _explicitNullValueRedirectMethod; set { _explicitNullValueRedirectMethod = value; AdditionalData?.Remove("redirectMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectMethod"); else _explicitNullProperties?.Remove("redirectMethod"); } }
         private string _explicitNullValueRedirectMethod = default!;
 #endif
         /// <summary>The url or path to redirect the user to after form submission</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
+        public string? RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; AdditionalData?.Remove("redirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
         private string? _explicitNullValueRedirectUrl = default!;
 #nullable restore
 #else
-        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
+        public string RedirectUrl { get => _explicitNullValueRedirectUrl; set { _explicitNullValueRedirectUrl = value; AdditionalData?.Remove("redirectUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirectUrl"); else _explicitNullProperties?.Remove("redirectUrl"); } }
         private string _explicitNullValueRedirectUrl = default!;
 #endif
         /// <summary>Whether to send an email confirmation to the user</summary>
-        public bool? SendEmailConfirmation { get => _explicitNullValueSendEmailConfirmation; set { _explicitNullValueSendEmailConfirmation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendEmailConfirmation"); else _explicitNullProperties?.Remove("sendEmailConfirmation"); } }
+        public bool? SendEmailConfirmation { get => _explicitNullValueSendEmailConfirmation; set { _explicitNullValueSendEmailConfirmation = value; AdditionalData?.Remove("sendEmailConfirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendEmailConfirmation"); else _explicitNullProperties?.Remove("sendEmailConfirmation"); } }
         private bool? _explicitNullValueSendEmailConfirmation = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.ListForms200ResponseFormsItemResponseSettings"/> and sets the default values.

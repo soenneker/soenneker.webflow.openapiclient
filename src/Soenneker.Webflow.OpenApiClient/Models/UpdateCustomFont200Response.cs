@@ -17,7 +17,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customFont") is { } nullNodeCustomFont && nullNodeCustomFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFont = null;
+            if (parseNode.GetChildNode("customFont") is null) { _explicitNullValueCustomFont = default!; _explicitNullProperties?.Remove("customFont"); }
+            else if (parseNode.GetChildNode("customFont") is { } nullNodeCustomFont && nullNodeCustomFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFont = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>A custom font uploaded to a Webflow site</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateCustomFont200ResponseCustomFont? CustomFont { get => _explicitNullValueCustomFont; set { _explicitNullValueCustomFont = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFont"); else _explicitNullProperties?.Remove("customFont"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateCustomFont200ResponseCustomFont? CustomFont { get => _explicitNullValueCustomFont; set { _explicitNullValueCustomFont = value; AdditionalData?.Remove("customFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFont"); else _explicitNullProperties?.Remove("customFont"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.UpdateCustomFont200ResponseCustomFont? _explicitNullValueCustomFont = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateCustomFont200ResponseCustomFont CustomFont { get => _explicitNullValueCustomFont; set { _explicitNullValueCustomFont = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFont"); else _explicitNullProperties?.Remove("customFont"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateCustomFont200ResponseCustomFont CustomFont { get => _explicitNullValueCustomFont; set { _explicitNullValueCustomFont = value; AdditionalData?.Remove("customFont"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFont"); else _explicitNullProperties?.Remove("customFont"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.UpdateCustomFont200ResponseCustomFont _explicitNullValueCustomFont = default!;
 #endif
         /// <summary>

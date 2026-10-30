@@ -18,10 +18,14 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cmsLocaleId") is { } nullNodeCmsLocaleId && nullNodeCmsLocaleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CmsLocaleId = null;
-            if (parseNode.GetChildNode("fieldData") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
-            if (parseNode.GetChildNode("isArchived") is { } nullNodeIsArchived && nullNodeIsArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsArchived = null;
-            if (parseNode.GetChildNode("isDraft") is { } nullNodeIsDraft && nullNodeIsDraft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDraft = null;
+            if (parseNode.GetChildNode("cmsLocaleId") is null) { _explicitNullValueCmsLocaleId = default!; _explicitNullProperties?.Remove("cmsLocaleId"); }
+            else if (parseNode.GetChildNode("cmsLocaleId") is { } nullNodeCmsLocaleId && nullNodeCmsLocaleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CmsLocaleId = null;
+            if (parseNode.GetChildNode("fieldData") is null) { _explicitNullValueFieldData = default!; _explicitNullProperties?.Remove("fieldData"); }
+            else if (parseNode.GetChildNode("fieldData") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
+            if (parseNode.GetChildNode("isArchived") is null) { _explicitNullValueIsArchived = default!; _explicitNullProperties?.Remove("isArchived"); }
+            else if (parseNode.GetChildNode("isArchived") is { } nullNodeIsArchived && nullNodeIsArchived.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsArchived = null;
+            if (parseNode.GetChildNode("isDraft") is null) { _explicitNullValueIsDraft = default!; _explicitNullProperties?.Remove("isDraft"); }
+            else if (parseNode.GetChildNode("isDraft") is { } nullNodeIsDraft && nullNodeIsDraft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDraft = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,11 +33,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Identifier for the locale of the CMS item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CmsLocaleId { get => _explicitNullValueCmsLocaleId; set { _explicitNullValueCmsLocaleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cmsLocaleId"); else _explicitNullProperties?.Remove("cmsLocaleId"); } }
+        public string? CmsLocaleId { get => _explicitNullValueCmsLocaleId; set { _explicitNullValueCmsLocaleId = value; AdditionalData?.Remove("cmsLocaleId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cmsLocaleId"); else _explicitNullProperties?.Remove("cmsLocaleId"); } }
         private string? _explicitNullValueCmsLocaleId = default!;
 #nullable restore
 #else
-        public string CmsLocaleId { get => _explicitNullValueCmsLocaleId; set { _explicitNullValueCmsLocaleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cmsLocaleId"); else _explicitNullProperties?.Remove("cmsLocaleId"); } }
+        public string CmsLocaleId { get => _explicitNullValueCmsLocaleId; set { _explicitNullValueCmsLocaleId = value; AdditionalData?.Remove("cmsLocaleId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cmsLocaleId"); else _explicitNullProperties?.Remove("cmsLocaleId"); } }
         private string _explicitNullValueCmsLocaleId = default!;
 #endif
         /// <summary>The date the item was created</summary>
@@ -47,11 +51,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>The fieldData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItem202ResponseFieldData? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItem202ResponseFieldData? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; AdditionalData?.Remove("fieldData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CreateItem202ResponseFieldData? _explicitNullValueFieldData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItem202ResponseFieldData FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateItem202ResponseFieldData FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; AdditionalData?.Remove("fieldData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CreateItem202ResponseFieldData _explicitNullValueFieldData = default!;
 #endif
         /// <summary>Unique identifier for the Item</summary>
@@ -63,10 +67,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         public string Id { get; private set; }
 #endif
         /// <summary>Boolean determining if the Item is set to archived</summary>
-        public bool? IsArchived { get => _explicitNullValueIsArchived; set { _explicitNullValueIsArchived = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isArchived"); else _explicitNullProperties?.Remove("isArchived"); } }
+        public bool? IsArchived { get => _explicitNullValueIsArchived; set { _explicitNullValueIsArchived = value; AdditionalData?.Remove("isArchived"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isArchived"); else _explicitNullProperties?.Remove("isArchived"); } }
         private bool? _explicitNullValueIsArchived = default!;
         /// <summary>Whether the item is in a draft state. Together with `lastPublished`, this determines the status shown in the Webflow UI. See [Publishing with the CMS API](/data/docs/working-with-the-cms/publishing) for the full mapping.</summary>
-        public bool? IsDraft { get => _explicitNullValueIsDraft; set { _explicitNullValueIsDraft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDraft"); else _explicitNullProperties?.Remove("isDraft"); } }
+        public bool? IsDraft { get => _explicitNullValueIsDraft; set { _explicitNullValueIsDraft = value; AdditionalData?.Remove("isDraft"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDraft"); else _explicitNullProperties?.Remove("isDraft"); } }
         private bool? _explicitNullValueIsDraft = default!;
         /// <summary>The date the item was last published</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

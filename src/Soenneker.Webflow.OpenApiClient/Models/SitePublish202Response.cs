@@ -17,9 +17,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customDomains") is { } nullNodeCustomDomains && nullNodeCustomDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomDomains = null;
-            if (parseNode.GetChildNode("publishScope") is { } nullNodePublishScope && nullNodePublishScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishScope = null;
-            if (parseNode.GetChildNode("publishToWebflowSubdomain") is { } nullNodePublishToWebflowSubdomain && nullNodePublishToWebflowSubdomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishToWebflowSubdomain = null;
+            if (parseNode.GetChildNode("customDomains") is null) { _explicitNullValueCustomDomains = default!; _explicitNullProperties?.Remove("customDomains"); }
+            else if (parseNode.GetChildNode("customDomains") is { } nullNodeCustomDomains && nullNodeCustomDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomDomains = null;
+            if (parseNode.GetChildNode("publishScope") is null) { _explicitNullValuePublishScope = default!; _explicitNullProperties?.Remove("publishScope"); }
+            else if (parseNode.GetChildNode("publishScope") is { } nullNodePublishScope && nullNodePublishScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishScope = null;
+            if (parseNode.GetChildNode("publishToWebflowSubdomain") is null) { _explicitNullValuePublishToWebflowSubdomain = default!; _explicitNullProperties?.Remove("publishToWebflowSubdomain"); }
+            else if (parseNode.GetChildNode("publishToWebflowSubdomain") is { } nullNodePublishToWebflowSubdomain && nullNodePublishToWebflowSubdomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishToWebflowSubdomain = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Array of domains objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem>? CustomDomains { get => _explicitNullValueCustomDomains; set { _explicitNullValueCustomDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customDomains"); else _explicitNullProperties?.Remove("customDomains"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem>? CustomDomains { get => _explicitNullValueCustomDomains; set { _explicitNullValueCustomDomains = value; AdditionalData?.Remove("customDomains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customDomains"); else _explicitNullProperties?.Remove("customDomains"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem>? _explicitNullValueCustomDomains = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem> CustomDomains { get => _explicitNullValueCustomDomains; set { _explicitNullValueCustomDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customDomains"); else _explicitNullProperties?.Remove("customDomains"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem> CustomDomains { get => _explicitNullValueCustomDomains; set { _explicitNullValueCustomDomains = value; AdditionalData?.Remove("customDomains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customDomains"); else _explicitNullProperties?.Remove("customDomains"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem> _explicitNullValueCustomDomains = default!;
 #endif
         /// <summary>Whether the site or an individual page was published</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponsePublishScope? PublishScope { get => _explicitNullValuePublishScope; set { _explicitNullValuePublishScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishScope"); else _explicitNullProperties?.Remove("publishScope"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponsePublishScope? PublishScope { get => _explicitNullValuePublishScope; set { _explicitNullValuePublishScope = value; AdditionalData?.Remove("publishScope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishScope"); else _explicitNullProperties?.Remove("publishScope"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponsePublishScope? _explicitNullValuePublishScope = default!;
         /// <summary>Flag for publishing to webflow.io subdomain</summary>
-        public bool? PublishToWebflowSubdomain { get => _explicitNullValuePublishToWebflowSubdomain; set { _explicitNullValuePublishToWebflowSubdomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishToWebflowSubdomain"); else _explicitNullProperties?.Remove("publishToWebflowSubdomain"); } }
+        public bool? PublishToWebflowSubdomain { get => _explicitNullValuePublishToWebflowSubdomain; set { _explicitNullValuePublishToWebflowSubdomain = value; AdditionalData?.Remove("publishToWebflowSubdomain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishToWebflowSubdomain"); else _explicitNullProperties?.Remove("publishToWebflowSubdomain"); } }
         private bool? _explicitNullValuePublishToWebflowSubdomain = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202Response"/> and sets the default values.
@@ -67,7 +70,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "customDomains", n => { CustomDomains = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem>(global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponseCustomDomainsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "publishScope", n => { PublishScope = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponsePublishScope>(); } },
+                { "publishScope", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.SitePublish202ResponsePublishScope>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePublishScope = default; _explicitNullProperties?.Remove("publishScope"); AdditionalData["publishScope"] = unknown; } else { PublishScope = parsed; AdditionalData.Remove("publishScope"); } } },
                 { "publishToWebflowSubdomain", n => { PublishToWebflowSubdomain = n.GetBoolValue(); } },
             };
         }

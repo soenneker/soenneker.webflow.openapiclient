@@ -18,8 +18,10 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assetFolders") is { } nullNodeAssetFolders && nullNodeAssetFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetFolders = null;
-            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("assetFolders") is null) { _explicitNullValueAssetFolders = default!; _explicitNullProperties?.Remove("assetFolders"); }
+            else if (parseNode.GetChildNode("assetFolders") is { } nullNodeAssetFolders && nullNodeAssetFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssetFolders = null;
+            if (parseNode.GetChildNode("pagination") is null) { _explicitNullValuePagination = default!; _explicitNullProperties?.Remove("pagination"); }
+            else if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>A list of Asset folders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem>? AssetFolders { get => _explicitNullValueAssetFolders; set { _explicitNullValueAssetFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetFolders"); else _explicitNullProperties?.Remove("assetFolders"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem>? AssetFolders { get => _explicitNullValueAssetFolders; set { _explicitNullValueAssetFolders = value; AdditionalData?.Remove("assetFolders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetFolders"); else _explicitNullProperties?.Remove("assetFolders"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem>? _explicitNullValueAssetFolders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem> AssetFolders { get => _explicitNullValueAssetFolders; set { _explicitNullValueAssetFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetFolders"); else _explicitNullProperties?.Remove("assetFolders"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem> AssetFolders { get => _explicitNullValueAssetFolders; set { _explicitNullValueAssetFolders = value; AdditionalData?.Remove("assetFolders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assetFolders"); else _explicitNullProperties?.Remove("assetFolders"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponseAssetFoldersItem> _explicitNullValueAssetFolders = default!;
 #endif
         /// <summary>Pagination object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; AdditionalData?.Remove("pagination"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.ListAssetFolders200ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>

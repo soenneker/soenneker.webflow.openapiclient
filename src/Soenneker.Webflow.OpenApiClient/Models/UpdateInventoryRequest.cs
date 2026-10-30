@@ -17,21 +17,24 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inventoryType") is { } nullNodeInventoryType && nullNodeInventoryType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InventoryType = null;
-            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
-            if (parseNode.GetChildNode("updateQuantity") is { } nullNodeUpdateQuantity && nullNodeUpdateQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateQuantity = null;
+            if (parseNode.GetChildNode("inventoryType") is null) { _explicitNullValueInventoryType = default!; _explicitNullProperties?.Remove("inventoryType"); }
+            else if (parseNode.GetChildNode("inventoryType") is { } nullNodeInventoryType && nullNodeInventoryType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InventoryType = null;
+            if (parseNode.GetChildNode("quantity") is null) { _explicitNullValueQuantity = default!; _explicitNullProperties?.Remove("quantity"); }
+            else if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("updateQuantity") is null) { _explicitNullValueUpdateQuantity = default!; _explicitNullProperties?.Remove("updateQuantity"); }
+            else if (parseNode.GetChildNode("updateQuantity") is { } nullNodeUpdateQuantity && nullNodeUpdateQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateQuantity = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>infinite or finite</summary>
-        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventoryRequestInventoryType? InventoryType { get => _explicitNullValueInventoryType; set { _explicitNullValueInventoryType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inventoryType"); else _explicitNullProperties?.Remove("inventoryType"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventoryRequestInventoryType? InventoryType { get => _explicitNullValueInventoryType; set { _explicitNullValueInventoryType = value; AdditionalData?.Remove("inventoryType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inventoryType"); else _explicitNullProperties?.Remove("inventoryType"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventoryRequestInventoryType? _explicitNullValueInventoryType = default!;
         /// <summary>Immediately sets quantity to this value.</summary>
-        public double? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        public double? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; AdditionalData?.Remove("quantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
         private double? _explicitNullValueQuantity = default!;
         /// <summary>Adds this quantity to currently store quantity. Can be negative.</summary>
-        public double? UpdateQuantity { get => _explicitNullValueUpdateQuantity; set { _explicitNullValueUpdateQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateQuantity"); else _explicitNullProperties?.Remove("updateQuantity"); } }
+        public double? UpdateQuantity { get => _explicitNullValueUpdateQuantity; set { _explicitNullValueUpdateQuantity = value; AdditionalData?.Remove("updateQuantity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateQuantity"); else _explicitNullProperties?.Remove("updateQuantity"); } }
         private double? _explicitNullValueUpdateQuantity = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventoryRequest"/> and sets the default values.
@@ -58,7 +61,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "inventoryType", n => { InventoryType = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventoryRequestInventoryType>(); } },
+                { "inventoryType", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateInventoryRequestInventoryType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInventoryType = default; _explicitNullProperties?.Remove("inventoryType"); AdditionalData["inventoryType"] = unknown; } else { InventoryType = parsed; AdditionalData.Remove("inventoryType"); } } },
                 { "quantity", n => { Quantity = n.GetDoubleValue(); } },
                 { "updateQuantity", n => { UpdateQuantity = n.GetDoubleValue(); } },
             };

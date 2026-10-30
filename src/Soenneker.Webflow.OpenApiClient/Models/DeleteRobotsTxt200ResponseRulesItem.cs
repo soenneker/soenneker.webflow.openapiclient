@@ -17,9 +17,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allows") is { } nullNodeAllows && nullNodeAllows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Allows = null;
-            if (parseNode.GetChildNode("disallows") is { } nullNodeDisallows && nullNodeDisallows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disallows = null;
-            if (parseNode.GetChildNode("userAgent") is { } nullNodeUserAgent && nullNodeUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgent = null;
+            if (parseNode.GetChildNode("allows") is null) { _explicitNullValueAllows = default!; _explicitNullProperties?.Remove("allows"); }
+            else if (parseNode.GetChildNode("allows") is { } nullNodeAllows && nullNodeAllows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Allows = null;
+            if (parseNode.GetChildNode("disallows") is null) { _explicitNullValueDisallows = default!; _explicitNullProperties?.Remove("disallows"); }
+            else if (parseNode.GetChildNode("disallows") is { } nullNodeDisallows && nullNodeDisallows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disallows = null;
+            if (parseNode.GetChildNode("userAgent") is null) { _explicitNullValueUserAgent = default!; _explicitNullProperties?.Remove("userAgent"); }
+            else if (parseNode.GetChildNode("userAgent") is { } nullNodeUserAgent && nullNodeUserAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>List of paths allowed for this user agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Allows { get => _explicitNullValueAllows; set { _explicitNullValueAllows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allows"); else _explicitNullProperties?.Remove("allows"); } }
+        public List<string>? Allows { get => _explicitNullValueAllows; set { _explicitNullValueAllows = value; AdditionalData?.Remove("allows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allows"); else _explicitNullProperties?.Remove("allows"); } }
         private List<string>? _explicitNullValueAllows = default!;
 #nullable restore
 #else
-        public List<string> Allows { get => _explicitNullValueAllows; set { _explicitNullValueAllows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allows"); else _explicitNullProperties?.Remove("allows"); } }
+        public List<string> Allows { get => _explicitNullValueAllows; set { _explicitNullValueAllows = value; AdditionalData?.Remove("allows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allows"); else _explicitNullProperties?.Remove("allows"); } }
         private List<string> _explicitNullValueAllows = default!;
 #endif
         /// <summary>List of paths disallowed for this user agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Disallows { get => _explicitNullValueDisallows; set { _explicitNullValueDisallows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disallows"); else _explicitNullProperties?.Remove("disallows"); } }
+        public List<string>? Disallows { get => _explicitNullValueDisallows; set { _explicitNullValueDisallows = value; AdditionalData?.Remove("disallows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disallows"); else _explicitNullProperties?.Remove("disallows"); } }
         private List<string>? _explicitNullValueDisallows = default!;
 #nullable restore
 #else
-        public List<string> Disallows { get => _explicitNullValueDisallows; set { _explicitNullValueDisallows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disallows"); else _explicitNullProperties?.Remove("disallows"); } }
+        public List<string> Disallows { get => _explicitNullValueDisallows; set { _explicitNullValueDisallows = value; AdditionalData?.Remove("disallows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disallows"); else _explicitNullProperties?.Remove("disallows"); } }
         private List<string> _explicitNullValueDisallows = default!;
 #endif
         /// <summary>The user agent the rules apply to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgent"); else _explicitNullProperties?.Remove("userAgent"); } }
+        public string? UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; AdditionalData?.Remove("userAgent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgent"); else _explicitNullProperties?.Remove("userAgent"); } }
         private string? _explicitNullValueUserAgent = default!;
 #nullable restore
 #else
-        public string UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgent"); else _explicitNullProperties?.Remove("userAgent"); } }
+        public string UserAgent { get => _explicitNullValueUserAgent; set { _explicitNullValueUserAgent = value; AdditionalData?.Remove("userAgent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgent"); else _explicitNullProperties?.Remove("userAgent"); } }
         private string _explicitNullValueUserAgent = default!;
 #endif
         /// <summary>

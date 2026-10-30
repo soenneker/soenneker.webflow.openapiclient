@@ -119,7 +119,7 @@ namespace Soenneker.Webflow.OpenApiClient.Pages.Item.Dom
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Webflow.OpenApiClient.Pages.Item.Dom.DomRequestBuilder.DomRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.webflow.com/v2", "/pages/{pageId}/dom", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -140,7 +140,7 @@ namespace Soenneker.Webflow.OpenApiClient.Pages.Item.Dom
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/pages/{pageId}/dom?localeId={localeId}", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/pages/{pageId}/dom?localeId={localeId}", RequestAdapter.BaseUrl, "https://api.webflow.com/v2", "/pages/{pageId}/dom", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -18,9 +18,12 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("extras") is { } nullNodeExtras && nullNodeExtras.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extras = null;
-            if (parseNode.GetChildNode("subtotal") is { } nullNodeSubtotal && nullNodeSubtotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtotal = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("extras") is null) { _explicitNullValueExtras = default!; _explicitNullProperties?.Remove("extras"); }
+            else if (parseNode.GetChildNode("extras") is { } nullNodeExtras && nullNodeExtras.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extras = null;
+            if (parseNode.GetChildNode("subtotal") is null) { _explicitNullValueSubtotal = default!; _explicitNullProperties?.Remove("subtotal"); }
+            else if (parseNode.GetChildNode("subtotal") is { } nullNodeSubtotal && nullNodeSubtotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subtotal = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>An array of extra items, includes discounts, shipping, and taxes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsExtrasItem>? Extras { get => _explicitNullValueExtras; set { _explicitNullValueExtras = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extras"); else _explicitNullProperties?.Remove("extras"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsExtrasItem>? Extras { get => _explicitNullValueExtras; set { _explicitNullValueExtras = value; AdditionalData?.Remove("extras"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extras"); else _explicitNullProperties?.Remove("extras"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsExtrasItem>? _explicitNullValueExtras = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsExtrasItem> Extras { get => _explicitNullValueExtras; set { _explicitNullValueExtras = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extras"); else _explicitNullProperties?.Remove("extras"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsExtrasItem> Extras { get => _explicitNullValueExtras; set { _explicitNullValueExtras = value; AdditionalData?.Remove("extras"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extras"); else _explicitNullProperties?.Remove("extras"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsExtrasItem> _explicitNullValueExtras = default!;
 #endif
         /// <summary>The subtotal price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsSubtotal? Subtotal { get => _explicitNullValueSubtotal; set { _explicitNullValueSubtotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtotal"); else _explicitNullProperties?.Remove("subtotal"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsSubtotal? Subtotal { get => _explicitNullValueSubtotal; set { _explicitNullValueSubtotal = value; AdditionalData?.Remove("subtotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtotal"); else _explicitNullProperties?.Remove("subtotal"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsSubtotal? _explicitNullValueSubtotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsSubtotal Subtotal { get => _explicitNullValueSubtotal; set { _explicitNullValueSubtotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtotal"); else _explicitNullProperties?.Remove("subtotal"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsSubtotal Subtotal { get => _explicitNullValueSubtotal; set { _explicitNullValueSubtotal = value; AdditionalData?.Remove("subtotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtotal"); else _explicitNullProperties?.Remove("subtotal"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsSubtotal _explicitNullValueSubtotal = default!;
 #endif
         /// <summary>The total price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsTotal? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsTotal? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsTotal? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsTotal Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsTotal Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.EcommOrderChangedRequestPayloadTotalsTotal _explicitNullValueTotal = default!;
 #endif
         /// <summary>

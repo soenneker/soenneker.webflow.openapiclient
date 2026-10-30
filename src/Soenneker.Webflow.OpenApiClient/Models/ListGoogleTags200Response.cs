@@ -18,7 +18,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("googleTagIds") is { } nullNodeGoogleTagIds && nullNodeGoogleTagIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleTagIds = null;
+            if (parseNode.GetChildNode("googleTagIds") is null) { _explicitNullValueGoogleTagIds = default!; _explicitNullProperties?.Remove("googleTagIds"); }
+            else if (parseNode.GetChildNode("googleTagIds") is { } nullNodeGoogleTagIds && nullNodeGoogleTagIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleTagIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>List of Google Tags configured for a site, sorted by order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListGoogleTags200ResponseGoogleTagIdsItem>? GoogleTagIds { get => _explicitNullValueGoogleTagIds; set { _explicitNullValueGoogleTagIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleTagIds"); else _explicitNullProperties?.Remove("googleTagIds"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListGoogleTags200ResponseGoogleTagIdsItem>? GoogleTagIds { get => _explicitNullValueGoogleTagIds; set { _explicitNullValueGoogleTagIds = value; AdditionalData?.Remove("googleTagIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleTagIds"); else _explicitNullProperties?.Remove("googleTagIds"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListGoogleTags200ResponseGoogleTagIdsItem>? _explicitNullValueGoogleTagIds = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListGoogleTags200ResponseGoogleTagIdsItem> GoogleTagIds { get => _explicitNullValueGoogleTagIds; set { _explicitNullValueGoogleTagIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleTagIds"); else _explicitNullProperties?.Remove("googleTagIds"); } }
+        public List<global::Soenneker.Webflow.OpenApiClient.Models.ListGoogleTags200ResponseGoogleTagIdsItem> GoogleTagIds { get => _explicitNullValueGoogleTagIds; set { _explicitNullValueGoogleTagIds = value; AdditionalData?.Remove("googleTagIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleTagIds"); else _explicitNullProperties?.Remove("googleTagIds"); } }
         private List<global::Soenneker.Webflow.OpenApiClient.Models.ListGoogleTags200ResponseGoogleTagIdsItem> _explicitNullValueGoogleTagIds = default!;
 #endif
         /// <summary>

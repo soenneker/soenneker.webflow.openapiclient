@@ -72,7 +72,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
             }
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            if (result.Boolean == null && result.Double == null && result.Integer == null && result.PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 == null && result.String == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5(), parseNode);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && ((!shapeMembers1.ContainsKey("additionalProperties") || (true)))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.Boolean == null && result.Double == null && result.Integer == null && result.PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 == null && result.String == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Webflow.OpenApiClient.Models.PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5(), parseNode);
             if (result.Boolean == null && result.Double == null && result.Integer == null && result.PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 == null && result.String == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
@@ -82,6 +86,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null)
             {
                 return PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5.GetFieldDeserializers();
@@ -96,7 +102,13 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (Boolean == null && Double == null && Integer == null && PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 == null && String == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null && Boolean == null && Double == null && Integer == null && String == null) { if (PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5); return; }
+            int selectedUnionBranches = 0;
+            if (Boolean != null) selectedUnionBranches++;
+            if (Double != null) selectedUnionBranches++;
+            if (Integer != null) selectedUnionBranches++;
+            if (PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null) selectedUnionBranches++;
+            if (String != null) selectedUnionBranches++;
+            if (PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null && selectedUnionBranches == 1) { if (PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(PatchCollection200ResponseFieldsItemValidationsAdditionalPropertiesOneOf5 != null)

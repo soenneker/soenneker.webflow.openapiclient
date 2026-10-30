@@ -18,7 +18,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fieldData") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
+            if (parseNode.GetChildNode("fieldData") is null) { _explicitNullValueFieldData = default!; _explicitNullProperties?.Remove("fieldData"); }
+            else if (parseNode.GetChildNode("fieldData") is { } nullNodeFieldData && nullNodeFieldData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,11 +37,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>Standard and Custom fields for a SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateSkus200ResponseSkusItemFieldData? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateSkus200ResponseSkusItemFieldData? FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; AdditionalData?.Remove("fieldData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CreateSkus200ResponseSkusItemFieldData? _explicitNullValueFieldData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.CreateSkus200ResponseSkusItemFieldData FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.CreateSkus200ResponseSkusItemFieldData FieldData { get => _explicitNullValueFieldData; set { _explicitNullValueFieldData = value; AdditionalData?.Remove("fieldData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldData"); else _explicitNullProperties?.Remove("fieldData"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.CreateSkus200ResponseSkusItemFieldData _explicitNullValueFieldData = default!;
 #endif
         /// <summary>Unique identifier for the Product</summary>

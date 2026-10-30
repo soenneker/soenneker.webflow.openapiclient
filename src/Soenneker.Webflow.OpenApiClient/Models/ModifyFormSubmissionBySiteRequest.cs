@@ -17,7 +17,8 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("formSubmissionData") is { } nullNodeFormSubmissionData && nullNodeFormSubmissionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormSubmissionData = null;
+            if (parseNode.GetChildNode("formSubmissionData") is null) { _explicitNullValueFormSubmissionData = default!; _explicitNullProperties?.Remove("formSubmissionData"); }
+            else if (parseNode.GetChildNode("formSubmissionData") is { } nullNodeFormSubmissionData && nullNodeFormSubmissionData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormSubmissionData = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <summary>An existing **hidden field** defined on the form schema, and the corresponding value to set</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionBySiteRequestFormSubmissionData? FormSubmissionData { get => _explicitNullValueFormSubmissionData; set { _explicitNullValueFormSubmissionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissionData"); else _explicitNullProperties?.Remove("formSubmissionData"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionBySiteRequestFormSubmissionData? FormSubmissionData { get => _explicitNullValueFormSubmissionData; set { _explicitNullValueFormSubmissionData = value; AdditionalData?.Remove("formSubmissionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissionData"); else _explicitNullProperties?.Remove("formSubmissionData"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionBySiteRequestFormSubmissionData? _explicitNullValueFormSubmissionData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionBySiteRequestFormSubmissionData FormSubmissionData { get => _explicitNullValueFormSubmissionData; set { _explicitNullValueFormSubmissionData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissionData"); else _explicitNullProperties?.Remove("formSubmissionData"); } }
+        public global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionBySiteRequestFormSubmissionData FormSubmissionData { get => _explicitNullValueFormSubmissionData; set { _explicitNullValueFormSubmissionData = value; AdditionalData?.Remove("formSubmissionData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formSubmissionData"); else _explicitNullProperties?.Remove("formSubmissionData"); } }
         private global::Soenneker.Webflow.OpenApiClient.Models.ModifyFormSubmissionBySiteRequestFormSubmissionData _explicitNullValueFormSubmissionData = default!;
 #endif
         /// <summary>

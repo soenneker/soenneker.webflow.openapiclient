@@ -17,13 +17,14 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isBuyNow") is { } nullNodeIsBuyNow && nullNodeIsBuyNow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsBuyNow = null;
+            if (parseNode.GetChildNode("isBuyNow") is null) { _explicitNullValueIsBuyNow = default!; _explicitNullProperties?.Remove("isBuyNow"); }
+            else if (parseNode.GetChildNode("isBuyNow") is { } nullNodeIsBuyNow && nullNodeIsBuyNow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsBuyNow = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isBuyNow property</summary>
-        public bool? IsBuyNow { get => _explicitNullValueIsBuyNow; set { _explicitNullValueIsBuyNow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isBuyNow"); else _explicitNullProperties?.Remove("isBuyNow"); } }
+        public bool? IsBuyNow { get => _explicitNullValueIsBuyNow; set { _explicitNullValueIsBuyNow = value; AdditionalData?.Remove("isBuyNow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isBuyNow"); else _explicitNullProperties?.Remove("isBuyNow"); } }
         private bool? _explicitNullValueIsBuyNow = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.ListOrders200ResponseOrdersItemMetadata"/> and sets the default values.

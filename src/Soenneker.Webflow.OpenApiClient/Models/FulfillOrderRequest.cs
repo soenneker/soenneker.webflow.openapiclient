@@ -18,13 +18,14 @@ namespace Soenneker.Webflow.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sendOrderFulfilledEmail") is { } nullNodeSendOrderFulfilledEmail && nullNodeSendOrderFulfilledEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendOrderFulfilledEmail = null;
+            if (parseNode.GetChildNode("sendOrderFulfilledEmail") is null) { _explicitNullValueSendOrderFulfilledEmail = default!; _explicitNullProperties?.Remove("sendOrderFulfilledEmail"); }
+            else if (parseNode.GetChildNode("sendOrderFulfilledEmail") is { } nullNodeSendOrderFulfilledEmail && nullNodeSendOrderFulfilledEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendOrderFulfilledEmail = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether or not the Order Fulfilled email should be sent</summary>
-        public bool? SendOrderFulfilledEmail { get => _explicitNullValueSendOrderFulfilledEmail; set { _explicitNullValueSendOrderFulfilledEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendOrderFulfilledEmail"); else _explicitNullProperties?.Remove("sendOrderFulfilledEmail"); } }
+        public bool? SendOrderFulfilledEmail { get => _explicitNullValueSendOrderFulfilledEmail; set { _explicitNullValueSendOrderFulfilledEmail = value; AdditionalData?.Remove("sendOrderFulfilledEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendOrderFulfilledEmail"); else _explicitNullProperties?.Remove("sendOrderFulfilledEmail"); } }
         private bool? _explicitNullValueSendOrderFulfilledEmail = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Webflow.OpenApiClient.Models.FulfillOrderRequest"/> and sets the default values.
