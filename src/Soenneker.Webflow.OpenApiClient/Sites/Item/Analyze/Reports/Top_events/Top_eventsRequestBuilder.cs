@@ -82,7 +82,7 @@ namespace Soenneker.Webflow.OpenApiClient.Sites.Item.Analyze.Reports.Top_events
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Webflow.OpenApiClient.Sites.Item.Analyze.Reports.Top_events.Top_eventsRequestBuilder.Top_eventsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.webflow.com/v2", "/sites/{siteId}/analyze/reports/top_events", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
