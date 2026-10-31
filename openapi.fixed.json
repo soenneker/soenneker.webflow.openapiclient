@@ -367,6 +367,37 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateSite201Response"
+                },
+                "examples": {
+                  "NewlyCreatedSite": {
+                    "value": {
+                      "id": "670ecf86817e3cc7a510eb6a",
+                      "workspaceId": "625860a7a6c16d624927122f",
+                      "displayName": "The Hitchiker\u0027s Guide",
+                      "shortName": "hitchikers-guide",
+                      "previewUrl": "https://preview.mysite.com",
+                      "timeZone": "America/Los_Angeles",
+                      "createdOn": "2024-10-15T20:24:38.134Z",
+                      "lastUpdated": "2024-10-15T20:24:38.326Z",
+                      "lastPublished": "2024-11-15T20:24:38.326Z",
+                      "parentFolderId": "670ece123598db72d9648be1",
+                      "customDomains": [],
+                      "locales": null,
+                      "dataCollectionEnabled": true,
+                      "dataCollectionType": "always"
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -1516,6 +1547,17 @@
               }
             },
             "x-logErrorCode": 429
+          },
+          "200": {
+            "description": "Request accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SitePublish202Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -14740,6 +14782,68 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateItem202Response"
+                },
+                "examples": {
+                  "SingleItem": {
+                    "value": {
+                      "id": "42b720ef280c7a7a3be8cabe",
+                      "cmsLocaleId": "653ad57de882f528b32e810e",
+                      "lastPublished": "2022-11-29T16:22:43.159Z",
+                      "lastUpdated": "2022-11-17T17:19:43.282Z",
+                      "createdOn": "2022-11-17T17:11:57.148Z",
+                      "isArchived": false,
+                      "isDraft": false,
+                      "fieldData": {
+                        "name": "The Hitchhiker\u0027s Guide to the Galaxy",
+                        "slug": "hitchhikers-guide-to-the-galaxy",
+                        "plain-text": "Don\u0027t Panic.",
+                        "rich-text": "\u003Ch3\u003EA Guide to Interstellar Travel\u003C/h3\u003E\u003Cp\u003EA towel is about the most massively useful thing an interstellar hitchhiker can have. \u003Cstrong\u003EDon\u0027t forget yours!\u003C/strong\u003E\u003C/p\u003E",
+                        "main-image": {
+                          "fileId": "62b720ef280c7a7a3be8cabe",
+                          "url": "/files/62b720ef280c7a7a3be8cabe_image.png"
+                        },
+                        "image-gallery": [
+                          {
+                            "fileId": "62b720ef280c7a7a3be8cabd",
+                            "url": "/files/62b720ef280c7a7a3be8cabd_image.png"
+                          },
+                          {
+                            "fileId": "62b720ef280c7a7a3be8cabe",
+                            "url": "/files/62b720ef280c7a7a3be8cabe_image.png"
+                          }
+                        ],
+                        "intro-video": "https://www.youtube.com/watch?v=aJ83KAggd-4",
+                        "official-site": "https://hitchhikers.fandom.com/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy",
+                        "contact-email": "zaphod.beeblebrox@heartofgold.gov",
+                        "support-phone": "424-242-4242",
+                        "answer-to-everything": 42,
+                        "release-date": "1979-10-12T00:00:00.000Z",
+                        "is-featured": true,
+                        "brand-color": "#000000",
+                        "category": "62b720ef280c7a7a3be8cabf",
+                        "author": "62b720ef280c7a7a3be8cab0",
+                        "tags": [
+                          "62b720ef280c7a7a3be8cab1",
+                          "62b720ef280c7a7a3be8cab2"
+                        ],
+                        "downloadable-asset": {
+                          "fileId": "62b720ef280c7a7a3be8cab3",
+                          "url": "/files/62b720ef280c7a7a3be8cab3_document.pdf"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -15878,6 +15982,17 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateItemLive202Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -16738,6 +16853,156 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateItems202Response"
+                },
+                "examples": {
+                  "SingleItemMultipleLocales": {
+                    "summary": "Single item created across multiple locales",
+                    "value": {
+                      "items": [
+                        {
+                          "id": "66f6ed9576ddacf3149d5ea6",
+                          "lastPublished": "2024-02-28T19:25:39.942Z",
+                          "lastUpdated": "2024-02-28T19:25:39.942Z",
+                          "createdOn": "2024-02-28T19:25:39.942Z",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca3",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "name": "Don\u0027t Panic",
+                            "slug": "dont-panic"
+                          }
+                        },
+                        {
+                          "id": "66f6ed9576ddacf3149d5ea6",
+                          "lastPublished": "2024-02-28T19:25:39.942Z",
+                          "lastUpdated": "2024-02-28T19:25:39.942Z",
+                          "createdOn": "2024-02-28T19:25:39.942Z",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca4",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "name": "Don\u0027t Panic",
+                            "slug": "dont-panic"
+                          }
+                        },
+                        {
+                          "id": "66f6ed9576ddacf3149d5ea6",
+                          "lastPublished": "2024-02-28T19:25:39.942Z",
+                          "lastUpdated": "2024-02-28T19:25:39.942Z",
+                          "createdOn": "2024-02-28T19:25:39.942Z",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca5",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "name": "Don\u0027t Panic",
+                            "slug": "dont-panic"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "MultipleItemsMultipleLocales": {
+                    "summary": "Multiple items created across multiple locales",
+                    "value": {
+                      "items": [
+                        {
+                          "id": "66f6ed9576ddacf3149d5ea6",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca3",
+                          "lastPublished": null,
+                          "lastUpdated": "2024-09-27T17:38:29.066Z",
+                          "createdOn": "2024-09-27T17:38:29.066Z",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "featured": false,
+                            "name": "Don\u0027t Panic",
+                            "slug": "dont-panic"
+                          }
+                        },
+                        {
+                          "id": "66f6ed9576ddacf3149d5ea6",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca4",
+                          "lastPublished": null,
+                          "lastUpdated": "2024-09-27T17:38:29.066Z",
+                          "createdOn": "2024-09-27T17:38:29.066Z",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "featured": false,
+                            "name": "Don\u0027t Panic",
+                            "slug": "dont-panic"
+                          }
+                        },
+                        {
+                          "id": "66f6ed9576ddacf3149d5ea6",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca5",
+                          "lastPublished": null,
+                          "lastUpdated": "2024-09-27T17:38:29.066Z",
+                          "createdOn": "2024-09-27T17:38:29.066Z",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "featured": false,
+                            "name": "Don\u0027t Panic",
+                            "slug": "dont-panic"
+                          }
+                        },
+                        {
+                          "id": "66f6ed9576ddacf3149d5eaa",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca3",
+                          "lastPublished": null,
+                          "lastUpdated": "2024-09-27T17:38:29.066Z",
+                          "createdOn": "2024-09-27T17:38:29.066Z",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "featured": false,
+                            "name": "So Long and Thanks for All the Fish",
+                            "slug": "so-long-and-thanks"
+                          }
+                        },
+                        {
+                          "id": "66f6ed9576ddacf3149d5eaa",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca4",
+                          "lastPublished": null,
+                          "lastUpdated": "2024-09-27T17:38:29.066Z",
+                          "createdOn": "2024-09-27T17:38:29.066Z",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "featured": false,
+                            "name": "So Long and Thanks for All the Fish",
+                            "slug": "so-long-and-thanks"
+                          }
+                        },
+                        {
+                          "id": "66f6ed9576ddacf3149d5eaa",
+                          "cmsLocaleId": "66f6e966c9e1dc700a857ca5",
+                          "lastPublished": null,
+                          "lastUpdated": "2024-09-27T17:38:29.066Z",
+                          "createdOn": "2024-09-27T17:38:29.066Z",
+                          "isArchived": false,
+                          "isDraft": false,
+                          "fieldData": {
+                            "featured": false,
+                            "name": "So Long and Thanks for All the Fish",
+                            "slug": "so-long-and-thanks"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -18026,6 +18291,26 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublishItem202Response"
+                },
+                "example": {
+                  "publishedItemIds": [
+                    "643fd856d66b6528195ee2ca",
+                    "643fd856d66b6528195ee2cb"
+                  ],
+                  "errors": [
+                    "Staging item ID 643fd856d66b6528195ee2cf not found."
+                  ]
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -19030,6 +19315,45 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Reply created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCommentReply201Response"
+                },
+                "examples": {
+                  "CreateCommentReply": {
+                    "summary": "Example created comment reply",
+                    "value": {
+                      "id": "679d2ddb5196117ad04d1ffa",
+                      "commentId": "679d2ddb5196117ad04d1ffd",
+                      "siteId": "679826b3b20b045e176bc4b5",
+                      "pageId": "679826b3b20b045e176bc4bc",
+                      "breakpoint": "main",
+                      "content": "Thanks for the feedback [[6287ec36a841b25637c663df]]!",
+                      "isResolved": false,
+                      "author": {
+                        "id": "6287ec36a841b25637c663df",
+                        "email": "ford.prefect@heartofgold.spaceship",
+                        "name": "Ford Prefect"
+                      },
+                      "mentionedUsers": [
+                        {
+                          "id": "6287ec36a841b25637c663df",
+                          "email": "arthur.dent@heartofgold.spaceship",
+                          "name": "Arthur Dent"
+                        }
+                      ],
+                      "createdOn": "2025-01-31T20:08:59.759Z",
+                      "lastUpdated": "2025-01-31T20:08:59.759Z"
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -22161,6 +22485,17 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostHostedScript201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -22328,6 +22663,30 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostInlineScripts201Response"
+                },
+                "examples": {
+                  "CustomCodeInlineResponse": {
+                    "value": {
+                      "id": "alert",
+                      "displayName": "Alert",
+                      "hostedLocation": "https://uploads-ssl.webflow.com/6258612d1ee792848f805dcf%2F64b6c769ff52ba6c3d904a91%2F660d6e15b3d1696f2d2b1447%2Falert-0.0.1.js",
+                      "integrityHash": null,
+                      "canCopy": false,
+                      "version": "0.0.1",
+                      "createdOn": "2022-10-26T00:28:54.191Z"
+                    }
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -24112,6 +24471,25 @@
               }
             },
             "x-logErrorCode": 503
+          },
+          "200": {
+            "description": "Font registered. Upload the binary to the presigned S3 URL in \u0060upload\u0060 to complete the process.",
+            "headers": {
+              "Location": {
+                "description": "URL of the created custom font resource",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCustomFont202Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -24817,6 +25195,25 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "File replacement initiated. Upload the binary to the presigned S3 URL in \u0060upload\u0060 to complete the process.",
+            "headers": {
+              "Location": {
+                "description": "URL of the custom font resource",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReplaceCustomFontFile202Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -25466,6 +25863,17 @@
                 "x-logErrorCode": 500
               }
             }
+          },
+          "200": {
+            "description": "Request was successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateWebhook201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-fern-sdk-group-name": "webhooks",
@@ -66460,48 +66868,35 @@
         }
       },
       "GetWorkspaceAuditLogs200ResponseItemsItem": {
-        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemUserAccess"
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf1"
           },
           {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemCustomRole"
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf2"
           },
           {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership"
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf3"
           },
           {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership"
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf4"
           },
           {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation"
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf5"
           },
           {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemSettingChange"
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf6"
           }
         ],
-        "properties": {
-          "timestamp": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "actor": {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemActor"
-          },
-          "workspace": {
-            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspace"
-          }
-        },
         "discriminator": {
           "propertyName": "eventType",
           "mapping": {
-            "user_access": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemUserAccess",
-            "custom_role": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemCustomRole",
-            "workspace_membership": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembership",
-            "site_membership": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemSiteMembership",
-            "workspace_invitation": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitation",
-            "workspace_setting": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemSettingChange"
+            "user_access": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf1",
+            "custom_role": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf2",
+            "workspace_membership": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf3",
+            "site_membership": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf4",
+            "workspace_invitation": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf5",
+            "workspace_setting": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemOneOf6"
           }
         }
       },
@@ -238810,6 +239205,150 @@
             }
           ]
         }
+      },
+      "GetWorkspaceAuditLogs200ResponseItemsItemOneOf1": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "$ref": "#/components/schemas/UserAccessEventType"
+          },
+          "eventSubType": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemUserAccessEventSubType"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemUserAccessPayload"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemActor"
+          },
+          "workspace": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspace"
+          }
+        }
+      },
+      "GetWorkspaceAuditLogs200ResponseItemsItemOneOf2": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "$ref": "#/components/schemas/CustomRoleEventType"
+          },
+          "eventSubType": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemCustomRoleEventSubType"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemCustomRolePayload"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemActor"
+          },
+          "workspace": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspace"
+          }
+        }
+      },
+      "GetWorkspaceAuditLogs200ResponseItemsItemOneOf3": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "$ref": "#/components/schemas/WorkspaceMembershipEventType"
+          },
+          "eventSubType": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipEventSubType"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceMembershipPayload"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemActor"
+          },
+          "workspace": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspace"
+          }
+        }
+      },
+      "GetWorkspaceAuditLogs200ResponseItemsItemOneOf4": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "$ref": "#/components/schemas/SiteMembershipEventType"
+          },
+          "eventSubType": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemSiteMembershipEventSubType"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemSiteMembershipPayload"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemActor"
+          },
+          "workspace": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspace"
+          }
+        }
+      },
+      "GetWorkspaceAuditLogs200ResponseItemsItemOneOf5": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "$ref": "#/components/schemas/WorkspaceInvitationEventType"
+          },
+          "eventSubType": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitationEventSubType"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspaceInvitationPayload"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemActor"
+          },
+          "workspace": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspace"
+          }
+        }
+      },
+      "GetWorkspaceAuditLogs200ResponseItemsItemOneOf6": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "$ref": "#/components/schemas/WorkspaceSettingEventType"
+          },
+          "eventSubType": {
+            "$ref": "#/components/schemas/SettingUpdatedEventSubType"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemSettingChangePayload"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actor": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemActor"
+          },
+          "workspace": {
+            "$ref": "#/components/schemas/GetWorkspaceAuditLogs200ResponseItemsItemWorkspace"
+          }
+        }
       }
     },
     "securitySchemes": {
@@ -238967,6 +239506,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -239026,6 +239578,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -239060,6 +239625,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -239336,6 +239914,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
