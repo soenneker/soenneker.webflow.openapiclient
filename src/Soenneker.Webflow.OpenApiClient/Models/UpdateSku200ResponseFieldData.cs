@@ -158,7 +158,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "compare-at-price", n => { CompareAtPrice = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSku200ResponseFieldDataCompareAtPrice>(global::Soenneker.Webflow.OpenApiClient.Models.UpdateSku200ResponseFieldDataCompareAtPrice.CreateFromDiscriminatorValue); } },
                 { "ec-sku-billing-method", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.UpdateSku200ResponseFieldDataEcSkuBillingMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEcSkuBillingMethod = default; _explicitNullProperties?.Remove("ec-sku-billing-method"); AdditionalData["ec-sku-billing-method"] = unknown; } else { EcSkuBillingMethod = parsed; AdditionalData.Remove("ec-sku-billing-method"); } } },

@@ -86,7 +86,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "brand", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.EcommNewOrderRequestPayloadStripeCardBrand>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBrand = default; _explicitNullProperties?.Remove("brand"); AdditionalData["brand"] = unknown; } else { Brand = parsed; AdditionalData.Remove("brand"); } } },
                 { "expires", n => { Expires = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.EcommNewOrderRequestPayloadStripeCardExpires>(global::Soenneker.Webflow.OpenApiClient.Models.EcommNewOrderRequestPayloadStripeCardExpires.CreateFromDiscriminatorValue); } },

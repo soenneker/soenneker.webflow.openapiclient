@@ -95,7 +95,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "actor", n => { Actor = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemActor>(global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemActor.CreateFromDiscriminatorValue); } },
                 { "eventSubType", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetWorkspaceAuditLogs200ResponseItemsItemUserAccessEventSubType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEventSubType = default; _explicitNullProperties?.Remove("eventSubType"); AdditionalData["eventSubType"] = unknown; } else { EventSubType = parsed; AdditionalData.Remove("eventSubType"); } } },

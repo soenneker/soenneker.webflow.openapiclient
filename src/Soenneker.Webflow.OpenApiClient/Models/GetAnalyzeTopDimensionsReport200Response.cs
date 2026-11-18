@@ -101,7 +101,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem>(global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDataItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dimension", n => { var parsed = n.GetEnumValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopDimensionsReport200ResponseDimension>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDimension = default; _explicitNullProperties?.Remove("dimension"); AdditionalData["dimension"] = unknown; } else { Dimension = parsed; AdditionalData.Remove("dimension"); } } },

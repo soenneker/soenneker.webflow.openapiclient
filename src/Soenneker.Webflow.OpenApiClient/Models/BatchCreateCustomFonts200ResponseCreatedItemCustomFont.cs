@@ -110,7 +110,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "axes", n => { Axes = n.GetCollectionOfObjectValues<global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFonts200ResponseCreatedItemCustomFontAxesItem>(global::Soenneker.Webflow.OpenApiClient.Models.BatchCreateCustomFonts200ResponseCreatedItemCustomFontAxesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "fileName", n => { FileName = n.GetStringValue(); } },

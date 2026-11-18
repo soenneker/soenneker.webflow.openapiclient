@@ -408,7 +408,7 @@ namespace Soenneker.Webflow.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(31)
             {
                 { "audienceIds", n => { AudienceIds = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds>(global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterAudienceIds.CreateFromDiscriminatorValue); } },
                 { "browser", n => { Browser = n.GetObjectValue<global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser>(global::Soenneker.Webflow.OpenApiClient.Models.GetAnalyzeTopPagesReport200ResponseFilterBrowser.CreateFromDiscriminatorValue); } },
